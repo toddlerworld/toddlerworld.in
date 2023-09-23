@@ -11,7 +11,7 @@ function Cards() {
                     <ul className='items'>
                         <CardItem
                             src='/gifs/placeholder1.gif'
-                            text={"Our well-designed environment supports child's growth and development"}
+                            text={'Our well-designed environment supports child\'s growth and development'}
                             label='Our Environment'
                             path='/our-environment'
                         />

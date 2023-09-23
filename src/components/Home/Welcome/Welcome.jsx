@@ -1,7 +1,7 @@
 import React from 'react';
 import './Welcome.scss';
-import {Button} from "../../Button/Button";
-import {Link} from "react-router-dom";
+import {Button} from '../../Button/Button';
+import {Link} from 'react-router-dom';
 
 const Welcome = () => {
     return(
@@ -21,6 +21,6 @@ const Welcome = () => {
             </div>
         </>
     );
-}
+};
 
 export default Welcome;

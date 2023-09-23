@@ -1,7 +1,7 @@
 import React from 'react';
 import './MainSection.scss';
-import {Button} from "../../Button/Button";
-import {Link} from "react-router-dom";
+import {Button} from '../../Button/Button';
+import {Link} from 'react-router-dom';
 
 const MainSection = () => {
     return(
@@ -22,6 +22,6 @@ const MainSection = () => {
                 </div>
             </div>
         </>
-    )
-}
+    );
+};
 export default MainSection;

@@ -10,9 +10,6 @@ function Navbar() {
 
     return (
         <>
-            <div className='header-container'>
-                <p>Book a visit by calling us on 7889744619, 7051427879</p>
-            </div>
             <nav className='navbar'>
                 <div className='navbar-container'>
                     <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>

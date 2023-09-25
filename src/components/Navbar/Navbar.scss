@@ -54,12 +54,12 @@
     display: flex;
     align-items: center;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0 1rem;
     height: 100%;
 }
 
 .nav-links:hover {
-    border-bottom: 4px solid #fff;
+    color: #ffff00;
     transition: all 0.2s ease-out;
 }
 
@@ -75,7 +75,55 @@
     display: none;
 }
 
-@media screen and (max-width: 960px) {
+/* The dropdown container */
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .nav-links {
+    font-size: 1.2rem;
+    border: none;
+    color: #fff;
+    padding: 0 1rem;
+    height: 100%;
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000000;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    float: none;
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+
+/* Add a yellow background color to dropdown links on hover */
+.dropdown-content a:hover {
+    color: #ffff00;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
     .NavbarItems {
         position: relative;
     }
@@ -84,7 +132,8 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 90vh;
+        justify-content: start;
+        height: 100vh;
         position: absolute;
         top: 80px;
         left: -100%;
@@ -93,7 +142,7 @@
     }
 
     .nav-menu.active {
-        background: #242222;
+        background: #000;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -108,8 +157,7 @@
     }
 
     .nav-links:hover {
-        background-color: #fff;
-        color: #242424;
+        color: #ffff00;
         border-radius: 0;
     }
 
@@ -154,5 +202,23 @@
         background: #fff;
         color: #242424;
         transition: 250ms;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .nav-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: center;
     }
 }

@@ -14,3 +14,12 @@
 .register-button {
     margin: 6px;
 }
+
+@media screen and (max-width: 768px) {
+    .welcome {
+        padding: 2rem;
+    }
+    .welcome-paragraph {
+        padding: 3% 10% 3% 10%;
+    }
+}

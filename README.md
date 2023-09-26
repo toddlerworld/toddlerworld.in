@@ -7,7 +7,10 @@ repository and submitting a pull request. The PR needs to have a description of 
 
 If you have found a bug on the site or have an idea for a new feature, feel free
 to [create a new issue](https://github.com/aheedshah/toddler-world/issues/new),
-or suggest a fix by creating a [pull request](https://help.github.com/articles/creating-a-pull-request/).
+or suggest a fix by creating a [pull request](https://help.github.com/articles/creating-a-pull-request/). When raising
+an issue, please add as much details as possible. Screenshots, video recordings, or anything else that can make it
+easier to reproduce the bug you are reporting.
+
 Every kind of help is appreciated!
 
 ## Running the project locally

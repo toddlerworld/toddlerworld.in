@@ -5,15 +5,17 @@ import MainSection from './MainSection/MainSection';
 import Welcome from './Welcome/Welcome';
 import HomeLandingImage from './Home-landing-image/Home-landing-image';
 import Youtube from './Youtube/Youtube';
+import Gallery from './Gallery/Gallery';
 
 const Home = () => {
-    return(
+    return (
         <>
-            <MainSection />
-            <Welcome />
-            <HomeLandingImage />
-            <Cards />
-            <Youtube />
+            <MainSection/>
+            <Welcome/>
+            <HomeLandingImage/>
+            <Cards/>
+            <Youtube/>
+            <Gallery/>
         </>
     );
 };

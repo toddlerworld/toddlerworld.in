@@ -1,0 +1,21 @@
+.container {
+    display: table;
+    width: 100%;
+}
+
+.contact, .maps {
+    display: table-cell;
+    width: 50%;
+    padding: 4rem;
+    background: #ffffff;
+    margin: auto;
+    align-content: start;
+}
+
+.hr-contact {
+    border: 1px solid #e6e6e6;
+    margin: 2rem 0;
+}
+
+//@media screen and (max-width: 768px) {
+//}

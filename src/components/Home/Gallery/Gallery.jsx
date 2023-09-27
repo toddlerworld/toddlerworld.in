@@ -7,7 +7,7 @@ import images from './images.json';
 const Gallery = () => {
     return (
         <div className="gallery">
-            <h1>Image Gallery</h1>
+            <h1>Photo Gallery</h1>
             <hr className="hr-gallery"/>
             <Carousel
                 className="crsl"

@@ -6,6 +6,7 @@ import Welcome from './Welcome/Welcome';
 import HomeLandingImage from './Home-landing-image/Home-landing-image';
 import Youtube from './Youtube/Youtube';
 import Gallery from './Gallery/Gallery';
+import Contact from './Contact/Contact';
 
 const Home = () => {
     return (
@@ -16,6 +17,7 @@ const Home = () => {
             <Cards/>
             <Youtube/>
             <Gallery/>
+            <Contact/>
         </>
     );
 };

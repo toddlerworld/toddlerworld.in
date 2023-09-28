@@ -27,6 +27,15 @@ h2 {
     color: rgb(138, 116, 1);
 }
 
+iframe {
+    padding: 4rem;
+    align-content: center;
+    text-align: center;
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+
 
 @media screen and (max-width: 768px) {
     .welcome {

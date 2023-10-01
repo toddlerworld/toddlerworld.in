@@ -1,5 +1,6 @@
 .navbar {
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
+    //opacity: 1;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -19,14 +20,11 @@
 }
 
 .navbar-logo {
-    color: #fff;
-    justify-self: start;
-    margin-left: 20px;
+    color: #ffffff;
     cursor: pointer;
-    text-decoration: none;
-    font-size: 2rem;
     display: flex;
     align-items: center;
+    scale: 0.27;
 }
 
 .fa-typo3 {
@@ -163,9 +161,10 @@
 
     .navbar-logo {
         position: absolute;
-        top: 0;
+        top: -90px;
         left: 0;
-        transform: translate(25%, 50%);
+        right: 500px;
+        scale: 0.27;
     }
 
     .menu-icon {

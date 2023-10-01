@@ -13,7 +13,7 @@ function Navbar() {
             <nav className="navbar">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-						Toddler World
+                        <img src="/images/logo.png" alt="Logo"/>
                     </Link>
                     {/*Below is the hamburger for the navigation bar*/}
                     <div className="menu-icon" onClick={handleClick}>

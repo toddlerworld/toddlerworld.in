@@ -1,10 +1,11 @@
 import React from 'react';
 import './Contact.scss';
+import OpeningHours from './OpeningHours/OpeningHours';
 
 const Contact = () => {
     return (
         <div className="container">
-            <div className="contact">
+            <div className="contact-container">
                 <h1>Contact Us</h1>
                 <hr className="hr-contact"/>
 
@@ -19,7 +20,7 @@ const Contact = () => {
 					Airport Avenue, Near Railway Bridge, Srinagar, Jammu and Kashmir, 190021<br/>
                 </p>
 
-                <p className="contact-paragraph">
+                <p className="contact-telephone">
 					Phone: <a href="tel:+911942303601" className="phone">+91 1942-303601</a>, <a
                         href="tel:+911942303611" className="phone">+91 1942-303611</a>
                     <br/>
@@ -28,10 +29,9 @@ const Contact = () => {
                         className="phone">+91 788-9744619</a>
                 </p>
 
-                <h2>Hours:</h2>
-
+                <OpeningHours/>
             </div>
-            <div className="maps">
+            <div className="maps-container">
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.730162425703!2d74.7713164!3d34.025136700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e191dba7d84fa3%3A0x16d8642869049f5a!2sToddler%20World!5e0!3m2!1sen!2suk!4v1695935838910!5m2!1sen!2suk"
                 ></iframe>

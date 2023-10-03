@@ -9,7 +9,9 @@ const Youtube = () => {
             <p>Toddler World is renowned for providing rich learning opportunities in unique and exciting
 				environment. </p>
 
-            <iframe className="youtube-video" src="https://www.youtube.com/embed/FxxsA-qaHTM"></iframe>
+            <div className="youtube-video-container">
+                <iframe className="youtube-video" src="https://www.youtube.com/embed/FxxsA-qaHTM"></iframe>
+            </div>
         </div>
     );
 };

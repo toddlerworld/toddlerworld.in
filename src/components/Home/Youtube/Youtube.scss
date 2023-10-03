@@ -16,8 +16,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .youtube-video {
+    .youtube-container {
+        display: block;
+        background-color: #ffffff;
+        padding: 5%;
+    }
+    .youtube-video-container {
         width: 100%;
-        height: 450px;
+    }
+    iframe {
+        width: 100%;
+        height: 40vh;
+        align-content: center;
     }
 }

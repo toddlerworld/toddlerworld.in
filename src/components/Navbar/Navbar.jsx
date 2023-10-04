@@ -35,8 +35,9 @@ function Navbar() {
                             </Link>
                         </li>
 
-                        <div className="dropdown">
-                            <button className="nav-links">Information
+                        <li className="dropdown">
+                            <button className="nav-links">
+								Information
                                 <i className="fa fa-caret-down"></i>
                             </button>
                             <div className="dropdown-content">
@@ -44,7 +45,7 @@ function Navbar() {
                                 <a href="#">Link 2</a>
                                 <a href="#">Link 3</a>
                             </div>
-                        </div>
+                        </li>
                     </ul>
                 </div>
             </nav>

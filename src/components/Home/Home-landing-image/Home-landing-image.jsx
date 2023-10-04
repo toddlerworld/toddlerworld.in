@@ -10,6 +10,6 @@ const HomeLandingImage = () => {
             </div>
         </>
     );
-}
+};
 
 export default HomeLandingImage;

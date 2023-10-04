@@ -204,6 +204,10 @@
     }
 
     /* Dropdown content (hidden by default) */
+    .dropdown {
+        height: 80px;
+        padding-left: 50px;
+    }
     .nav-links {
         text-align: center;
         padding: 2rem;
@@ -211,11 +215,15 @@
         display: table;
     }
 
+    .dropdown-content {
+        min-width: 90%;
+    }
+
     /* Links inside the dropdown */
     .dropdown-content a {
         float: none;
         color: white;
-        padding: 12px 16px;
+        min-width: 90%;
         text-decoration: none;
         display: block;
         text-align: center;

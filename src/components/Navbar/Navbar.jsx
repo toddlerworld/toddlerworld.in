@@ -10,16 +10,16 @@ function Navbar() {
 
     return (
         <>
-            <nav className="navbar">
+            <nav className="navbar"  data-testid="navbar-component">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img src="/images/logo.png" alt="Logo"/>
+                        <img src="/images/logo.png" alt="Logo" data-testid="menu-icon-component"/>
                     </Link>
                     {/*Below is the hamburger for the navigation bar*/}
-                    <div className="menu-icon" onClick={handleClick}>
+                    <div className="menu-icon" onClick={handleClick} data-testid="menu-icon">
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
                     </div>
-                    <ul className={click ? 'nav-menu active' : 'nav-menu'}>
+                    <ul className={click ? 'nav-menu active' : 'nav-menu'} data-testid="nav-menu-component">
                         <li className="nav-item">
                             <Link to="/" className="nav-links" onClick={closeMobileMenu}>
 								Home

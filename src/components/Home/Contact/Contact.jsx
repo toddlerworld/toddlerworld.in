@@ -4,7 +4,7 @@ import OpeningHours from './OpeningHours/OpeningHours';
 
 const Contact = () => {
     return (
-        <div className="container">
+        <div className="container" data-testid="contact-container">
             <div className="contact-container">
                 <h1>Contact Us</h1>
                 <hr className="hr-contact"/>

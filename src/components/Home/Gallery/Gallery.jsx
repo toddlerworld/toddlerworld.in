@@ -6,7 +6,7 @@ import images from './images.json';
 
 const Gallery = () => {
     return (
-        <div className="gallery">
+        <div className="gallery" data-testid="gallery-component">
             <h1>Photo Gallery</h1>
             <hr className="hr-gallery"/>
             <Carousel

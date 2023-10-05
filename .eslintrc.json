@@ -14,7 +14,7 @@
     "plugins": [
         "react"
     ],
-    "ignorePatterns": ["**/*.css", "**/*.scss"],
+    "ignorePatterns": ["**/*.css", "**/*.scss", "**/*.test.jsx", "**/*.test.js"],
     "rules": {
         "react/prop-types": "off",
         "indent": [

@@ -1,0 +1,56 @@
+.about-container {
+    padding: 4rem;
+    position: relative;
+}
+.heading {
+    padding-top: 2%;
+    padding-left: 10%;
+    justify-content: center;
+    text-align: left;
+}
+
+.hr-about-us{
+    border: 1px solid #e6e6e6;
+    margin: 2rem 0;
+    width:100%;
+}
+
+.about-section-2 {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.about-section-1, .about-section-3 {
+    padding-left: 10%;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-section-1 h1 {
+    justify-content: center;
+    text-align: center;
+}
+
+.about-button {
+    margin: 6px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-container {
+        padding: 1rem;
+    }
+    .about-section-1, .about-section-2, .about-section-3 {
+        display: flex;
+        flex-direction: column;
+        padding: 10%;
+    }
+
+    .about-section-1 h1, .about-section-2 h1, .about-section-3 h1 {
+        padding-top: 5%;
+    }
+    .about-button {
+        padding-top: 3%;
+        padding-left: 33%;
+        padding-right: 33%;
+    }
+}

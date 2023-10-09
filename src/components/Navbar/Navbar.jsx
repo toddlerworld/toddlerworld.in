@@ -21,13 +21,17 @@ function Navbar() {
                     </div>
                     <ul className={click ? 'nav-menu active' : 'nav-menu'} data-testid="nav-menu-component">
                         <li className="nav-item">
-                            <Link to="/" className="nav-links" onClick={closeMobileMenu}>
+                            <Link
+                                to="/"
+                                className="nav-links"
+                                onClick={closeMobileMenu}
+                            >
 								Home
                             </Link>
                         </li>
                         <li className="nav-item">
                             <Link
-                                to="/about"
+                                to="/about-us"
                                 className="nav-links"
                                 onClick={closeMobileMenu}
                             >

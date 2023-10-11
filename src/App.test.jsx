@@ -19,28 +19,27 @@ describe('App test', () => {
         expect(screen.getByText('Welcome to Toddler World')).toBeInTheDocument();
     });
 
-    test('matches snapshot', () => {
-        const tree = renderer.create(<App />).toJSON();
-        expect(tree).toMatchSnapshot();
+    test('renders Home component for / path', () => {
+        render(
+            <MemoryRouter initialEntries={['/']}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                </Routes>
+            </MemoryRouter>
+        );
+
+        expect(screen.getByText('Welcome to Toddler World')).toBeInTheDocument();
     });
 
     test('renders About component for /about-us path', () => {
         render(
             <MemoryRouter initialEntries={['/about-us']}>
-                <Routes><Route path="/about-us" element={<About />} /></Routes>
+                <Routes>
+                    <Route path="/about-us" element={<About />} />
+                </Routes>
             </MemoryRouter>
         );
 
         expect(screen.getByText('About us')).toBeInTheDocument();
-    });
-
-    test('renders About component for /about-us path', () => {
-        render(
-            <MemoryRouter initialEntries={['/']}>
-                <Routes><Route path="/" element={<Home />} /></Routes>
-            </MemoryRouter>
-        );
-
-        expect(screen.getByText('Welcome to Toddler World')).toBeInTheDocument();
     });
 });

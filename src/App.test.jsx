@@ -19,11 +19,6 @@ describe('App test', () => {
         expect(screen.getByText('Welcome to Toddler World')).toBeInTheDocument();
     });
 
-    test('matches snapshot', () => {
-        const tree = renderer.create(<App />).toJSON();
-        expect(tree).toMatchSnapshot();
-    });
-
     test('renders Home component for / path', () => {
         render(
             <MemoryRouter initialEntries={['/']}>

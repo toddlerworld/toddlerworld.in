@@ -1,60 +1,71 @@
 .about-container {
     padding: 4rem;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    background-color: #f2f2f2;
-    flex-wrap: wrap;
-    flex-shrink: 1;
-    flex-grow: 1;
-    max-width: 100%;
+    //position: relative;
+    //display: flex;
+    //flex-direction: row;
+    //align-items: center;
+    //background-color: #f2f2f2;
+    //flex-wrap: wrap;
+    //flex-shrink: 1;
+    //flex-grow: 1;
+    //max-width: 100%;
 }
+
 .heading {
-    justify-content: left;
-    text-align: left;
+    //justify-content: left;
+    //text-align: left;
     font-size: 2rem;
     font-weight: 600;
     color: #000000;
     margin: 0;
-    padding: 0;
-    align-items: start;
+    //align-items: start;
+    //padding-left: 20%;
 
 }
 
-.hr-about-us{
+.hr-about-us {
     border: 1px solid #e6e6e6;
     margin: 2rem 0;
-    width:100%;
+    width: 100%;
 }
 
-.about-section-1, .about-section-3 {
-    padding-bottom: 5%;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
+div.text-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    align-items: start;
+    justify-items: center;
 }
 
-.about-section-3 {
-    padding-top: 5%;
+/* first block */
+
+div.text-block.image-left h2 {
+    grid-column: 2 / span 2;
+    margin-top: 100px;
 }
 
-.about-section-2 {
-    display: flex;
-    flex-direction: row-reverse;
+div.text-block.image-left img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 3;
 }
 
-.about-section-1 h1 {
-    justify-content: right;
-    text-align: right;
 
+/* 2nd block */
+
+div.text-block.image-right h2 {
+    grid-column: 1 / span 2;
 }
 
-.about-button {
-    margin: 6px;
-    display: flex;
-    flex-direction: column;
+div.text-block.image-right img {
+    display: block;
+    height: auto;
+    max-width: 100%;
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 3;
+    justify-self: right;
 }
 
 @media screen and (max-width: 768px) {
@@ -72,9 +83,10 @@
     .about-section-1 h1, .about-section-2 h1, .about-section-3 h1 {
         padding-top: 5%;
     }
-    .about-button {
-        padding-top: 3%;
-        padding-left: 33%;
-        padding-right: 33%;
-    }
+    //.about-button {
+        //padding-top: 3%;
+        //padding-left: 33%;
+        //padding-right: 33%;
+        //margin-right: 10px;
+    //}
 }

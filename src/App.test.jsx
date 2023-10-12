@@ -6,14 +6,13 @@ import renderer from 'react-test-renderer';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import About from './components/About/About';
 import Home from './components/Home/Home';
+import Environment from './components/Environment/Environment';
+import Team from './components/Team/Team';
 
 describe('App test', () => {
-    // Test 1: Render Test
     test('renders without crashing', () => {
         render(<App />);
     });
-
-    // Test 2: Check if the title is correct
     test('check if the title is correct', () => {
         render(<App />);
         expect(screen.getByText('Welcome to Toddler World')).toBeInTheDocument();
@@ -41,5 +40,29 @@ describe('App test', () => {
         );
 
         expect(screen.getByText('About us')).toBeInTheDocument();
+    });
+
+    test('renders About component for /our-team path', () => {
+        render(
+            <MemoryRouter initialEntries={['/our-team']}>
+                <Routes>
+                    <Route path="/our-team" element={<Team />} />
+                </Routes>
+            </MemoryRouter>
+        );
+
+        expect(screen.getByText('Our Team')).toBeInTheDocument();
+    });
+
+    test('renders About component for /our-environment path', () => {
+        render(
+            <MemoryRouter initialEntries={['/our-environment']}>
+                <Routes>
+                    <Route path="/our-environment" element={<Environment />} />
+                </Routes>
+            </MemoryRouter>
+        );
+
+        expect(screen.getByText('Our Environment')).toBeInTheDocument();
     });
 });

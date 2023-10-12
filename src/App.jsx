@@ -7,6 +7,7 @@ import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import About from './components/About/About';
 import Team from './components/Team/Team';
+import Environment from './components/Environment/Environment';
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="/about-us" element={<About />} />
                     <Route path="/our-team" element={<Team />} />
+                    <Route path="/our-environment" element={<Environment />} />
                 </Routes>
                 <Footer />
             </Router>

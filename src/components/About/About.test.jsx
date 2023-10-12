@@ -1,9 +1,7 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import About from './About';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
-import Home from '../Home/Home';
 
 let component;
 
@@ -45,5 +43,9 @@ describe('About Component', () => {
     test('renders Learn More button in each section', () => {
         const learnMoreButtons = screen.getAllByRole('button', {name: /Learn More/i});
         expect(learnMoreButtons).toHaveLength(3);
+    });
+    test('renders "About us" heading', () => {
+        const heading = screen.getByText('About us');
+        expect(heading).toBeInTheDocument();
     });
 });

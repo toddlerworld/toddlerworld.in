@@ -1,6 +1,5 @@
 .about-container {
-    padding: 4rem;
-    position: relative;
+    padding-left: 10%;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -12,15 +11,10 @@
 }
 
 .heading {
-    //justify-content: left;
-    //text-align: left;
     font-size: 2rem;
     font-weight: 600;
     color: #000000;
     margin: 0;
-    //align-items: start;
-    padding-left: 20%;
-
 }
 
 .hr-about-us{
@@ -31,12 +25,12 @@
 
 .about-section-1, .about-section-3 {
     padding-bottom: 5%;
-    //padding-left: 20%;
     display: flex;
     justify-content: center;
     flex-direction: row;
     align-items: center;
     min-width: 70%;
+    margin-right: 150px;
 }
 
 .about-text {
@@ -56,10 +50,12 @@
 }
 
 .about-section-2 {
-    //padding-left: 20%;
-    min-width: 80%;
+    min-width: 70%;
     display: flex;
     flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
 }
 
 .about-section-1 h1 {
@@ -72,27 +68,59 @@
     margin: 6px;
     display: flex;
     flex-direction: column;
+
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1330px) {
+    .about-section-1, .about-section-2, .about-section-3 {
+        min-width: 80%;
+    }
+}
+
+@media screen and (max-width: 1165px) {
+    .about-section-1, .about-section-2, .about-section-3 {
+        min-width: 90%;
+    }
+}
+@media screen and (max-width: 1035px) {
+    .about-container{
+        padding: 3%;
+    }
+    .about-section-1, .about-section-2, .about-section-3 {
+        min-width: 100%;
+    }
+}
+
+@media screen and (max-width: 1050px) {
     .about-container {
-        //padding: 1rem;
-        padding-top: 5%;
+        padding: 1rem;
+        //padding-top: 5%;
         justify-content: center;
+        text-align: center;
+
+    }
+
+    .about-text {
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
     }
     .about-section-1, .about-section-2, .about-section-3 {
         display: flex;
         flex-direction: column;
-        padding: 10%;
+        margin-right: 0;
+        //padding: 10%;
+    }
+
+    .about-section-2 {
+        padding-left: 0;
+    }
+
+    .about-text-left {
+        padding-right: 0;
     }
 
     .about-section-1 h1, .about-section-2 h1, .about-section-3 h1 {
         padding-top: 5%;
     }
-    //.about-button {
-        //padding-top: 3%;
-        //padding-left: 33%;
-        //padding-right: 33%;
-        //margin-right: 10px;
-    //}
 }

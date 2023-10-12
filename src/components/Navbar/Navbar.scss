@@ -2,9 +2,7 @@
     background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(26, 23, 23) 100%);
     //opacity: 1;
     height: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    //display: flex;
     font-size: 1.2rem;
     position: sticky;
     top: 0;
@@ -121,7 +119,7 @@
     display: block;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 875px) {
     .NavbarItems {
         position: relative;
     }

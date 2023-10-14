@@ -35,7 +35,7 @@ describe('MainSection component', () => {
         expect(headingElement).toBeInTheDocument();
     });
 
-    test('renders Link to "/login"', () => {
+    test('renders Link to "/welcome"', () => {
         render(
             <Router>
                 <MainSection />
@@ -43,6 +43,6 @@ describe('MainSection component', () => {
         );
         const linkElement = screen.getByRole('link', { name: /Find out more!/i });
         expect(linkElement).toBeInTheDocument();
-        expect(linkElement.href).toContain('/login');
+        expect(linkElement.href).toContain('/welcome');
     });
 });

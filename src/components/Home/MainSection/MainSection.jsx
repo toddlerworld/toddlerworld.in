@@ -10,7 +10,7 @@ const MainSection = () => {
                 <video src="/images/home-page-pic.mp4" className="main-video" data-testid="main-video" autoPlay loop muted/>
                 <h1>Welcome to Toddler World</h1>
                 <div className="button-login">
-                    <Link to="/login">
+                    <Link to="/welcome">
                         <Button
                             className="login-button"
                             buttonStyle="primary-button"

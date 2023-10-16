@@ -4,7 +4,7 @@ import CardItem from '../CardItem/CardItem';
 
 const PlayEquipment = () => {
     return (
-        <div className='play-equipment-container'>
+        <div className='play-equipment-container' data-testid='play-equipment-container'>
             <h1>Our Facilities include...</h1>
             <hr className="hr-contact"/>
             <div className="card">

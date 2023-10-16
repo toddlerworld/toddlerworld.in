@@ -5,7 +5,6 @@ import Header from './Header';
 test('renders header component', () => {
     const { getByText } = render(<Header />);
 
-    // You might need to adjust the textContent based on your actual content
     const phoneNumber1 = getByText('7889744619');
     const phoneNumber2 = getByText('7051427879');
 

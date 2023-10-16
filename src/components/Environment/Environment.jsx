@@ -14,14 +14,14 @@ const environment = () => {
 
 
 
-                    Peace of mind:<br/>
+                    <strong>Peace of mind:</strong><br/>
                     We understand that the safety and well-being of your child is your top priority.
                     That’s why we go above and beyond to ensure your child feels safe, comfortable, and cared for—in
                     all dimensions of our program.<br/><br/><br/>
 
 
 
-                    Home away from home:<br/>
+                    <strong>Home away from home:</strong><br/>
                     We provide your child home away from home. Our personalized, nurturing vibe even carries over to our
                     buildings and grounds. The nursery has been specifically designed to create a fun, interactive, and
                     dynamic experience. At Toddler World, you can be sure that your child will gain the first steps toward
@@ -29,7 +29,7 @@ const environment = () => {
 
 
 
-                    Caring Growth Environment:<br/>
+                    <strong>Caring Growth Environment:</strong><br/>
                     Our dedicated staff is trained to create an environment which caters to :
                     <ul>
                         <li>Different stages of development of the child</li>

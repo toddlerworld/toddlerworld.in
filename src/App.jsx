@@ -9,6 +9,7 @@ import About from './components/About/About';
 import Team from './components/Team/Team';
 import Environment from './components/Environment/Environment';
 import Welcome from './components/Welcome/Welcome';
+import PlayEquipment from './components/PlayEquipment/PlayEquipment';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/our-team" element={<Team />} />
                     <Route path="/our-environment" element={<Environment />} />
                     <Route path="/welcome" element={<Welcome />} />
+                    <Route path="/play-equipment" element={<PlayEquipment />} />
                 </Routes>
                 <Footer />
             </Router>

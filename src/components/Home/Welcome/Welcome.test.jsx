@@ -42,6 +42,6 @@ describe('Welcome component', () => {
         );
         const linkElement = screen.getByRole('link', { name: /Register your child!/i });
         expect(linkElement).toBeInTheDocument();
-        expect(linkElement.href).toContain('/admissions');
+        expect(linkElement.href).toContain('https://www.campuskidz.in/Registration/OnlineEnquiry');
     });
 });

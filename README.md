@@ -34,6 +34,15 @@ contributing:
 5. Please ensure that the code is tested properly by running the code on your local machine before creating a PR.
 6. Please ensure that the PR has a proper description of the changes and the reason for the same.
 
+Below are some of the things that still need to be built:
+- `/programs-1`
+- `/our-activities#3bfac689-c850-45de-9f66-709037fb4ff6`
+- `/policies-%26-procedures`
+- `/admissions`
+- `/parent-partnership`
+- `/careers`
+- `/contact-us`
+
 Thanks for you help in making this project better!
 
 With ♥ from Toddler World!

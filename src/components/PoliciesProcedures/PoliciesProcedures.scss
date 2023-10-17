@@ -1,0 +1,55 @@
+.policies-procedures-container {
+    padding-left: 10%;
+    padding-bottom: 9%;
+    max-width: 80%;
+}
+
+.p-policies-procedures {
+    display: flex;
+}
+
+.policies-procedures-container p{
+    float: left;
+    padding-right: 5%;
+}
+
+
+.image-policies-procedures {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color:white;
+    width: 30%;
+    float: right;
+}
+
+@media screen and (max-width: 1250px) {
+    .image-policies-procedures {
+        padding-top: 10%;
+        height: 30%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .our-policies-procedures {
+        align-items: center;
+        justify-content: center;
+    }
+    .p-policies-procedures {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .policies-procedures-container p{
+        padding-bottom: 5%;
+    }
+    .image-policies-procedures {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+        justify-content: center;
+        width: 100%;
+        float: right;
+    }
+}

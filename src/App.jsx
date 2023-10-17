@@ -10,6 +10,8 @@ import Team from './components/Team/Team';
 import Environment from './components/Environment/Environment';
 import Welcome from './components/Welcome/Welcome';
 import PlayEquipment from './components/PlayEquipment/PlayEquipment';
+import ParentPartnership from './components/ParentPartnership/ParentPartnership';
+import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedures';
 
 function App() {
     return (
@@ -24,6 +26,8 @@ function App() {
                     <Route path="/our-environment" element={<Environment />} />
                     <Route path="/welcome" element={<Welcome />} />
                     <Route path="/play-equipment" element={<PlayEquipment />} />
+                    <Route path="/parent-partnership" element={<ParentPartnership />} />
+                    <Route path="/policies-procedures" element={<PoliciesProcedures />} />
                 </Routes>
                 <Footer />
             </Router>

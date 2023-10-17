@@ -30,7 +30,6 @@ const OpeningHours = () => {
                 </p>)
             }
 
-
             {isDropdownOpen && (
                 <div>
                     {daysOfWeek.map(day => (

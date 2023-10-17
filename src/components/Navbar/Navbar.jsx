@@ -45,9 +45,12 @@ function Navbar() {
                                 <i className="fa fa-caret-down"></i>
                             </button>
                             <div className="dropdown-content">
-                                <a href="#">Link 1</a>
-                                <a href="#">Link 2</a>
-                                <a href="#">Link 3</a>
+                                <a href="#">Programmes</a>
+                                <a href="/policies-procedures">Policies & Procedures</a>
+                                <a href="#">Admissions</a>
+                                <a href="/parent-partnership">Parent Partnership</a>
+                                <a href="#">Careers</a>
+                                <a href="#">Contact Us</a>
                             </div>
                         </li>
                     </ul>

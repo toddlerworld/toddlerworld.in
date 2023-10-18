@@ -1,11 +1,11 @@
-.admissions-container {
+.activities-container {
     padding: 4rem;
     max-width: 70%;
     display: block;
     margin: auto;
 }
 
-.admissions-image {
+.activities-image {
     max-width: 100%;
     justify-content: center;
     align-items: center;
@@ -16,14 +16,14 @@
     margin-right: auto;
 }
 
-.left-aligned-admissions {
+.left-aligned-activities {
     text-align: left;
     width: 40%;
     display: inline-block;
     padding-right: 25%;
 }
 
-.right-aligned-admissions {
+.right-aligned-activities {
     text-align: left;
     width: 30%;
     display: inline-block;
@@ -31,20 +31,20 @@
         text-align: center;
     }
 }
-.register-interest-admission {
+.register-interest-activities {
     padding-top: 10%;
     text-align: center;
 }
 
 @media screen and (max-width: 786px) {
-    .admissions-container {
+    .activities-container {
         max-width: 80%;
         align-items: center;
         width: 100%;
         justify-content: center;
         text-align: center;
     }
-    .left-aligned-admissions, .right-aligned-admissions {
+    .left-aligned-activities, .right-aligned-activities {
         padding-right: 6%;
         padding-left: 6%;
         width: 100%;

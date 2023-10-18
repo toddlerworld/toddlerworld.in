@@ -36,8 +36,6 @@ contributing:
 
 Below are some of the things that still need to be built:
 - `/programs-1`
-- `/our-activities#3bfac689-c850-45de-9f66-709037fb4ff6`
-- `/admissions`
 - `/careers`
 - `/contact-us`
 

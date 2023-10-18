@@ -45,7 +45,7 @@ function About () {
                 <div className='about-text'>
                     <h1>Our Activities</h1>
                     <div className='about-button'>
-                        <Link to="/our-activities">
+                        <Link to="/activities">
                             <Button
                                 buttonStyle='primary-button'
                                 buttonSize='large'

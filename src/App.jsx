@@ -13,6 +13,7 @@ import PlayEquipment from './components/PlayEquipment/PlayEquipment';
 import ParentPartnership from './components/ParentPartnership/ParentPartnership';
 import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedures';
 import Admissions from './components/Admissions/Admissions';
+import Activities from './components/Activities/Activities';
 
 function App() {
     return (
@@ -30,6 +31,7 @@ function App() {
                     <Route path="/parent-partnership" element={<ParentPartnership />} />
                     <Route path="/policies-procedures" element={<PoliciesProcedures />} />
                     <Route path="/admissions" element={<Admissions />} />
+                    <Route path="/activities" element={<Activities />} />
                 </Routes>
                 <Footer />
             </Router>

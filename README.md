@@ -37,12 +37,10 @@ contributing:
 Below are some of the things that still need to be built:
 - `/programs-1`
 - `/our-activities#3bfac689-c850-45de-9f66-709037fb4ff6`
-- `/policies-%26-procedures`
 - `/admissions`
-- `/parent-partnership`
 - `/careers`
 - `/contact-us`
 
-Thanks for you help in making this project better!
+Thanks for your help in making this project better!
 
 With ♥ from Toddler World!

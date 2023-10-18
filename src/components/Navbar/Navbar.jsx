@@ -47,7 +47,7 @@ function Navbar() {
                             <div className="dropdown-content">
                                 <a href="#">Programmes</a>
                                 <a href="/policies-procedures">Policies & Procedures</a>
-                                <a href="#">Admissions</a>
+                                <a href="/admissions">Admissions</a>
                                 <a href="/parent-partnership">Parent Partnership</a>
                                 <a href="#">Careers</a>
                                 <a href="#">Contact Us</a>

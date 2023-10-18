@@ -1,6 +1,5 @@
 import React from 'react';
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom/extend-expect'; // For additional matchers
 import Admissions from './Admissions';
 
 describe('Tests for the Admissions Component', () => {

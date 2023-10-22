@@ -14,6 +14,7 @@ import ParentPartnership from './components/ParentPartnership/ParentPartnership'
 import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedures';
 import Admissions from './components/Admissions/Admissions';
 import Activities from './components/Activities/Activities';
+import Careers from './components/Careers/Careers';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                     <Route path="/policies-procedures" element={<PoliciesProcedures />} />
                     <Route path="/admissions" element={<Admissions />} />
                     <Route path="/activities" element={<Activities />} />
+                    <Route path="/careers" element={<Careers />} />
                 </Routes>
                 <Footer />
             </Router>

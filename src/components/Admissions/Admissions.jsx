@@ -31,14 +31,16 @@ const Admissions = () => {
                     first-served basis, ensuring a fair and timely allocation of opportunities. To initiate your
                     enrollment journey, kindly click on the button below, where you can register your interest.
                 </p>
-                <div className='register-interest-admission'>
-                    <Button
-                        buttonStyle="primary-button"
-                        buttonSize="large"
-                        onClick='https://www.campuskidz.in/Registration/OnlineEnquiry'
-                    >
-                        Register your Child
-                    </Button>
+                <div className='register-interest-admission' data-testid="register-test-comp">
+                    <a href='https://www.campuskidz.in/Registration/OnlineEnquiry' data-testid="link-test">
+                        <Button
+                            buttonStyle="primary-button"
+                            buttonSize="large"
+                            data-testid="register-test"
+                        >
+                            Register your Child
+                        </Button>
+                    </a>
                 </div>
             </div>
         </div>

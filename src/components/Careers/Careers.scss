@@ -1,0 +1,78 @@
+.heading-careers {
+    padding: 4rem;
+    max-width: 70%;
+    margin: auto;
+}
+
+.careers-container {
+    padding: 4rem;
+    max-width: 70%;
+    display: flex;
+    margin: auto;
+}
+
+.left-aligned-careers {
+    text-align: left;
+    width: 40%;
+    //display: inline-block;
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    padding-right: 20%;
+    margin-top: -100px;
+}
+
+.right-aligned-careers {
+    text-align: left;
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    width: 30%;
+    margin-top: -100px;
+    h1 {
+        text-align: center;
+    }
+}
+
+.register-interest-careers {
+    padding-top: 10%;
+    text-align: center;
+}
+
+.careers-form{
+    max-width: 80%;
+    height: 1000px;
+    justify-content: center;
+}
+
+@media screen and (max-width: 786px) {
+    .heading-careers {
+        text-align: center;
+    }
+    .careers-container {
+        padding: 1rem;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: block;
+    }
+
+    .left-aligned-careers, .right-aligned-careers {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        padding: 0 0 8%;
+    }
+
+    .right-aligned-careers {
+        margin-top: 25px;
+    }
+    .careers-form {
+        width: 80%;
+        height: 700px;
+        iframe {
+            width: 90%;
+        }
+    }
+}

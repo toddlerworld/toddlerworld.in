@@ -49,7 +49,7 @@ function Navbar() {
                                 <a href="/policies-procedures">Policies & Procedures</a>
                                 <a href="/admissions">Admissions</a>
                                 <a href="/parent-partnership">Parent Partnership</a>
-                                <a href="#">Careers</a>
+                                <a href="/careers">Careers</a>
                                 <a href="#">Contact Us</a>
                             </div>
                         </li>

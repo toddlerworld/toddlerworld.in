@@ -2,7 +2,7 @@ import React from 'react';
 import './Careers.scss';
 import {Button} from '../Button/Button';
 
-const Admissions = () => {
+const Careers = () => {
     return(
         <>
             <div className='heading-careers'>
@@ -51,26 +51,29 @@ const Admissions = () => {
                     what are you waiting for? If you are focussed and energetic with a passion to work in the childcare
                     industry, apply today.
                     </p>
-                    <div className='register-interest-careers'>
-                        <Button
-                            buttonStyle="primary-button"
-                            buttonSize="large"
-                            onClick='https://www.campuskidz.in/Registration/OnlineEnquiry'
-                        >
-                        Send your details
-                        </Button>
+                    <div className='register-interest-careers' data-testid='send-details-test'>
+                        <a href='#send-details' data-testid='send-link-test'>
+                            <Button
+                                buttonStyle="primary-button"
+                                buttonSize="large"
+                            >
+                            Send your details
+                            </Button>
+                        </a>
                     </div>
                 </div>
             </div>
             <div className='heading-careers'>
-                <h1 className='heading'>SEND YOUR DETAILS</h1>
+                <h1 className='heading' id='send-details' data-testid='send-details'>SEND YOUR DETAILS</h1>
                 <hr className='hr-about-us' />
             </div>
-            <div className='careers-form'>
-                <iframe src="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd5JQ_npNHs9jCVW4oVfrLS4qybFBK8vU6Op6Y70fm8qp7uGw/formResponse?embedded=true" />
+            <div className='careers-form' data-testid='careers-form-test'>
+                <iframe src=
+                    "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd5JQ_npNHs9jCVW4oVfrLS4qybFBK8vU6Op6Y70fm8qp7uGw/formResponse?embedded=true"
+                />
             </div>
         </>
     );
 };
 
-export default Admissions;
+export default Careers;

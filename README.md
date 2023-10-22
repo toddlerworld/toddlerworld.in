@@ -36,7 +36,6 @@ contributing:
 
 Below are some of the things that still need to be built:
 - `/programs-1`
-- `/careers`
 - `/contact-us`
 
 Thanks for your help in making this project better!

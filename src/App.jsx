@@ -15,6 +15,9 @@ import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedur
 import Admissions from './components/Admissions/Admissions';
 import Activities from './components/Activities/Activities';
 import Careers from './components/Careers/Careers';
+import Programmes from './components/Programmes/Programmes';
+import PlayGroup from './components/PlayGroup/PlayGroup';
+import PreNursery from './components/PreNursery/PreNursery';
 
 function App() {
     return (
@@ -34,6 +37,8 @@ function App() {
                     <Route path="/admissions" element={<Admissions />} />
                     <Route path="/activities" element={<Activities />} />
                     <Route path="/careers" element={<Careers />} />
+                    <Route path="/play-group" element={<PlayGroup />} />
+                    <Route path="/pre-nursery" element={<PreNursery />} />
                 </Routes>
                 <Footer />
             </Router>

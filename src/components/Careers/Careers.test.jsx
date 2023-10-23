@@ -1,8 +1,6 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import userEvent from '@testing-library/user-event';
 import Careers from './Careers';
-import Admissions from '../Admissions/Admissions';
 
 describe('Careers Component', () => {
     test('renders Careers component', () => {
@@ -76,7 +74,5 @@ describe('Careers Component', () => {
         // Check if the iframe is present within the form section
         const iframe = formContainer.querySelector('iframe');
         expect(iframe).toBeInTheDocument();
-    })
-
-
+    });
 });

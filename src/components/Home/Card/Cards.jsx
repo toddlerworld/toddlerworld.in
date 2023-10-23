@@ -25,7 +25,7 @@ function Cards() {
                             src="/gifs/placeholder3.gif"
                             text="Our age appropriate programmes that grow with your child"
                             label="Our Programmes"
-                            path="/login"
+                            path="/programmes"
                         />
                     </ul>
                 </div>

@@ -6,7 +6,7 @@ const PlayEquipment = () => {
     return (
         <div className='play-equipment-container' data-testid='play-equipment-container'>
             <h1>Our Facilities include...</h1>
-            <hr className="hr-contact"/>
+            <hr className="hr-about-us"/>
             <div className="card">
                 <div className="wrapper">
                     <ul className="items">

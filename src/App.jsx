@@ -15,7 +15,6 @@ import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedur
 import Admissions from './components/Admissions/Admissions';
 import Activities from './components/Activities/Activities';
 import Careers from './components/Careers/Careers';
-import Programmes from './components/Programmes/Programmes';
 import PlayGroup from './components/PlayGroup/PlayGroup';
 import PreNursery from './components/PreNursery/PreNursery';
 

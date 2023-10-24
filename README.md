@@ -37,9 +37,6 @@ contributing:
 Below are some of the things that still need to be built:
 - `/programs-1`
 - `/contact-us`
-- `/nursery`
-- `/kindergarten-1`
-- `/kindergarten-2`
 
 Thanks for your help in making this project better!
 

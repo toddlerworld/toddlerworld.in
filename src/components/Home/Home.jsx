@@ -11,13 +11,13 @@ import Contact from './Contact/Contact';
 const Home = () => {
     return (
         <>
-            <MainSection/>
-            <Welcome/>
-            <HomeLandingImage/>
-            <Cards/>
-            <Youtube/>
-            <Gallery/>
-            <Contact/>
+            <MainSection data-testid='main-section-home-test'/>
+            <Welcome data-testid='welcome-home-test'/>
+            <HomeLandingImage data-testid='home-landing-image-home-test'/>
+            <Cards data-testid='cards-home-test'/>
+            <Youtube data-testid='youtube-home-test'/>
+            <Gallery data-testid='gallery-home-test'/>
+            <Contact data-testid='contact-home-test'/>
         </>
     );
 };

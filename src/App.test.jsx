@@ -2,7 +2,6 @@ import {render, screen} from '@testing-library/react'
 import React from 'react'
 import '@testing-library/jest-dom'
 import App from './App'
-import renderer from 'react-test-renderer';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import About from './components/About/About';
 import Home from './components/Home/Home';

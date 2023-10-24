@@ -4,7 +4,6 @@ import PlayEquipment from './PlayEquipment';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import CardItem from '../CardItem/CardItem';
 
-// Mock the CardItem component to capture props
 jest.mock('../CardItem/CardItem', () => jest.fn());
 describe('PlayEquipment Component', () => {
     beforeEach(() => {

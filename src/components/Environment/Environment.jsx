@@ -17,7 +17,7 @@ const environment = () => {
                     <strong>Peace of mind:</strong><br/>
                     We understand that the safety and well-being of your child is your top priority.
                     That’s why we go above and beyond to ensure your child feels safe, comfortable, and cared for—in
-                    all dimensions of our program.<br/><br/><br/>
+                    all dimensions of our programme.<br/><br/><br/>
 
 
 

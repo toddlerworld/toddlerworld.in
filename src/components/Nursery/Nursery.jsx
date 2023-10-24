@@ -17,9 +17,9 @@ const Nursery = () => {
                             <i>Nursery at Toddler World.</i>
                         </strong><br /><br />
 
-                        This program is for children between 3 years to 4 years old. Once children graduate from
+                        This programme is for children between 3 years to 4 years old. Once children graduate from
                         Pre-Nursery, we move on to a more advanced curriculum that escalates the possibilities of
-                        learning in your child. The program focuses on better reading skills, a richer vocabulary and
+                        learning in your child. The programme focuses on better reading skills, a richer vocabulary and
                         stronger skills in basic math. This ensures that your child is ready to venture into a new world
                         of learning that is rich with possibilities.
                     </p>

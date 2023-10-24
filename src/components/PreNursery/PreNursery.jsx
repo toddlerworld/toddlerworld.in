@@ -19,13 +19,13 @@ const PreNursery = () => {
 
                         Welcome to the pre-nursery years—the most critical and pivotal for determining your child&apos;s
                         lifelong learning ability. Your talkative child is at the prime age for developing pre-reading
-                        skills and forming social relations with his/her peers. Our pre-nursery program is designed to
+                        skills and forming social relations with his/her peers. Our pre-nursery programme is designed to
                         help your child build a strong foundation for school success. He/She will enter kindergarten
                         ready to learn and prepared to succeed. We teach your child the cognitive and social-emotional
                         skills that will help him/her become a lifelong learner: problem-solving, self-regulation,
                         independence, interactive learning, and collaborative play. <br /><br />
 
-                        <strong>How our pre-nursery program approach helps your preschooler progress:</strong><br/><br/>
+                        <strong>How our pre-nursery programme approach helps your preschooler progress:</strong><br/><br/>
 
                         <strong>Citizen</strong><br/>
                         Your child’s ability to share and communicate with others is just as important as learning

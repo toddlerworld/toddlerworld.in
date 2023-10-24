@@ -16,7 +16,7 @@ describe('Kindergarten2 Component Tests', () => {
 
     test('renders the left-aligned Kindergarten2 content', () => {
         const { getByText } = render(<Kindergarten2 />);
-        const leftContent = getByText(/The final program at pre-school level/i);
+        const leftContent = getByText(/The final programme at pre-school level/i);
         expect(leftContent).toBeInTheDocument();
     });
 

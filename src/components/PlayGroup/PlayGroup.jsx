@@ -13,7 +13,7 @@ const PlayGroup = () => {
             <div className='playgroup-container'>
                 <div className='left-aligned-playgroup'>
                     <p>
-                        <strong>A high-energy play group program that lets them explore the world: Play Group at
+                        <strong>A high-energy play group programme that lets them explore the world: Play Group at
                             Toddler World.</strong><br /><br />
 
                         Your toddler is busy exploring his new-found language and adding to his vocabulary every day. This
@@ -31,10 +31,10 @@ const PlayGroup = () => {
                         filled with exploration and introduction to new experiences. Regardless of developmental stage,
                         each day is filled with laughter, reading, building self-sufficiency, and hands-on learning.<br /><br />
 
-                        <strong>How our program approach helps your toddler grow:</strong><br/><br/>
+                        <strong>How our programme approach helps your toddler grow:</strong><br/><br/>
 
                         <strong>Citizen</strong><br/>
-                        Our toddler program teaches the value and meaning of community. Your child and his classmates will
+                        Our toddler programme teaches the value and meaning of community. Your child and his classmates will
                         join in collaborative activities, such as creating a collage for the whole classroom to see. Through
                         dramatic play with a teacher, your child will also have fun taking on different roles so that he
                         will understand the perspectives of other people.<br/><br/>

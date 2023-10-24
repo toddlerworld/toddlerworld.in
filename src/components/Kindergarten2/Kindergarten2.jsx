@@ -17,9 +17,9 @@ const Kindergarten2 = () => {
                             <i>Kindergarten 2 at Toddler World.</i>
                         </strong><br /><br />
 
-                        The final program at pre-school level, Kindergarten 2 is meant for children between 5 years to
+                        The final programme at pre-school level, Kindergarten 2 is meant for children between 5 years to
                         6 years old. In Kindergarten 2 we provide your child with ample academic challenges that will
-                        result in a smoother transition to school. The program is structured to have a fine balance
+                        result in a smoother transition to school. The programme is structured to have a fine balance
                         between fun and development. The focus is on activities that lead to development in thinking
                         and reading skills.
                     </p>

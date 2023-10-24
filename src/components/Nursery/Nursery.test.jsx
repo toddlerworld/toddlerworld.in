@@ -16,7 +16,7 @@ describe('Nursery Component Tests', () => {
 
     test('renders the left-aligned Nursery content', () => {
         const { getByText } = render(<Nursery />);
-        const leftContent = getByText(/This program is for children between/i);
+        const leftContent = getByText(/This programme is for children between/i);
         expect(leftContent).toBeInTheDocument();
     });
 

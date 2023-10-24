@@ -17,6 +17,9 @@ import Activities from './components/Activities/Activities';
 import Careers from './components/Careers/Careers';
 import PlayGroup from './components/PlayGroup/PlayGroup';
 import PreNursery from './components/PreNursery/PreNursery';
+import Nursery from './components/Nursery/Nursery';
+import Kindergarten1 from './components/Kindergarten1/Kindergarten1';
+import Kindergarten2 from './components/Kindergarten2/Kindergarten2';
 
 function App() {
     return (
@@ -38,6 +41,9 @@ function App() {
                     <Route path="/careers" element={<Careers />} />
                     <Route path="/play-group" element={<PlayGroup />} />
                     <Route path="/pre-nursery" element={<PreNursery />} />
+                    <Route path="/nursery" element={<Nursery />} />
+                    <Route path="/kindergarten-1" element={<Kindergarten1 />} />
+                    <Route path="/kindergarten-2" element={<Kindergarten2 />} />
                 </Routes>
                 <Footer />
             </Router>

@@ -1,0 +1,108 @@
+.heading-contactus {
+    padding: 4rem;
+    max-width: 70%;
+    margin: auto;
+}
+
+.contactus-container {
+    padding: 4rem;
+    max-width: 70%;
+    display: flex;
+    margin: auto;
+}
+
+.left-aligned-contactus {
+    text-align: left;
+    width: 40%;
+    display: flex;
+    flex-basis: 60%;
+    flex-direction: column;
+    padding-right: 20%;
+    margin-top: -100px;
+}
+
+.right-aligned-contactus {
+    text-align: left;
+    display: flex;
+    flex-basis: 30%;
+    flex-direction: column;
+    //width: 30%;
+    margin-top: -100px;
+    h1 {
+        text-align: center;
+    }
+}
+
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+}
+
+.form-contactus{
+    padding-top: 15px;
+    input, textarea {
+        width: 100%;
+        padding: 20px;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        resize: none;
+    }
+}
+
+.form-contactus input:focus::placeholder,
+.form-contactus textarea:focus::placeholder{
+    font-size: 12px;
+    transform: translateY(-20px);
+    transition: font-size 0.3s, transform 0.3s;
+}
+
+.form-contactus button {
+    background-color: rgb(255, 215, 3);
+    color: #000000;
+    padding: 10px 15px;
+    border: 1px solid var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.form-contactus button:hover {
+    transition: all 0.3s ease-out;
+    background: #fff;
+    color: #242424;
+}
+
+@media screen and (max-width: 786px) {
+    .heading-contactus {
+        text-align: center;
+    }
+    .contactus-container {
+        padding: 1rem;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        display: block;
+    }
+
+    .left-aligned-contactus, .right-aligned-contactus {
+        width: 100%;
+        display: block;
+        justify-content: center;
+        padding: 0 0 8%;
+    }
+
+    .right-aligned-contactus {
+        margin-top: 25px;
+    }
+    .contactus-form {
+        width: 80%;
+        height: 700px;
+        iframe {
+            width: 90%;
+        }
+    }
+}

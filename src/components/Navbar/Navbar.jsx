@@ -50,7 +50,7 @@ function Navbar() {
                                 <a href="/admissions">Admissions</a>
                                 <a href="/parent-partnership">Parent Partnership</a>
                                 <a href="/careers">Careers</a>
-                                <a href="#">Contact Us</a>
+                                <a href="/contact-us">Contact Us</a>
                             </div>
                         </li>
                     </ul>

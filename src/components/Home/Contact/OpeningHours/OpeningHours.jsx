@@ -24,8 +24,15 @@ const OpeningHours = () => {
     return (
         <>
             {!isDropdownOpen && (
-                <p onClick={toggleDropdown} style={{cursor: 'pointer'}}>
-                    <span style={{fontWeight: 'bold'}}>{today}:</span> {openingHours[today]}{' '}
+                <p
+                    onClick={toggleDropdown}
+                    style={{cursor: 'pointer'}}
+                >
+                    <span
+                        style={{fontWeight: 'bold'}}>
+                        {today === 'Sunday' ? 'Closed Today' : 'Open Today '}
+                    </span>
+                    {openingHours[today]}{' '}
                     <span>&#9660;</span>
                 </p>)
             }
@@ -36,11 +43,14 @@ const OpeningHours = () => {
                         <p
                             key={day}
                             onClick={toggleDropdown}
-                            style={{cursor: 'pointer'}}>
-
-                            <span style={{fontWeight: 'bold'}}>{day}:</span> {openingHours[day]}
+                            style={{cursor: 'pointer'}}
+                        >
+                            <span
+                                style={{fontWeight: 'bold'}}
+                            >{day}:
+                            </span>
+                            {openingHours[day]}
                             {day === 'Saturday' ? <span>&#9650;</span> : ''}
-
                         </p>
                     ))}
                 </div>

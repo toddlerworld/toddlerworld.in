@@ -5,7 +5,6 @@ import OpeningHours from './OpeningHours';
 describe('Testing the Opening Hours Component', () => {
     test('renders the current day opening hours initially', () => {
         const { getByText } = render(<OpeningHours />);
-        const currentDay = new Date().toLocaleDateString('en-US', { weekday: 'long' });
         const openingHoursText = getByText((_, element) => {
             return element.tagName.toLowerCase() === 'p';
         });

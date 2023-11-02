@@ -37,11 +37,14 @@ const ContactUs = () => {
                             rows="10"
                             required
                         ></textarea>
-
-                        <button>
+                        <br />
+                        <button className='contactus-send-button'>
                             Send
                         </button>
                     </form>
+                    <p className='contactus-captcha'>
+                        This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" className="phone">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="phone">Terms of Service</a> apply.
+                    </p>
                 </div>
                 <div className='right-aligned-contactus'>
                     <h3>Better yet, see us in person!</h3><br /><br />
@@ -61,6 +64,11 @@ const ContactUs = () => {
                     <h3>Hours</h3><br /><br />
                     <OpeningHours/>
                 </div>
+            </div>
+            <div className="contactus-maps-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.730162425703!2d74.7713164!3d34.025136700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e191dba7d84fa3%3A0x16d8642869049f5a!2sToddler%20World!5e0!3m2!1sen!2suk!4v1695935838910!5m2!1sen!2suk"
+                ></iframe>
             </div>
         </>
     );

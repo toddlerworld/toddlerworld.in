@@ -40,7 +40,29 @@ describe('ContactUs', () => {
 
         const links= screen.getAllByRole("link");
 
-        expect(links[0].textContent).toEqual("Message us on Whatsapp");
-        expect(links[0].href).toContain("https://wa.me/917889744619");
+        expect(links[2].textContent).toEqual("Message us on Whatsapp");
+        expect(links[2].href).toContain("https://wa.me/917889744619");
+    });
+
+    test('renders links as expected', () => {
+        render(
+            <Router>
+                <ContactUs />
+            </Router>
+        );
+
+        const links= screen.getAllByRole("link");
+
+        expect(links[0].textContent).toEqual("Privacy Policy");
+        expect(links[0].href).toContain("https://policies.google.com/privacy");
+
+        expect(links[1].textContent).toEqual("Terms of Service");
+        expect(links[1].href).toContain("https://policies.google.com/terms");
+
+        expect(links[3].textContent).toEqual("+91.7051.427879");
+        expect(links[3].href).toContain("tel:+917051427879");
+
+        expect(links[4].textContent).toEqual("+91.7889.744619");
+        expect(links[4].href).toContain("tel:+917889744619");
     });
 });

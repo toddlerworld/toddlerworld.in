@@ -4,7 +4,6 @@ import Cards from './Cards';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import CardItem from '../../CardItem/CardItem';
 
-// Mock the CardItem component to capture props
 jest.mock('../../CardItem/CardItem', () => jest.fn());
 describe('PlayEquipment Component', () => {
     beforeEach(() => {
@@ -29,11 +28,12 @@ describe('PlayEquipment Component', () => {
         // Loop through each call to CardItem and check the props
         CardItem.mock.calls.forEach((call, index) => {
             const [props] = call;
-            const {src, text, label} = props;
+            const {src, text, label, alt} = props;
 
             expect(src).toBeDefined();
             expect(text).toBeDefined();
             expect(label).toBeDefined();
+            expect(alt).toBeDefined();
         });
     });
 

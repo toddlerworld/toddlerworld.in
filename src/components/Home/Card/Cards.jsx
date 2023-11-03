@@ -14,18 +14,21 @@ function Cards() {
                             text={'Our well-designed environment supports child\'s growth and development'}
                             label="Our Environment"
                             path="/our-environment"
+                            alt="Our Environment"
                         />
                         <CardItem
                             src="/gifs/placeholder2.gif"
                             text="World class infrastructure for holistic development of the child"
                             label="Our Facilities"
                             path="/play-equipment"
+                            alt="Our Facilities"
                         />
                         <CardItem
                             src="/gifs/placeholder3.gif"
                             text="Our age appropriate programmes that grow with your child"
                             label="Our Programmes"
                             path="/programmes"
+                            alt="Our Programmes"
                         />
                     </ul>
                 </div>

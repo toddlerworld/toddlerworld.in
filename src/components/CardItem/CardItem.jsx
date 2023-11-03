@@ -7,7 +7,7 @@ function CardItem(props) {
             <li className='item'>
                 <Link className='link' to={props.path}>
                     <figure className='image' data-category={props.label}>
-                        <img className='img-item' alt='Job Image' src={props.src} />
+                        <img className='img-item' alt={props.alt} src={props.src} />
                     </figure>
                     <div className='aboutCard'>
                         <h5 className='caption'>{props.text}</h5>

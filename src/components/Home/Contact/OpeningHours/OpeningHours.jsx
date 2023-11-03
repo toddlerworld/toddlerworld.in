@@ -30,7 +30,7 @@ const OpeningHours = () => {
                 >
                     <span
                         style={{fontWeight: 'bold'}}>
-                        {today === 'Sunday' ? 'Closed Today' : 'Open Today '}
+                        {today === 'Sunday' ? 'Closed Today ' : 'Open Today '}
                     </span>
                     {openingHours[today]}{' '}
                     <span>&#9660;</span>
@@ -47,8 +47,7 @@ const OpeningHours = () => {
                         >
                             <span
                                 style={{fontWeight: 'bold'}}
-                            >{day}:
-                            </span>
+                            >{day}: </span>
                             {openingHours[day]}
                             {day === 'Saturday' ? <span>&#9650;</span> : ''}
                         </p>

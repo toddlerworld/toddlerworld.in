@@ -1,10 +1,9 @@
 .card-container {
     padding: 4rem;
     background: #fff;
-}
-
-.card-container h1 {
-    text-align: center;
+    h1 {
+        text-align: center;
+    }
 }
 
 .card {
@@ -23,13 +22,6 @@
 
 .items {
     margin-bottom: 24px;
-}
-
-.item {
-    display: flex;
-    flex: 1;
-    margin: 0 1rem;
-    border-radius: 10px;
 }
 
 .link {

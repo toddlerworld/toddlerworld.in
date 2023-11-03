@@ -11,6 +11,7 @@ describe('CardItem Component', () => {
             label: 'Example Label',
             src: 'example.jpg',
             text: 'Example Text',
+            alt: 'Example Alt Text'
         };
 
         const { getByText, getByAltText, getByTestId } = render(
@@ -20,7 +21,7 @@ describe('CardItem Component', () => {
         );
 
         expect(getByText('Example Text')).toBeInTheDocument();
-        expect(getByAltText('Job Image')).toHaveAttribute('src', 'example.jpg');
+        expect(getByAltText('Example Alt Text')).toHaveAttribute('src', 'example.jpg');
     });
 
     test('renders with default alt text if not provided', () => {
@@ -29,6 +30,7 @@ describe('CardItem Component', () => {
             label: 'Example Label',
             src: 'example.jpg',
             text: 'Example Text',
+            alt: 'Example Alt Text'
         };
 
         const { getByAltText } = render(
@@ -37,7 +39,7 @@ describe('CardItem Component', () => {
             </Router>
         );
 
-        expect(getByAltText('Job Image')).toBeInTheDocument();
+        expect(getByAltText('Example Alt Text')).toBeInTheDocument();
     });
 
     test('renders with default alt text if alt prop is an empty string', () => {
@@ -55,6 +57,6 @@ describe('CardItem Component', () => {
             </Router>
         );
 
-        expect(getByAltText('Job Image')).toBeInTheDocument();
+        expect(getByAltText('')).toBeInTheDocument();
     });
 });

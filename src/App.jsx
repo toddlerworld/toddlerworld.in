@@ -21,8 +21,8 @@ import Nursery from './components/Nursery/Nursery';
 import Kindergarten1 from './components/Kindergarten1/Kindergarten1';
 import Kindergarten2 from './components/Kindergarten2/Kindergarten2';
 import ContactUs from './components/Contact-us/Contact-us';
-// import Programmes from './components/Programmes/Programmes';
 import NotFound from './components/NotFound/NotFound';
+import Programmes from './components/Programmes/Programmes';
 
 function App() {
     return (
@@ -48,7 +48,7 @@ function App() {
                     <Route path="/kindergarten-1" element={<Kindergarten1 />} />
                     <Route path="/kindergarten-2" element={<Kindergarten2 />} />
                     <Route path="/contact-us" element={<ContactUs />} />
-                    {/*<Route path="/programmes" element={<Programmes />} />*/}
+                    <Route path="/programmes" element={<Programmes />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />

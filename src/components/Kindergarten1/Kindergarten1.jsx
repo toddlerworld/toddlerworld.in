@@ -19,9 +19,9 @@ const Kindergarten1 = () => {
 
                         This programme is meant for children between 4 years to 5 years old. In Kindergarten 1 we focus
                         on skills that will guide your child towards future academic success. The learning tenets of the
-                        programme include social finesse and mastering gross motor skills. Each school day we provide your
-                        child with opportunities for independent discovery, cooperative learning and generous outdoor
-                        playtime.
+                        programme include social finesse and mastering gross motor skills. Each school day we provide
+                        your child with opportunities for independent discovery, cooperative learning and generous
+                        outdoor playtime.
                     </p>
                 </div>
                 <div className='right-aligned-kindergarten1'>

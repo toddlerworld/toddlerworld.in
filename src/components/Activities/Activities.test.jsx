@@ -1,48 +1,52 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import {render, screen} from '@testing-library/react';
 import Activities from './Activities';
+import {MemoryRouter, Route, Router, Routes} from 'react-router-dom';
 
 describe('Tests for the Activities Component', () => {
+    beforeEach(() => {
+        render(
+            <MemoryRouter initialEntries={['/activities']}>
+                <Routes>
+                    <Route path="/activities" element={<Activities />} />
+                </Routes>
+            </MemoryRouter>
+        );
+    });
     test('renders without crashing', () => {
-        const { container } = render(<Activities />);
+        const container = screen.getByTestId('activities-container');
         expect(container).toBeInTheDocument();
     });
 
     test('renders the activities image', () => {
-        const { getByAltText } = render(<Activities />);
-        const image = getByAltText('Baby Bead Maze Toy For Brain Development');
+        const image = screen.getByAltText('Baby Bead Maze Toy For Brain Development');
         expect(image).toBeInTheDocument();
     });
 
     test('renders the heading', () => {
-        const { getByText } = render(<Activities />);
-        const heading = getByText('Our Activities');
+        const heading = screen.getByText('Our Activities');
         expect(heading).toBeInTheDocument();
     });
 
     test('renders the left-aligned admissions content', () => {
-        const { getByText } = render(<Activities />);
-        const leftContent = getByText(/Montessori Activities/i);
+        const leftContent = screen.getByText(/Montessori Activities/i);
         expect(leftContent).toBeInTheDocument();
     });
 
     test('renders the right-aligned admissions content', () => {
-        const { getByText } = render(<Activities />);
-        const rightContent = getByText(/A range of play equipment is available to help children/i);
+        const rightContent = screen.getByText(/A range of play equipment is available to help children/i);
         expect(rightContent).toBeInTheDocument();
     });
 
     test('renders the Play Equipment section', () => {
-        const { getByText } = render(<Activities />);
-        const playEquipmentHeading = getByText('Play Equipment');
-        const playEquipmentText = getByText(/A range of play equipment is available to help/i);
+        const playEquipmentHeading = screen.getByText('Play Equipment');
+        const playEquipmentText = screen.getByText(/A range of play equipment is available to help/i);
         expect(playEquipmentHeading).toBeInTheDocument();
         expect(playEquipmentText).toBeInTheDocument();
     });
 
     test('renders the Find out more button', () => {
-        const { getByText } = render(<Activities />);
-        const findOutMoreButton = getByText('Find out more');
+        const findOutMoreButton = screen.getByText('Find out more');
         expect(findOutMoreButton).toBeInTheDocument();
     });
 });

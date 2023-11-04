@@ -8,7 +8,6 @@ const NotFound = () => {
         <>
             <div className="error-page-container" data-testid="error-page">
                 <h1>Lost your Way?</h1>
-
                 <p>Sorry we can&apos;t find that page! <br/>
                     But we&apos;re sure you&apos;ll find your way back home by clicking the button below.</p>
                 <Link to="/">

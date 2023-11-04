@@ -18,13 +18,9 @@ const Welcome = () => {
                     curriculum with the child as a whole in mind. Our staff will work together to create enriching
                     classroom experiences to ensure that your child maintains a healthy life balance.<br/><br/><br/>
 
-
-
                     With a low child to staff ratio, we&apos;re able to structure our learning  in a personal and meaningful
                     way. We offer the best infrastructure, methodology, curriculum, trained team and top of the line
                     learning equipment.<br/><br/><br/>
-
-
 
                     At Toddler World, we not only enroll your child, we enroll you too. You can enlighten yourself at
                     our parent counseling workshops – helping you to understand your child better.

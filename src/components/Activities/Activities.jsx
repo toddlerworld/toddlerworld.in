@@ -1,10 +1,11 @@
 import React from 'react';
 import {Button} from '../Button/Button';
 import './Activities.scss';
+import {Link} from 'react-router-dom';
 
 const Activities = () => {
     return(
-        <div className='activities-container'>
+        <div className='activities-container' data-testid='activities-container'>
             <img src='/images/activities/1.webp' alt='Baby Bead Maze Toy For Brain Development' className='activities-image'/>
             <h1 className='heading'>Our Activities</h1>
             <hr className='hr-about-us' />
@@ -32,13 +33,14 @@ const Activities = () => {
                     is taken to choose materials that will create an inspiring sensory experience.
                 </p>
                 <div className='register-interest-activities'>
-                    <Button
-                        buttonStyle="primary-button"
-                        buttonSize="large"
-                        onClick='/play-equipment'
-                    >
-                        Find out more
-                    </Button>
+                    <Link to='/play-equipment'>
+                        <Button
+                            buttonStyle="primary-button"
+                            buttonSize="large"
+                        >
+                            Find out more
+                        </Button>
+                    </Link>
                 </div>
             </div>
         </div>

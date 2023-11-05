@@ -51,12 +51,14 @@
 
 @media screen and (max-width: 786px) {
     .heading-kindergarten1 {
+        padding: 1rem;
         text-align: center;
+        max-width: 100%;
     }
     .kindergarten1-container {
-        padding: 1rem;
+        padding: 4rem 1rem 1rem 1rem;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         justify-content: center;
         text-align: center;
         display: block;
@@ -71,5 +73,9 @@
 
     .right-aligned-kindergarten1 {
         margin-top: 25px;
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
     }
 }

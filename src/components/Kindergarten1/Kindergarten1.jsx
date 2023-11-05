@@ -17,7 +17,7 @@ const Kindergarten1 = () => {
                 <div className='left-aligned-kindergarten1'>
                     <p>
                         <strong>Skills that will guide your child towards future academic success:
-                            <i>Kindergarten 1 at Toddler World.</i>
+                            <i> Kindergarten 1 at Toddler World.</i>
                         </strong><br /><br />
 
                         This programme is meant for children between 4 years to 5 years old. In Kindergarten 1 we focus

@@ -27,7 +27,7 @@ const environment = () => {
                     a lifelong love of learning.<br/><br/><br/>
 
                     <strong>Caring Growth Environment:</strong><br/>
-                    Our dedicated staff is trained to create an environment which caters to :
+                    Our dedicated staff is trained to create an environment which caters to:
                     <ul>
                         <li>Different stages of development of the child</li>
                         <li>Individual differences amongst children</li>

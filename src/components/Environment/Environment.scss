@@ -66,3 +66,17 @@
         max-width: 90%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .our-environment-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .image-our-environment {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    .p-our-environment ul {
+        padding-left: 3%;
+    }
+}

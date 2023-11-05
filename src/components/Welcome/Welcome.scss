@@ -32,6 +32,8 @@
 
 @media screen and (max-width: 1024px) {
     .welcome-container {
+        padding: 1rem;
+        max-width: 100%;
         align-items: center;
         justify-content: center;
     }

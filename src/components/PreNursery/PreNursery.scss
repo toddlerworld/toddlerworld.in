@@ -52,11 +52,13 @@
 @media screen and (max-width: 786px) {
     .heading-prenursery {
         text-align: center;
+        padding: 1rem;
+        max-width: 100%;
     }
     .prenursery-container {
-        padding: 1rem;
+        padding: 4rem 1rem 1rem 1rem;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         justify-content: center;
         text-align: center;
         display: block;
@@ -71,5 +73,9 @@
 
     .right-aligned-prenursery {
         margin-top: 25px;
+        p {
+            margin-top: 8px;
+            text-align: center;
+        }
     }
 }

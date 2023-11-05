@@ -17,7 +17,7 @@ const Kindergarten2 = () => {
                 <div className='left-aligned-kindergarten2'>
                     <p>
                         <strong>Academic challenges that will result in a smoother transition to school:
-                            <i>Kindergarten 2 at Toddler World.</i>
+                            <i> Kindergarten 2 at Toddler World.</i>
                         </strong><br /><br />
 
                         The final programme at pre-school level, Kindergarten 2 is meant for children between 5 years to

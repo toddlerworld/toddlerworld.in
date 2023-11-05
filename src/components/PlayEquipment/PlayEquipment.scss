@@ -14,6 +14,11 @@
     margin: 0 auto;
 }
 
+.hr-play-equipment {
+    border: 1px solid #e6e6e6;
+    margin: 2rem 0;
+}
+
 .wrapper {
     position: relative;
     margin: 50px 0 45px;
@@ -112,5 +117,20 @@
 @media only screen and (max-width: 1024px) {
     .item {
         margin-bottom: 2rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .play-equipment-container {
+        padding: 2rem 0 0 0;
+        max-width: 100%;
+        h1 {
+            padding-left: 2rem;
+        }
+    }
+
+    .hr-play-equipment {
+        padding-left: 2rem;
+        max-width: 100%;
     }
 }

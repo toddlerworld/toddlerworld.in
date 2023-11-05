@@ -7,7 +7,6 @@ import HomeLandingImage from './Home-landing-image/Home-landing-image';
 import Youtube from './Youtube/Youtube';
 import Gallery from './Gallery/Gallery';
 import Contact from './Contact/Contact';
-import Reviews from './Reviews/Reviews';
 
 const Home = () => {
     useEffect(() => {
@@ -19,7 +18,6 @@ const Home = () => {
             <Welcome/>
             <HomeLandingImage/>
             <Cards/>
-            <Reviews/>
             <Youtube/>
             <Gallery/>
             <Contact/>

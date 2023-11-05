@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './PlayEquipment.scss';
 import CardItem from '../CardItem/CardItem';
 
 const PlayEquipment = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='play-equipment-container' data-testid='play-equipment-container'>
             <h1>Our Facilities include...</h1>

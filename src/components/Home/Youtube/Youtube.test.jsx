@@ -11,7 +11,7 @@ describe('Youtube component', () => {
 
     test('renders heading "YOU\'LL LOVE WHY WE\'RE DIFFERENT. TAKE A LOOK"', () => {
         render(<Youtube />);
-        const headingElement = screen.getByText(/YOU'LL LOVE WHY WE'RE DIFFERENT. TAKE A LOOK/i);
+        const headingElement = screen.getByText(/YOU'LL LOVE WHY WE ARE DIFFERENT. TAKE A LOOK/i);
         expect(headingElement).toBeInTheDocument();
     });
 

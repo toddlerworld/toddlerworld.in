@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './Kindergarten1.scss';
 
 const Kindergarten1 = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <div className='heading-kindergarten1'>

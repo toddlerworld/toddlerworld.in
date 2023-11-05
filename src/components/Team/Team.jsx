@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Team.scss';
 const Team = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div className='our-team-container'>
             <h1 className='heading'>Our Team</h1>

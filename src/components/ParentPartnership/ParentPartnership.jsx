@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './ParentPartnership.scss';
 const ParentPartnership = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div className='parent-partnership-container'>
             <h1 className='heading'>Parent Partnership</h1>

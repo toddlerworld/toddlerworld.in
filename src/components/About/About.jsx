@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './About.scss';
 import {Button} from '../Button/Button';
 import {Link} from 'react-router-dom';
 
 function About () {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='about-container' data-testid='about-container'>
             <h1 className='heading'>About us</h1>

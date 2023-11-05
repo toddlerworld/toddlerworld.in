@@ -1,6 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Welcome.scss';
 const Welcome = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='welcome-container'>
             <h1 className='heading'>Thank you for your interest in Toddler World.</h1>
@@ -24,8 +27,8 @@ const Welcome = () => {
 
                     At Toddler World, we not only enroll your child, we enroll you too. You can enlighten yourself at
                     our parent counseling workshops – helping you to understand your child better.
-                    <br/>
-                    We welcome you to Toddler World for a joyful journey towards love & light.
+                    <br/><br />
+                    <strong>We welcome you to Toddler World for a joyful journey towards love & light.</strong>
                 </p>
                 <img src='/images/Welcome/welcome.webp'
                     alt='Two kids playing with toys'

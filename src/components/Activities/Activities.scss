@@ -38,18 +38,16 @@
 
 @media screen and (max-width: 786px) {
     .activities-container {
-        max-width: 80%;
+        padding: 1.2rem ;
+        max-width: 100%;
         align-items: center;
-        width: 100%;
         justify-content: center;
         text-align: center;
     }
     .left-aligned-activities, .right-aligned-activities {
-        padding-right: 6%;
-        padding-left: 6%;
+        padding: 0 0 8% 0;
         width: 100%;
         display: block;
         justify-content: center;
-        padding: 0 0 8%;
     }
 }

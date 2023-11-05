@@ -39,14 +39,20 @@
     .our-team-container {
         align-items: center;
         justify-content: center;
+        p {
+            padding-bottom: 5%;
+        }
     }
     .p-about-us {
         display: flex;
         flex-direction: column;
     }
+}
 
-    .our-team-container p{
-        text-align: center;
-        padding-bottom: 5%;
+@media screen and (max-width: 768px){
+    .our-team-container {
+        padding: 1rem;
+        max-width: 100%;
     }
+
 }

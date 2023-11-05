@@ -4,6 +4,11 @@
     max-width: 80%;
 }
 
+.hr-environment{
+    border: 1px solid #e6e6e6;
+    margin: 2rem 0;
+}
+
 .p-our-environment {
     display: flex;
 }
@@ -32,12 +37,17 @@
 
 @media screen and (max-width: 1024px) {
     .our-environment-container {
+        padding-top: 1rem;
+        max-width: 100%;
         align-items: center;
         justify-content: center;
     }
     .p-our-environment {
         display: flex;
         flex-direction: column;
+        img {
+            width: 90%;
+        }
     }
 
     .our-environment-container p{
@@ -49,7 +59,10 @@
         align-items: flex-start;
         color: white;
         justify-content: center;
-        width: 100%;
         float: right;
+    }
+
+    .hr-environment {
+        max-width: 90%;
     }
 }

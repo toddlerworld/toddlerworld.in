@@ -47,14 +47,23 @@
 @media screen and (max-width: 786px) {
     .heading-careers {
         text-align: center;
+        padding: 1rem;
     }
     .careers-container {
-        padding: 1rem;
+        padding: 5rem 1rem 1rem 1rem;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         justify-content: center;
         text-align: center;
         display: block;
+    }
+
+    .heading-careers, .careers-form {
+        padding: 1rem;
+        max-width: 100%;
+        iframe {
+            max-width: 100%;
+        }
     }
 
     .left-aligned-careers, .right-aligned-careers {
@@ -67,11 +76,11 @@
     .right-aligned-careers {
         margin-top: 25px;
     }
-    .careers-form {
-        width: 80%;
-        height: 700px;
-        iframe {
-            width: 90%;
-        }
-    }
+    //.careers-form {
+    //    width: 80%;
+    //    height: 700px;
+    //    iframe {
+    //        width: 90%;
+    //    }
+    //}
 }

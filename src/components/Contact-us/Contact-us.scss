@@ -135,9 +135,11 @@
 
 @media screen and (max-width: 860px) {
     .heading-contactus {
+        padding: 1rem;
         text-align: center;
     }
     .contactus-container {
+        padding: 5rem 1rem 1rem 1rem;
         align-items: center;
         justify-content: center;
         text-align: center;
@@ -154,9 +156,6 @@
 
     .right-aligned-contactus {
         margin-top: 25px;
-        //.btn {
-        //    max-width: 64%;
-        //}
     }
 
     .contactus-captcha {

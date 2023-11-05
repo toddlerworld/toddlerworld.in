@@ -35,3 +35,13 @@
         max-width: 85%;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .programmes-container {
+        padding: 1rem;
+    }
+
+    .programmes-top-container, .programmes-bottom-container {
+        max-width: 100%;
+    }
+}

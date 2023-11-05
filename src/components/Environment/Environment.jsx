@@ -8,7 +8,7 @@ const environment = () => {
     return (
         <div className='our-environment-container'>
             <h1 className='heading'>Our Environment</h1>
-            <hr className='hr-about-us' />
+            <hr className='hr-environment' />
             <div className='p-our-environment'>
                 <p>
                     Toddler World is a space where once the child walks in, he is so lured that he is unable to withdraw
@@ -21,7 +21,7 @@ const environment = () => {
                     all dimensions of our programme.<br/><br/><br/>
 
                     <strong>Home away from home:</strong><br/>
-                    We provide your child home away from home. Our personalized, nurturing vibe even carries over to our
+                    We provide your child home away from home. Our personalised, nurturing vibe even carries over to our
                     buildings and grounds. The nursery has been specifically designed to create a fun, interactive, and
                     dynamic experience. At Toddler World, you can be sure that your child will gain the first steps toward
                     a lifelong love of learning.<br/><br/><br/>

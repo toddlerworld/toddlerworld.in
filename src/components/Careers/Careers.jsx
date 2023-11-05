@@ -67,7 +67,7 @@ const Careers = () => {
                 </div>
             </div>
             <div className='heading-careers'>
-                <h1 className='heading' id='send-details' data-testid='send-details'>SEND YOUR DETAILS</h1>
+                <h2 className='heading' id='send-details' data-testid='send-details'>SEND YOUR DETAILS</h2>
                 <hr className='hr-about-us' />
             </div>
             <div className='careers-form' data-testid='careers-form-test'>

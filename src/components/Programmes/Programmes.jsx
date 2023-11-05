@@ -9,7 +9,7 @@ const Programmes = () => {
     return(
         <div className="programmes-container" data-testid="programmes-container">
             <div className="programmes-top-container">
-                <h3>Our Programmes</h3><br/>
+                <h2>Our Programmes</h2><br/>
                 <p>Our programmes are designed keeping in mind your child’s age and ability to absorb information.
                     We make sure to provide your child with every opportunity to challenge themselves while also
                     paying equal attention to keeping them fit and active. Our activities are not only confined to the

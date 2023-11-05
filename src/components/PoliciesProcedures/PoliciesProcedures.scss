@@ -53,3 +53,14 @@
         float: right;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .policies-procedures-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .p-policies-procedures ul {
+        padding-left: 5%;
+    }
+}

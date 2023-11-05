@@ -31,6 +31,11 @@
 }
 
 @media screen and (max-width: 1024px) {
+    .parent-partnership-container {
+        padding: 1rem;
+        max-width: 100%;
+    }
+    
     .our-parent-partnership {
         align-items: center;
         justify-content: center;

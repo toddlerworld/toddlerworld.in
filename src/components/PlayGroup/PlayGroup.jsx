@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './PlayGroup.scss';
 
 const PlayGroup = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <div className='heading-playgroup'>

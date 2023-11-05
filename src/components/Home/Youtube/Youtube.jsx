@@ -4,7 +4,7 @@ import './Youtube.scss';
 const Youtube = () => {
     return (
         <div className="youtube-container" data-testid="youtube-component">
-            <h1>YOU&apos;LL LOVE WHY WE&apos;RE DIFFERENT. TAKE A LOOK</h1>
+            <h1>YOU&apos;LL LOVE WHY WE ARE DIFFERENT. TAKE A LOOK</h1>
             <hr className="hr-youtube"/>
             <p>
                 Toddler World is renowned for providing rich learning opportunities in unique and exciting environment.

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './Activities.scss';
 import {Link} from 'react-router-dom';
 
 const Activities = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div className='activities-container' data-testid='activities-container'>
             <img src='/images/activities/1.webp' alt='Baby Bead Maze Toy For Brain Development' className='activities-image'/>

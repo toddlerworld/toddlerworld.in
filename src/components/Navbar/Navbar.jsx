@@ -26,7 +26,7 @@ function Navbar() {
                                 className="nav-links"
                                 onClick={closeMobileMenu}
                             >
-								Home
+                                <p>Home</p>
                             </Link>
                         </li>
                         <li className="nav-item">
@@ -35,14 +35,15 @@ function Navbar() {
                                 className="nav-links"
                                 onClick={closeMobileMenu}
                             >
-								About us
+                                <p>About us</p>
                             </Link>
                         </li>
 
                         <li className="dropdown">
                             <button className="nav-links">
-								Information
-                                <i className="fa fa-caret-down"></i>
+                                <p>Information
+                                    <i className="fa fa-caret-down"></i>
+                                </p>
                             </button>
                             <div className="dropdown-content">
                                 <a href="/programmes">Programmes</a>

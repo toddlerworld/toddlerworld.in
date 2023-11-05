@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Contact-us.scss';
 import OpeningHours from '../Home/Contact/OpeningHours/OpeningHours';
 import {Button} from '../Button/Button';
 import {Link} from 'react-router-dom';
 
 const ContactUs = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <div className='heading-contactus'>

@@ -23,6 +23,7 @@ import Kindergarten2 from './components/Kindergarten2/Kindergarten2';
 import ContactUs from './components/Contact-us/Contact-us';
 import NotFound from './components/NotFound/NotFound';
 import Programmes from './components/Programmes/Programmes';
+import SchoolTransitions from './components/SchoolTransitions/SchoolTransitions';
 
 function App() {
     return (
@@ -49,6 +50,7 @@ function App() {
                     <Route path="/kindergarten-2" element={<Kindergarten2 />} />
                     <Route path="/contact-us" element={<ContactUs />} />
                     <Route path="/programmes" element={<Programmes />} />
+                    <Route path="/school-transitions" element ={<SchoolTransitions />} />
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Admissions.scss';
 import {Button} from '../Button/Button';
+import {Link} from 'react-router-dom';
 
 const Admissions = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
-        <div className='admissions-container'>
+        <div className='admissions-container' data-testid='admissions-container'>
             <img src='/images/admissions/1.webp' alt='A child building a tower with blocks' className='admissions-image'/>
             <h1 className='heading'>Admissions</h1>
             <hr className='hr-about-us' />
@@ -32,15 +36,15 @@ const Admissions = () => {
                     enrollment journey, kindly click on the button below, where you can register your interest.
                 </p>
                 <div className='register-interest-admission' data-testid="register-test-comp">
-                    <a href='https://www.campuskidz.in/Registration/OnlineEnquiry' data-testid="link-test">
+                    <Link to="https://www.campuskidz.in/Registration/OnlineEnquiry" target="_blank" data-testid="link-test">
                         <Button
                             buttonStyle="primary-button"
                             buttonSize="large"
                             data-testid="register-test"
                         >
-                            Register your Child
+                            Submit an Enquiry
                         </Button>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </div>

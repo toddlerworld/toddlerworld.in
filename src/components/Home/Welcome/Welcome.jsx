@@ -15,7 +15,7 @@ const Welcome = () => {
                         buttonStyle='primary-button'
                         buttonSize='large'
                     >
-                        Register your child!
+                        Submit an Enquiry
                     </Button>
                 </Link>
             </div>

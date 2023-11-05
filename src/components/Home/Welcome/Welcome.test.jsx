@@ -40,7 +40,7 @@ describe('Welcome component', () => {
                 <Welcome />
             </Router>
         );
-        const linkElement = screen.getByRole('link', { name: /Register your child!/i });
+        const linkElement = screen.getByRole('link', { name: /Submit an Enquiry/i });
         expect(linkElement).toBeInTheDocument();
         expect(linkElement.href).toContain('https://www.campuskidz.in/Registration/OnlineEnquiry');
     });

@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './NotFound.scss';
 import {Button} from '../Button/Button';
 import {Link} from 'react-router-dom';
 
 const NotFound = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <>
             <div className="error-page-container" data-testid="error-page">

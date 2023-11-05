@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Programmes.scss';
 import CardItem from '../CardItem/CardItem';
 
 const Programmes = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return(
         <div className="programmes-container" data-testid="programmes-container">
             <div className="programmes-top-container">

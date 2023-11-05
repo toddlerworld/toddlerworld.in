@@ -1,7 +1,10 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import './Environment.scss';
 
 const environment = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     return (
         <div className='our-environment-container'>
             <h1 className='heading'>Our Environment</h1>

@@ -52,11 +52,14 @@
 @media screen and (max-width: 786px) {
     .heading-nursery {
         text-align: center;
-    }
-    .nursery-container {
         padding: 1rem;
+        max-width: 100%;
+    }
+
+    .nursery-container {
+        padding: 4rem 1rem 1rem 1rem;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         justify-content: center;
         text-align: center;
         display: block;
@@ -71,5 +74,9 @@
 
     .right-aligned-nursery {
         margin-top: 25px;
+        p {
+            margin-top: 15px;
+            text-align: center;
+        }
     }
 }

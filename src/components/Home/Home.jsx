@@ -14,14 +14,13 @@ const Home = () => {
     }, []);
     return (
         <>
-            <MainSection data-testid='main-section-home-test'/>
-            <Welcome data-testid='welcome-home-test'/>
-            <HomeLandingImage data-testid='home-landing-image-home-test'/>
-            <Cards data-testid='cards-home-test'/>
-            {/*TODO: Add a new component for the Google reviews*/}
-            <Youtube data-testid='youtube-home-test'/>
-            <Gallery data-testid='gallery-home-test'/>
-            <Contact data-testid='contact-home-test'/>
+            <MainSection/>
+            <Welcome/>
+            <HomeLandingImage/>
+            <Cards/>
+            <Youtube/>
+            <Gallery/>
+            <Contact/>
         </>
     );
 };

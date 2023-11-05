@@ -7,7 +7,7 @@ const Contact = () => {
         <div className="container" data-testid="contact-container">
             <div className="contact-container">
                 <h1>Contact Us</h1>
-                <hr className="hr-contact"/>
+                <hr className="hr-about-us"/>
 
                 <h2>Better yet, see us in person!</h2>
 

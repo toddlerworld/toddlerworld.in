@@ -56,7 +56,7 @@
     .playgroup-container {
         padding: 1rem;
         align-items: center;
-        width: 100%;
+        max-width: 100%;
         justify-content: center;
         text-align: center;
         display: block;
@@ -71,5 +71,11 @@
 
     .right-aligned-playgroup {
         margin-top: 25px;
+        p {
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
     }
 }

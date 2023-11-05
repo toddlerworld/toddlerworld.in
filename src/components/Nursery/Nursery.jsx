@@ -17,7 +17,7 @@ const Nursery = () => {
                 <div className='left-aligned-nursery'>
                     <p>
                         <strong>Escalates the possibilities of learning in your child:
-                            <i>Nursery at Toddler World.</i>
+                            <i> Nursery at Toddler World.</i>
                         </strong><br /><br />
 
                         This programme is for children between 3 years to 4 years old. Once children graduate from

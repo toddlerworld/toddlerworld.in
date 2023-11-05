@@ -19,6 +19,22 @@ Every kind of help is appreciated!
 
 ## Running the project locally
 
+**Recommended:**
+
+Install docker and run it through docker. This will ensure that the application runs in the same environment as it
+would on the server. To run the application through docker, run the following commands:
+
+```docker-compose -f docker-compose.dev.yml up```
+
+The above command will create the docker image and run the application on your local machine.
+
+The below command is used to run the application in the background:
+
+```docker run toddler-world-dev```
+
+The application will be available on http://localhost:3000
+
+**Easiest:**
 The simplest way to run this application is by cloning the repository, installing the dependencies and running the
 application on your local machine. Once everything is installed, run `npm start` to start the application.
 

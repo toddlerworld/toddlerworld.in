@@ -23,10 +23,14 @@
     }
     .youtube-video-container {
         width: 100%;
+        iframe {
+            padding: 0;
+        }
     }
-    iframe {
+    .youtube-video {
+        margin-top: 3%;
         width: 100%;
-        height: 40vh;
-        align-content: center;
+        height: 650px;
     }
+
 }

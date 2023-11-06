@@ -32,6 +32,10 @@ The below command is used to run the application in the background:
 
 ```docker run toddler-world-dev```
 
+If you've added packages, keep in mind to update the docker image for it to run using the command
+
+`docker-compose up --build`
+
 The application will be available on http://localhost:3000
 
 **Easiest:**

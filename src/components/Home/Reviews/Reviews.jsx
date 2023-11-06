@@ -8,7 +8,7 @@ import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import reviews from './Reviews-list.json';
 
 const PreviousBtn = (props) => {
-    const { className, onClick } = props;
+    const {className, onClick} = props;
     return (
         <div className={className} onClick={onClick}>
             <ArrowBackIos className='back-arrow-review' />
@@ -17,7 +17,7 @@ const PreviousBtn = (props) => {
 };
 
 const NextBtn = (props) => {
-    const { className, onClick } = props;
+    const {className, onClick} = props;
     return (
         <div className={className} onClick={onClick}>
             <ArrowForwardIos className='forward-arrow-review' />
@@ -50,9 +50,9 @@ const Reviews = () => {
 
 const Card = ({img, review, author}) => {
     return (
-        <div className='reviews-cards'>
+        <div className='reviews-cards' data-testid='review-card'>
             <Avatar
-                imgProps={{ style: { borderRadius: '50%' } }}
+                imgProps={{style: {borderRadius: '50%'}}}
                 src={img}
                 style={{
                     width: 120,
@@ -66,7 +66,7 @@ const Card = ({img, review, author}) => {
                 {review}
             </p>
             <p style={{ marginTop: 25 }}>
-                <span style={{ fontWeight: 500, color: 'green' }}>
+                <span style={{ fontWeight: 500, color: 'green' }} data-testid="author">
                     {author}
                 </span>
             </p>

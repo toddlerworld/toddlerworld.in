@@ -24,7 +24,7 @@ Every kind of help is appreciated!
 Install docker and run it through docker. This will ensure that the application runs in the same environment as it
 would on the server. To run the application through docker, run the following commands:
 
-```docker-compose -f docker-compose.dev.yml up```
+```docker-compose -f docker-compose.yml up```
 
 The above command will create the docker image and run the application on your local machine.
 

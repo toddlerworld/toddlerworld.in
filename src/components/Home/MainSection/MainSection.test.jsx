@@ -14,15 +14,15 @@ describe('MainSection component', () => {
         expect(mainSectionElement).toBeInTheDocument();
     });
 
-    test('renders video element with src "/images/home-page-pic.mp4"', () => {
+    test('renders landing image with correct src', () => {
         render(
             <Router>
                 <MainSection />
             </Router>
         );
-        const videoElement = screen.getByTestId('main-video');
-        expect(videoElement).toBeInTheDocument();
-        expect(videoElement.src).toContain('/images/home-page-pic.mp4');
+        const photo = screen.getByTestId('landing-photo');
+        expect(photo).toBeInTheDocument();
+        expect(photo.src).toContain('/images/main-section/landing-image.png');
     });
 
     test('renders heading "Welcome to Toddler World"', () => {

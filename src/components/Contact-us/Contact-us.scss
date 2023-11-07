@@ -63,7 +63,6 @@
         border: 1px solid var(--primary);
         border-radius: 4px;
         cursor: pointer;
-        font-size: 18px;
         width: 20%;
         display: block;
         margin: 0 auto;
@@ -85,7 +84,7 @@
 }
 
 .contactus-maps-container {
-    max-width: 90%;
+    max-width: 100%;
     iframe {
         height: 500px;
     }

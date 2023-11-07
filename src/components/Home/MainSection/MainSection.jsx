@@ -7,7 +7,7 @@ const MainSection = () => {
     return (
         <>
             <div className="hero-container" data-testid="main-section">
-                <video src="/images/home-page-pic.mp4" className="main-video" data-testid="main-video" autoPlay loop muted/>
+                <img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo"/>
                 <h1>Welcome to Toddler World</h1>
                 <div className="button-login">
                     <Link to="/welcome">

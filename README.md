@@ -39,8 +39,9 @@ If you've added packages, keep in mind to update the docker image for it to run 
 The application will be available on http://localhost:3000
 
 **Easiest:**
-The simplest way to run this application is by cloning the repository, installing the dependencies and running the
-application on your local machine. Once everything is installed, run `npm start` to start the application.
+The simplest way to run this application is by cloning the repository, installing the dependencies by using the 
+command `yarn` and running the application on your local machine. Once everything is installed, 
+run `yarn start` to start the application.
 
 ## Contributing
 

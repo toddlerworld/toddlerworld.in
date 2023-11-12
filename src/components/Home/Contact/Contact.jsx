@@ -19,11 +19,9 @@ const Contact = () => {
                 <p className="contact-paragraph">
 					Airport Avenue, Near Railway Bridge, Srinagar, Jammu and Kashmir, 190021<br/>
                 </p>
+                <br />
 
                 <p className="contact-telephone">
-					Phone: <a href="tel:+911942303601" className="phone">+91 1942-303601</a>, <a
-                        href="tel:+911942303611" className="phone">+91 1942-303611</a>
-                    <br/>
 					Mobile: <a href="tel:+917051427879" className="phone">+91 705-1427879</a>, <a
                         href="tel:+917889744619"
                         className="phone">+91 788-9744619</a>

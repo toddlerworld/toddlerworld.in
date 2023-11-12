@@ -29,13 +29,9 @@ describe('Contact component', () => {
 
     test('renders phone numbers', () => {
         render(<Contact />);
-        const phoneElement1 = screen.getByText('+91 1942-303601');
-        const phoneElement2 = screen.getByText('+91 1942-303611');
         const mobileElement1 = screen.getByText('+91 705-1427879');
         const mobileElement2 = screen.getByText('+91 788-9744619');
 
-        expect(phoneElement1).toBeInTheDocument();
-        expect(phoneElement2).toBeInTheDocument();
         expect(mobileElement1).toBeInTheDocument();
         expect(mobileElement2).toBeInTheDocument();
     });

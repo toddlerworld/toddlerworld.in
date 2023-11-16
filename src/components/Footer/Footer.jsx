@@ -21,7 +21,7 @@ function Footer() {
                             <i className="fab fa-facebook-f"/>
                         </Link>
                         <Link
-                            class="social-icon-link instagram"
+                            className="social-icon-link instagram"
                             to="https://www.instagram.com/toddlerworldsgr/"
                             target="_blank"
                             aria-label="Instagram"
@@ -29,7 +29,7 @@ function Footer() {
                             <i className="fab fa-instagram"/>
                         </Link>
                         <Link
-                            class="social-icon-link youtube"
+                            className="social-icon-link youtube"
                             to="https://www.youtube.com/@ToddlerWorld"
                             target="_blank"
                             aria-label="Youtube"
@@ -37,7 +37,7 @@ function Footer() {
                             <i className="fab fa-youtube"/>
                         </Link>
                         <Link
-                            class="social-icon-link twitter"
+                            className="social-icon-link twitter"
                             to="https://www.twitter.com/toddlerworldsgr/"
                             target="_blank"
                             aria-label="Twitter"
@@ -45,7 +45,7 @@ function Footer() {
                             <i className="fab fa-twitter"/>
                         </Link>
                         <Link
-                            class="social-icon-link twitter"
+                            className="social-icon-link twitter"
                             to="https://www.linkedin.com/company/toddlerworld/"
                             target="_blank"
                             aria-label="LinkedIn"

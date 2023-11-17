@@ -3,6 +3,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './Reviews.scss';
+import { useMediaQuery } from 'react-responsive';
 import { Avatar } from '@material-ui/core';
 import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import reviews from './Reviews-list.json';
@@ -26,11 +27,15 @@ const NextBtn = (props) => {
 };
 
 const Reviews = () => {
+    const isDesktop = useMediaQuery({ 
+        query: '(min-width: 768px)' 
+    });
+
     return (
         <div className='testimonial'>
             <div className='testimonial-items'>
                 <h1>The Trust We&apos;ve Earnt</h1>
-                <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots>
+                <Slider prevArrow={<PreviousBtn />} nextArrow={<NextBtn />} dots={isDesktop} autoplay={true} autoplaySpeed={5000}>
                     {
                         reviews.map(
                             theReview =>

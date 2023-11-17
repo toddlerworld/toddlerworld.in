@@ -32,7 +32,8 @@ The below command is used to run the application in the background:
 
 ```docker run toddler-world-dev```
 
-If you've added packages, keep in mind to update the docker image for it to run using the command
+If you've added packages, created new files, or added new images, keep in mind to update the docker image for it to run 
+using the command
 
 `docker-compose up --build`
 

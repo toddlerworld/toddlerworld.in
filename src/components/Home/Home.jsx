@@ -14,7 +14,8 @@ const Home = () => {
         window.scrollTo(0, 0);
     }, []);
     return (
-        <>
+        <div className='home-page'>
+            <img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo"/>
             <MainSection/>
             <Welcome/>
             <HomeLandingImage/>
@@ -23,7 +24,7 @@ const Home = () => {
             <Youtube/>
             <Gallery/>
             <Contact/>
-        </>
+        </div>
     );
 };
 export default Home;

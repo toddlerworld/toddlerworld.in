@@ -7,7 +7,7 @@ const MainSection = () => {
     return (
         <>
             <div className="hero-container" data-testid="main-section">
-                <img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo"/>
+                {/*<img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo"/>*/}
                 <h1>Welcome to Toddler World</h1>
                 <div className="button-login">
                     <Link to="/welcome">

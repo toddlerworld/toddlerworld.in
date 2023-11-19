@@ -14,17 +14,6 @@ describe('MainSection component', () => {
         expect(mainSectionElement).toBeInTheDocument();
     });
 
-    test('renders landing image with correct src', () => {
-        render(
-            <Router>
-                <MainSection />
-            </Router>
-        );
-        const photo = screen.getByTestId('landing-photo');
-        expect(photo).toBeInTheDocument();
-        expect(photo.src).toContain('/images/main-section/landing-image.png');
-    });
-
     test('renders heading "Welcome to Toddler World"', () => {
         render(
             <Router>

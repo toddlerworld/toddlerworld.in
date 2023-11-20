@@ -24,15 +24,9 @@
     flex-direction: column;
     align-items: flex-start;
     color:white;
-    height: 50%;
+    height: 400px;
+    width: 40%;
     float: right;
-}
-
-@media screen and (max-width: 1250px) {
-    .image-our-team {
-        padding-top: 10%;
-        height: 50%;
-    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -43,16 +37,29 @@
             padding-bottom: 5%;
         }
     }
-    .p-about-us {
-        display: flex;
-        flex-direction: column;
-    }
+
 }
 
 @media screen and (max-width: 768px){
     .our-team-container {
         padding: 1rem;
         max-width: 100%;
+    }
+
+    .image-our-team {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color:white;
+        height: 100%;
+        width: 100%;
+        float: right;
+    }
+
+    .p-about-us {
+        display: flex;
+        flex-direction: column;
     }
 
 }

@@ -30,7 +30,7 @@ const Welcome = () => {
                     <br/><br />
                     <strong>We welcome you to Toddler World for a joyful journey towards love & light.</strong>
                 </p>
-                <img src='/images/Welcome/welcome.webp'
+                <img src='/images/Welcome/welcome.jpg'
                     alt='Two kids playing with toys'
                     className='image-welcome' />
             </div>

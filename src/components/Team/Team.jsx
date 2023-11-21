@@ -25,7 +25,7 @@ const Team = () => {
                     All to ensure that they provide the outstanding quality care that your child deserves and that you
                     expect.
                 </p>
-                <img src='/images/team/1.jpg' alt='Teacher showing how to write to a child' className='image-our-team'/>
+                <img src='/images/team/1.webp' alt='Teacher showing how to write to a child' className='image-our-team'/>
             </div>
         </div>
     );

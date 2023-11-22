@@ -14,7 +14,7 @@ describe(('Welcome Component Tests'), () => {
 
     test('renders the image with the correct alt attribute', () => {
         const { getByAltText } = render(<Welcome />);
-        expect(getByAltText('Two kids playing with toys')).toBeInTheDocument();
+        expect(getByAltText('Children enjoying listening to a story')).toBeInTheDocument();
     });
 
     test('contains the expected paragraphs of text', () => {

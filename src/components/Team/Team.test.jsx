@@ -14,7 +14,7 @@ describe('Tests for Our Team Component', () => {
 
     test('renders the image with the correct alt attribute', () => {
         const { getByAltText } = render(<Team />);
-        expect(getByAltText('Teacher showing how to write to a child')).toBeInTheDocument();
+        expect(getByAltText('A boy reading from a book')).toBeInTheDocument();
     });
 
     test('contains the expected paragraphs of text', () => {

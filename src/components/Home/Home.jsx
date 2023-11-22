@@ -22,8 +22,8 @@ const Home = () => {
     return (
         <div className='home-page'>
             {isDesktop ?
-                <img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo"/> :
-                <img src="/images/mobile.webp" className="landing-photo" alt="Background Image" data-testid="landing-photo"/>
+                <img src="/images/main-section/landing-image.png" className="landing-photo" alt="Background Image" data-testid="landing-photo-desktop"/> :
+                <img src="/images/mobile.webp" className="landing-photo" alt="Background Image" data-testid="landing-photo-mobile"/>
             }
             <MainSection/>
             <Welcome/>

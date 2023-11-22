@@ -37,7 +37,7 @@ const environment = () => {
                     <br/>
                     Our space is intentionally designed to give your child the best possible experience!
                 </p>
-                <img src='/images/environment/our-environment.webp'
+                <img src='/images/environment/environment.webp'
                     alt='Children playing in the play area'
                     className='image-our-environment' />
             </div>

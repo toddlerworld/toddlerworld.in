@@ -14,7 +14,7 @@ describe(('Environment Component Tests'), () => {
 
     test('renders the image with the correct alt attribute', () => {
         const { getByAltText } = render(<Environment />);
-        expect(getByAltText('Children playing in the play area')).toBeInTheDocument();
+        expect(getByAltText('A boy playing in the play area')).toBeInTheDocument();
     });
 
     test('contains the expected paragraphs of text', () => {

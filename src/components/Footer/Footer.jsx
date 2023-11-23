@@ -10,7 +10,7 @@ function Footer() {
                     <Link to="/" className="social-logo">
 						Toddler World
                     </Link>
-                    <small className="website-rights">Toddler World © 2016-2023</small>
+                    <small className="website-rights">Toddler World © 2016-2024</small>
                     <div className="logos-socials">
                         <Link
                             className="social-icon-link facebook"

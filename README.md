@@ -40,6 +40,7 @@ using the command
 The application will be available on http://localhost:3000
 
 **Easiest:**
+
 The simplest way to run this application is by cloning the repository, installing the dependencies by using the 
 command `yarn` and running the application on your local machine. Once everything is installed, 
 run `yarn start` to start the application.

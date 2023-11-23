@@ -13,7 +13,7 @@ describe('Footer Component', () => {
         );
 
         expect(getByText('Toddler World')).toBeInTheDocument();
-        expect(getByText('Toddler World © 2016-2023')).toBeInTheDocument();
+        expect(getByText('Toddler World © 2016-2024')).toBeInTheDocument();
         expect(getByLabelText('Facebook')).toBeInTheDocument();
         expect(getByLabelText('Instagram')).toBeInTheDocument();
         expect(getByLabelText('Youtube')).toBeInTheDocument();

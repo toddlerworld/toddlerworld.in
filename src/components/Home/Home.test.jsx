@@ -39,7 +39,4 @@ describe('Home Component tests', () => {
 
         expect(desktopImage).toHaveAttribute('src', '/images/main-section/landing-image.png');
     });
-
-
-
 });

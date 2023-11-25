@@ -2,6 +2,7 @@
 
 ![workflow](https://github.com/aheedshah/toddler-world/actions/workflows/build_test_react.yml/badge.svg)
 [![codecov](https://codecov.io/gh/aheedshah/toddler-world/graph/badge.svg?token=57OH7CZD9F)](https://codecov.io/gh/aheedshah/toddler-world)
+[![GitHub Super-Linter](https://github.com/aheedshah/toddler-world/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
 
 This is the codebase for the Toddler World web app. Please feel free to contribute to the project by forking the
 repository and submitting a pull request. The PR needs to have a description of the changes and the reason for the same.

@@ -1,4 +1,4 @@
-name: Build and Test React Application
+name: Build and Test Toddler World
 
 # Controls when the action will run.
 on:
@@ -17,15 +17,16 @@ jobs:
       fail-fast: false
       matrix:
         os: [ubuntu-latest, macos-latest]
+        node-version: ['16.x', '18.x', '20.x']
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
-      - name: Use Node.js 18.x and Yarn
+      - name: Use Node.js and Yarn
         uses: actions/setup-node@v4
         with:
-          node-version: 18.x
+          node-version: ${{ matrix.node-version }}
           cache: 'yarn'
       - name: Yarn install, build and test
         run: |

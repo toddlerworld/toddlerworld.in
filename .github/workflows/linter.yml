@@ -1,6 +1,8 @@
 name: Lint Toddler World
 
-on: [push, pull_request]
+on:
+  pull_request:
+    branches: [ master, main ]
 
 jobs:
   build:

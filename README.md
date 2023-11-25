@@ -3,13 +3,13 @@
 ![workflow](https://github.com/aheedshah/toddler-world/actions/workflows/build_test_react.yml/badge.svg)
 [![codecov](https://codecov.io/gh/aheedshah/toddler-world/graph/badge.svg?token=57OH7CZD9F)](https://codecov.io/gh/aheedshah/toddler-world)
 
-This is the codebase for the Toddler World website. Please feel free to contribute to the project by forking the
+This is the codebase for the Toddler World web app. Please feel free to contribute to the project by forking the
 repository and submitting a pull request. The PR needs to have a description of the changes and the reason for the same.
 It would be appreciated if you could follow the template and include each details for your PR.
 
 ## Bugs and issues
 
-If you have found a bug on the website or have an idea for a new feature, feel free
+If you have found a bug on the web app or have an idea for a new feature, feel free
 to [create a new issue](https://github.com/aheedshah/toddler-world/issues/new),
 or suggest a fix by creating a [pull request](https://help.github.com/articles/creating-a-pull-request/). When raising
 an issue, please add as much details as possible. Screenshots, video recordings, or anything else that can make it

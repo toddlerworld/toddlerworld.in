@@ -15,6 +15,7 @@ const Gallery = () => {
                 autoPlay
                 infiniteLoop
                 centerMode
+                useKeyboardArrows
                 interval={4000}
                 showStatus={false}>
                 {

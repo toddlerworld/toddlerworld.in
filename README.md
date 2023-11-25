@@ -1,5 +1,7 @@
 [![codecov](https://codecov.io/gh/aheedshah/toddler-world/graph/badge.svg?token=57OH7CZD9F)](https://codecov.io/gh/aheedshah/toddler-world)
 
+![workflow](https://github.com/aheedshah/toddler-world/actions/workflows/build_test_react.yml/badge.svg)
+
 # The Toddler World codebase
 
 This is the codebase for the Toddler World website. Please feel free to contribute to the project by forking the

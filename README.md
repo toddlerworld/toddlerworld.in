@@ -13,7 +13,7 @@ If you have found a bug on the website or have an idea for a new feature, feel f
 to [create a new issue](https://github.com/aheedshah/toddler-world/issues/new),
 or suggest a fix by creating a [pull request](https://help.github.com/articles/creating-a-pull-request/). When raising
 an issue, please add as much details as possible. Screenshots, video recordings, or anything else that can make it
-easier to reproduce the bug you are reporting. There is a template for creating issues, please follow the same and 
+easier to reproduce the bug you are reporting. There is a template for creating issues, please follow the same and
 include as much detail as possible to make it easy for us to understand and reproduce the issue.
 
 Every kind of help is appreciated!
@@ -33,17 +33,17 @@ The below command is used to run the application in the background:
 
 ```docker run toddler-world-dev```
 
-If you've added packages, created new files, or added new images, keep in mind to update the docker image for it to run 
+If you've added packages, created new files, or added new images, keep in mind to update the docker image for it to run
 using the command
 
 `docker-compose up --build`
 
-The application will be available on http://localhost:3000
+The application will be available on [http://localhost:3000](http://localhost:3000)
 
 **Easiest:**
 
-The simplest way to run this application is by cloning the repository, installing the dependencies by using the 
-command `yarn` and running the application on your local machine. Once everything is installed, 
+The simplest way to run this application is by cloning the repository, installing the dependencies by using the
+command `yarn` and running the application on your local machine. Once everything is installed,
 run `yarn start` to start the application.
 
 ## Contributing

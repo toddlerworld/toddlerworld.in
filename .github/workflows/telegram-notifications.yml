@@ -1,14 +1,10 @@
 name: telegram notification
 on: [pull_request, push]
 jobs:
-  check-dependabot:
-    runs-on: ubuntu-latest
-    if: ${{ github.actor == 'dependabot[bot]' }}
-    steps:
-      - run: echo "PR created by Dependabot. Can't run workflow!"
   build:
     name: Build
     runs-on: ubuntu-latest
+    if: ${{ github.actor != 'dependabot[bot]' }}
     steps:
       - name: send telegram message on a new PR
         uses: appleboy/telegram-action@master

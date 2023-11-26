@@ -4,6 +4,7 @@ jobs:
   build:
     name: Build
     runs-on: ubuntu-latest
+    if: ${{ !github.actor == 'dependabot[bot]' }}
     steps:
       - name: send telegram message on a new PR
         uses: appleboy/telegram-action@master

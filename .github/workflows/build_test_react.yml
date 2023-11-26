@@ -1,6 +1,5 @@
 name: Build and Test Toddler World
 
-# Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   push:
@@ -8,10 +7,8 @@ on:
   pull_request:
     branches: [ "main" ]
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build_test:
-    # The type of runner that the job will run on
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
@@ -19,9 +16,7 @@ jobs:
         os: [ubuntu-latest, macos-latest]
         node-version: ['16.x', '18.x', '20.x']
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
       - name: Use Node.js and Yarn
         uses: actions/setup-node@v4
@@ -33,6 +28,8 @@ jobs:
           yarn install
           CI='' yarn build --if-present
           yarn test
+
+      # Upload the coverage reports:
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v3
         env:

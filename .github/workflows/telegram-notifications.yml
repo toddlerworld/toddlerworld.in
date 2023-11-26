@@ -1,0 +1,14 @@
+name: telegram notification
+on: [pull_request, push]
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: send telegram message on a new PR
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_TOKEN }}
+          message: |
+            🚀 Exciting news! ${{ github.actor }} just pushed some updates in the ${{ github.repository }} repo. It's a ${{ github.event_name }}, and you can check it out here: [${{ github.sha }}@${{ github.ref }}]. Dive in and explore the awesomeness! 💻🔍

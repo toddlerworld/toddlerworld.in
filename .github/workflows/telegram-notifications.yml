@@ -1,5 +1,5 @@
 name: telegram notification
-on: [pull_request]
+on: [pull_request, push]
 jobs:
   build:
     name: Build
@@ -11,4 +11,4 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_TOKEN }}
           message: |
-            ${{ github.event_name }} commit in ${{ github.repository }} by "${{ github.actor }}". [${{github.sha}}@${{ github.ref }}]
+            🚀 Exciting news! ${{ github.actor }} just pushed some updates in the ${{ github.repository }} repo. It's a ${{ github.event_name }}, and you can check it out here: [${{ github.sha }}@${{ github.ref }}]. Dive in and explore the awesomeness! 💻🔍

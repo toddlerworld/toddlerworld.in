@@ -1,4 +1,4 @@
-name: telegram notification
+name: Telegram Notifications
 on: [pull_request, push]
 jobs:
   build:

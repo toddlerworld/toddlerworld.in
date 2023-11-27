@@ -7,10 +7,17 @@ function CardItem(props) {
             <li className='item'>
                 <Link className='link' to={props.path}>
                     <figure className='image' data-category={props.label}>
-                        <img className='img-item' alt={props.alt} src={props.src} />
+                        {props.src.endsWith('.webm') ? (
+                            <video className='img-item' autoPlay loop muted playsInline>
+                                <source src={props.src} type='video/webm' />
+                                Your browser does not support the video tag.
+                            </video>
+                        ) : (
+                            <img className='img-item' alt={props.alt} src={props.src} />
+                        )}
                     </figure>
                     <div className='aboutCard'>
-                        <h5 className='caption'>{props.text}</h5>
+                        <p className='caption'><strong>{props.text}</strong></p>
                     </div>
                 </Link>
             </li>

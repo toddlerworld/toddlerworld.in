@@ -37,6 +37,6 @@ describe('Home Component tests', () => {
         );
         const desktopImage = getByTestId('landing-photo-desktop');
 
-        expect(desktopImage).toHaveAttribute('src', '/images/main-section/landing-image.png');
+        expect(desktopImage).toHaveAttribute('src', '/images/main-section/landing-image.webp');
     });
 });

@@ -10,21 +10,21 @@ function Cards() {
                 <div className="wrapper">
                     <ul className="items">
                         <CardItem
-                            src="/gifs/placeholder1.gif"
+                            src="/gifs/placeholder1.webm"
                             text={'Our well-designed environment supports child\'s growth and development'}
                             label="Our Environment"
                             path="/our-environment"
                             alt="Our Environment"
                         />
                         <CardItem
-                            src="/gifs/placeholder2.gif"
+                            src="/gifs/placeholder2.webm"
                             text="World class infrastructure for holistic development of the child"
                             label="Our Facilities"
                             path="/play-equipment"
                             alt="Our Facilities"
                         />
                         <CardItem
-                            src="/gifs/placeholder3.gif"
+                            src="/gifs/placeholder3.webm"
                             text="Our age appropriate programmes that grow with your child"
                             label="Our Programmes"
                             path="/programmes"

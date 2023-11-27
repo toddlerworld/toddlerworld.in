@@ -71,7 +71,7 @@ const Careers = () => {
                 <hr className='hr-about-us' />
             </div>
             <div className='careers-form' data-testid='careers-form-test'>
-                <iframe src=
+                <iframe title="Google Document for Careers" src=
                     "https://docs.google.com/forms/u/0/d/e/1FAIpQLSd5JQ_npNHs9jCVW4oVfrLS4qybFBK8vU6Op6Y70fm8qp7uGw/formResponse?embedded=true"
                 />
             </div>

@@ -11,7 +11,7 @@ const Youtube = () => {
             </p>
 
             <div className="youtube-video-container">
-                <iframe className="youtube-video" src="https://www.youtube.com/embed/FxxsA-qaHTM" data-testid="youtube-video"></iframe>
+                <iframe title="Youtube Video" className="youtube-video" src="https://www.youtube.com/embed/FxxsA-qaHTM" data-testid="youtube-video"></iframe>
             </div>
         </div>
     );

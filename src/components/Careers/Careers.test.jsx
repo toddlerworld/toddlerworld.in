@@ -43,8 +43,6 @@ describe('Careers Component', () => {
         render(<Careers />);
         const sendDetailsLink = screen.getByTestId('send-link-test');
         expect(sendDetailsLink).toBeInTheDocument();
-
-        // Check if the "Send your details" link has the correct href
         expect(sendDetailsLink.getAttribute('href')).toBe('#send-details');
     })
 
@@ -67,11 +65,9 @@ describe('Careers Component', () => {
     test('check if the iframe component is rendered', () => {
         render(<Careers />);
 
-        // Check if the form section is rendered
         const formContainer = screen.getByTestId('careers-form-test');
         expect(formContainer).toBeInTheDocument();
 
-        // Check if the iframe is present within the form section
         const iframe = formContainer.querySelector('iframe');
         expect(iframe).toBeInTheDocument();
     });

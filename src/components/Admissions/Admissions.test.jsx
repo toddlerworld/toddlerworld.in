@@ -42,7 +42,6 @@ describe('Tests for the Admissions Component', () => {
     });
 
     test('renders the "Register your Child" button', () => {
-        // const { container } = render(<Admissions />);
         const registerButton = screen.getByTestId('register-test-comp');
         expect(registerButton).toBeInTheDocument();
     });

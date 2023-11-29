@@ -15,7 +15,6 @@ function Navbar() {
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
                         <img src="/images/logo.webp" alt="Logo" data-testid="menu-icon-component"/>
                     </Link>
-                    {/*Below is the hamburger for the navigation bar*/}
                     <div className="menu-icon" onClick={handleClick} data-testid="menu-icon">
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>
                     </div>

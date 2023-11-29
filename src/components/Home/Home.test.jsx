@@ -3,7 +3,6 @@ import Home from './Home';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import React from 'react';
 
-// Mock the react-responsive module
 jest.mock('react-responsive', () => ({
     useMediaQuery: jest.fn(),
 }));
@@ -21,7 +20,6 @@ describe('Home Component tests', () => {
         );
         const mobileImage = getByTestId('landing-photo-mobile');
 
-        // Assuming the mobile image source is '/images/mobile.webp'
         expect(mobileImage).toHaveAttribute('src', '/images/mobile.webp');
     });
 

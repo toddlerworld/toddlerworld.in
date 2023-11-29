@@ -3,7 +3,6 @@ import Home from './Home';
 import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import React from 'react';
 
-// Mock the react-responsive module
 jest.mock('react-responsive', () => ({
     useMediaQuery: jest.fn(),
 }));

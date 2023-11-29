@@ -22,7 +22,6 @@ describe('Tests for Our Team Component', () => {
         const expectedTextSnippet =
             `Toddler World staff are selected for their empathy with children, their commitment to childcare...`;
 
-        // Using a regular expression to match a part of the text content
         expect(getByText(new RegExp(expectedTextSnippet))).toBeInTheDocument();
     });
 });

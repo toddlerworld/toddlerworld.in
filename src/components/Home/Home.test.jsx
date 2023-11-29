@@ -21,7 +21,6 @@ describe('Home Component tests', () => {
         );
         const mobileImage = getByTestId('landing-photo-mobile');
 
-        // Assuming the mobile image source is '/images/mobile.webp'
         expect(mobileImage).toHaveAttribute('src', '/images/mobile.webp');
     });
 

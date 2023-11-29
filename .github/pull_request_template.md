@@ -6,7 +6,7 @@ Fixes # (issue)
 
 ## Type of change
 
-Please click on options that are relevant to this PR.
+Please keep the options that are relevant to this PR.
 
 - [ ] Bugfix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)

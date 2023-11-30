@@ -10,6 +10,7 @@ function CardItem(props) {
                         {props.src.endsWith('.webm') ? (
                             <video className='img-item' autoPlay loop muted playsInline>
                                 <source src={props.src} type='video/webm' />
+                                <track src={props.captions} kind="captions" srcLang="en" label="english_captions" />
                                 Your browser does not support the video tag.
                             </video>
                         ) : (

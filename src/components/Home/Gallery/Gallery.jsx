@@ -24,6 +24,8 @@ const Gallery = () => {
                             src={image.source}
                             alt={image.alt}
                             key={image.id}
+                            height="100%"
+                            width="100%"
                         />
                     )
                 }

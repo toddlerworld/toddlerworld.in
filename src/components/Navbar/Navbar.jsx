@@ -13,7 +13,11 @@ function Navbar() {
             <nav className="navbar"  data-testid="navbar-component">
                 <div className="navbar-container">
                     <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-                        <img src="/images/logo.webp" alt="Logo" data-testid="menu-icon-component"/>
+                        <img
+                            src="/images/logo.webp"
+                            alt="Logo"
+                            data-testid="menu-icon-component"
+                        />
                     </Link>
                     <div className="menu-icon" onClick={handleClick} data-testid="menu-icon">
                         <i className={click ? 'fas fa-times' : 'fas fa-bars'}/>

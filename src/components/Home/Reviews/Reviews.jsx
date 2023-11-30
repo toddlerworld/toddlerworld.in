@@ -44,6 +44,7 @@ const Reviews = () => {
                                     img={theReview.image}
                                     review={theReview.review}
                                     author={theReview.author}
+                                    alt={theReview.alt}
                                 />
                         )
                     }
@@ -53,7 +54,7 @@ const Reviews = () => {
     );
 };
 
-const Card = ({img, review, author}) => {
+const Card = ({img, review, author, alt}) => {
     return (
         <div className='reviews-cards' data-testid='review-card'>
             <Avatar
@@ -66,6 +67,7 @@ const Card = ({img, review, author}) => {
                     padding: 7,
                     marginBottom: 20
                 }}
+                alt={alt}
             />
             <p>
                 {review}

@@ -13,7 +13,8 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "cypress"
     ],
     "ignorePatterns": ["cypress/fixtures/*.json", "cypress/support/*.js"],
     "rules": {

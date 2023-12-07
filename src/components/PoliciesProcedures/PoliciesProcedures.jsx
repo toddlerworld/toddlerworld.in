@@ -23,7 +23,8 @@ const PoliciesProcedures = () => {
                 </p>
                 <img src='/images/policies-procedures/1.webp'
                     alt='Pencils'
-                    className='image-policies-procedures' />
+                    className='image-policies-procedures'
+                />
             </div>
         </div>
     );

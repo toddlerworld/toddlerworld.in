@@ -9,7 +9,10 @@ const Activities = () => {
     }, []);
     return(
         <div className='activities-container' data-testid='activities-container'>
-            <img src='/images/activities/1.webp' alt='Baby Bead Maze Toy For Brain Development' className='activities-image'/>
+            <img src='/images/activities/1.webp'
+                alt='Baby Bead Maze Toy For Brain Development'
+                className='activities-image'
+            />
             <h1 className='heading'>Our Activities</h1>
             <hr className='hr-about-us' />
             <div className='left-aligned-activities'>

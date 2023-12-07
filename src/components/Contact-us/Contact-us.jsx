@@ -20,8 +20,7 @@ const ContactUs = () => {
                     <form
                         action="https://getform.io/f/f5e8cb21-2e57-4c0b-af0c-ef2930b0ca8a"
                         method="POST"
-                        className="form-contactus"
-                    >
+                        className="form-contactus">
                         <input
                             type="text"
                             name="name"

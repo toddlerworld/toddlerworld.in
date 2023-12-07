@@ -15,6 +15,7 @@
     "plugins": [
         "react"
     ],
+    "ignorePatterns": ["cypress/fixtures/*.json", "cypress/support/*.js"],
     "rules": {
         "react/prop-types": "off",
         "indent": [

@@ -53,7 +53,8 @@
       "beforeEach",
       "afterEach",
       "it",
-      "assert"
+      "assert",
+      "cy"
     ]
   }
 }

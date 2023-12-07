@@ -22,7 +22,9 @@ jobs:
       - name: Lint Toddler World
         uses: github/super-linter@v5
         env:
+          LINTER_RULES_PATH: /
           VALIDATE_ALL_CODEBASE: false
-          VALIDATE_JAVASCRIPT_ES: '.eslintrc.json'
+          JAVASCRIPT_ES_CONFIG_FILE: .eslintrc.json
+          VALIDATE_JAVASCRIPT_STANDARD: false
           DEFAULT_BRANCH: main
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

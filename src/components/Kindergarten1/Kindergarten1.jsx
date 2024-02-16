@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './Kindergarten1.scss';
+import {Link} from "react-router-dom";
 
 const Kindergarten1 = () => {
     useEffect(() => {
@@ -32,7 +33,7 @@ const Kindergarten1 = () => {
                     <p>There is a lot more to know. Please feel free to contact us.
                     </p>
                     <div className='contact-us-kindergarten1' data-testid="contact-us-comp">
-                        <a href='/contact-us' data-testid="contact-us-link-test">
+                        <Link to='/contact-us' data-testid="contact-us-link-test">
                             <Button
                                 buttonStyle="primary-button"
                                 buttonSize="large"
@@ -40,7 +41,7 @@ const Kindergarten1 = () => {
                             >
                                 Contact us
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

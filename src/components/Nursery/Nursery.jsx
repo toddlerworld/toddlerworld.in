@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './Nursery.scss';
+import {Link} from "react-router-dom";
 
 const Nursery = () => {
     useEffect(() => {
@@ -9,7 +10,7 @@ const Nursery = () => {
     return(
         <>
             <div className='heading-nursery'>
-                <img src='/images/nursery/1.webp' alt='A boy wearing a police outfit' className='nursery-image'/>
+                <img src='/images/nursery/1.webp' alt='A boy wearing a police outfit' className='nursery-image' data-testid='nursery-image'/>
                 <h1 className='heading'>NURSERY (3 - 4 YEARS)</h1>
                 <hr className='hr-about-us' />
             </div>
@@ -32,7 +33,7 @@ const Nursery = () => {
                     <p>There is a lot more to know. Please feel free to contact us.
                     </p>
                     <div className='contact-us-nursery' data-testid="contact-us-comp">
-                        <a href='/contact-us' data-testid="contact-us-link-test">
+                        <Link to='/contact-us' data-testid="contact-us-link-test">
                             <Button
                                 buttonStyle="primary-button"
                                 buttonSize="large"
@@ -40,7 +41,7 @@ const Nursery = () => {
                             >
                                 Contact us
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

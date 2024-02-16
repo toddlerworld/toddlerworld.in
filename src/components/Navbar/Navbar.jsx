@@ -51,31 +51,37 @@ function Navbar() {
                             <div className="dropdown-content">
                                 <Link
                                     to="/programmes"
+                                    onClick={closeMobileMenu}
                                 >
                                     Programmes
                                 </Link>
                                 <Link
                                     to="/policies-procedures"
+                                    onClick={closeMobileMenu}
                                 >
                                     Policies & Procedures
                                 </Link>
                                 <Link
                                     to="/admissions"
+                                    onClick={closeMobileMenu}
                                 >
                                     Admissions
                                 </Link>
                                 <Link
                                     to="/parent-partnership"
+                                    onClick={closeMobileMenu}
                                 >
                                     Parent Partnership
                                 </Link>
                                 <Link
                                     to="/careers"
+                                    onClick={closeMobileMenu}
                                 >
                                     Careers
                                 </Link>
                                 <Link
                                     to="/contact-us"
+                                    onClick={closeMobileMenu}
                                 >
                                     Contact Us
                                 </Link>

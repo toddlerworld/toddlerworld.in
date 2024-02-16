@@ -45,7 +45,7 @@ const ContactUs = () => {
                         </button>
                     </form>
                     <p className='contactus-captcha'>
-                        This site is protected by reCAPTCHA and the Google <a href="https://policies.google.com/privacy" className="phone">Privacy Policy</a> and <a href="https://policies.google.com/terms" className="phone">Terms of Service</a> apply.
+                        This site is protected by reCAPTCHA and the Google <Link to="https://policies.google.com/privacy" className="phone">Privacy Policy</Link> and <Link to="https://policies.google.com/terms" className="phone">Terms of Service</Link> apply.
                     </p>
                 </div>
                 <div className='right-aligned-contactus'>

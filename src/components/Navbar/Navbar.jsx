@@ -49,12 +49,36 @@ function Navbar() {
                                 </p>
                             </button>
                             <div className="dropdown-content">
-                                <a href="/programmes">Programmes</a>
-                                <a href="/policies-procedures">Policies & Procedures</a>
-                                <a href="/admissions">Admissions</a>
-                                <a href="/parent-partnership">Parent Partnership</a>
-                                <a href="/careers">Careers</a>
-                                <a href="/contact-us">Contact Us</a>
+                                <Link
+                                    to="/programmes"
+                                >
+                                    Programmes
+                                </Link>
+                                <Link
+                                    to="/policies-procedures"
+                                >
+                                    Policies & Procedures
+                                </Link>
+                                <Link
+                                    to="/admissions"
+                                >
+                                    Admissions
+                                </Link>
+                                <Link
+                                    to="/parent-partnership"
+                                >
+                                    Parent Partnership
+                                </Link>
+                                <Link
+                                    to="/careers"
+                                >
+                                    Careers
+                                </Link>
+                                <Link
+                                    to="/contact-us"
+                                >
+                                    Contact Us
+                                </Link>
                             </div>
                         </li>
                     </ul>

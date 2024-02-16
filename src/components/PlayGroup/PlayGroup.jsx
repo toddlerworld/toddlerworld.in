@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import {Button} from '../Button/Button';
 import './PlayGroup.scss';
+import {Link} from "react-router-dom";
 
 const PlayGroup = () => {
     useEffect(() => {
@@ -74,7 +75,7 @@ const PlayGroup = () => {
                     <p>There is a lot more to know. Please feel free to contact us.
                     </p>
                     <div className='contact-us-playgroup' data-testid="contact-us-comp">
-                        <a href='/contact-us' data-testid="contact-us-link-test">
+                        <Link to='/contact-us' data-testid="contact-us-link-test">
                             <Button
                                 buttonStyle="primary-button"
                                 buttonSize="large"
@@ -82,7 +83,7 @@ const PlayGroup = () => {
                             >
                                 Contact us
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -54,7 +54,7 @@ describe('Tests for the Admissions Component', () => {
         expect(linkElement).toBeInTheDocument();
         expect(linkElement).toHaveAttribute(
             'href',
-            'https://www.campuskidz.in/Registration/OnlineEnquiry'
+            'https://www.campuskidz.in/toddler'
         );
     });
 });

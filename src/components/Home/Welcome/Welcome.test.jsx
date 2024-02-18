@@ -42,6 +42,6 @@ describe('Welcome component', () => {
         );
         const linkElement = screen.getByRole('link', { name: /Submit an Enquiry/i });
         expect(linkElement).toBeInTheDocument();
-        expect(linkElement.href).toContain('https://www.campuskidz.in/Registration/OnlineEnquiry');
+        expect(linkElement.href).toContain('https://www.campuskidz.in/toddler');
     });
 });

@@ -36,7 +36,7 @@ const Admissions = () => {
                     enrollment journey, kindly click on the button below, where you can register your interest.
                 </p>
                 <div className='register-interest-admission' data-testid="register-test-comp">
-                    <Link to="https://www.campuskidz.in/toddler" target="_blank" data-testid="link-test">
+                    <Link to="https://www.campuskidz.in/Logon/KidEnquiry?SchoolCode=TODDLER" target="_blank" data-testid="link-test">
                         <Button
                             buttonStyle="primary-button"
                             buttonSize="large"

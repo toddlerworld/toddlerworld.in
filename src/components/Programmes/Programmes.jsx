@@ -13,7 +13,8 @@ const Programmes = () => {
                 <p>Our programmes are designed keeping in mind your child’s age and ability to absorb information.
                     We make sure to provide your child with every opportunity to challenge themselves while also
                     paying equal attention to keeping them fit and active. Our activities are not only confined to the
-                    classroom but also include various other activities to make learning fun.</p>
+                    classroom but also include various other activities to make learning fun.
+                </p>
             </div>
             <div className="programmes-cards-container">
                 <div className="card">
@@ -44,9 +45,10 @@ const Programmes = () => {
             <div className="programmes-bottom-container">
                 <h3>Age appropriate programmes that grow with your child</h3><br/>
                 <p>Our programmes are designed keeping in mind your child’s age and ability to absorb information. We
-                    make sure to provide your child with every opportunity to challenge themselves  while also paying
+                    make sure to provide your child with every opportunity to challenge themselves while also paying
                     equal attention to keeping them fit and active. Our activities are not only confined to the
-                    classroom but also include various other activities to make learning fun.</p>
+                    classroom but also include various other activities to make learning fun.
+                </p>
             </div>
         </div>
     );

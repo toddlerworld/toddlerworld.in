@@ -13,7 +13,8 @@ const Programmes = () => {
                 <p>Our programmes are designed keeping in mind your child’s age and ability to absorb information.
                     We make sure to provide your child with every opportunity to challenge themselves while also
                     paying equal attention to keeping them fit and active. Our activities are not only confined to the
-                    classroom but also include various other activities to make learning fun.</p>
+                    classroom but also include various other activities to make learning fun.
+                </p>
             </div>
             <div className="programmes-cards-container">
                 <div className="card">
@@ -38,29 +39,16 @@ const Programmes = () => {
                                 path="/nursery"
                             />
                         </ul>
-                        <ul className='items'>
-                            <CardItem
-                                src="/images/programmes/4.webp"
-                                text={'Skills that will guide your child towards future academic success: Kindergarten 1 at Toddler World'}
-                                label="Kindergarten 1 (4 - 5 years)"
-                                path="/kindergarten-1"
-                            />
-                            <CardItem
-                                src="/images/programmes/5.webp"
-                                text={'Academic challenges that will result in a smoother transition to school: Kindergarten 2 at Toddler World'}
-                                label="Kindergarten 2 (5 - 6 years)"
-                                path="/kindergarten-2"
-                            />
-                        </ul>
                     </div>
                 </div>
             </div>
             <div className="programmes-bottom-container">
-                <h3>Age appropriate programmes that grow with your child</h3><br/>
-                <p>Our programmes are designed keeping in mind your child’s age and ability to absorb information. We
-                    make sure to provide your child with every opportunity to challenge themselves  while also paying
-                    equal attention to keeping them fit and active. Our activities are not only confined to the
-                    classroom but also include various other activities to make learning fun.</p>
+                <h3>Tailored to your child's developmental stage</h3><br/>
+                <p>Our programmes are meticulously crafted to align with the developmental milestones of your child.
+                    We strive to create an environment where they can thrive intellectually, physically and
+                    emotionally. Beyond traditional classroom settings, we offer a diverse range of activities aimed
+                    at making learning a joyous and holistic experience.
+                </p>
             </div>
         </div>
     );

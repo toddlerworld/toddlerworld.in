@@ -24,8 +24,8 @@ describe('Programmes Component', () => {
     });
 
     test('renders correct number of CardItems with proper props', () => {
-        // Expect CardItem to be called 5 times
-        expect(CardItem).toHaveBeenCalledTimes(5);
+        // Expect CardItem to be called 3 times
+        expect(CardItem).toHaveBeenCalledTimes(3);
 
         //Loop through each call to CardItem and check the props
         CardItem.mock.calls.forEach((call, index) => {

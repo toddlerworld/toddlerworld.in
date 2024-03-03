@@ -53,18 +53,6 @@ describe('Tests if all Links are reachable and render properly', () => {
     cy.get('.our-environment-container').find('img').should('have.length', 1)
   })
 
-  it('Test if the Kindergarten 1 link works', () => {
-    cy.visit('/kindergarten-1')
-    cy.get('.heading-kindergarten1 h1').should('have.text', 'KINDERGARTEN 1 (4 - 5 YEARS)')
-    cy.get('.heading-kindergarten1').find('img').should('have.length', 1)
-  })
-
-  it('Test if the Kindergarten 2 link works', () => {
-    cy.visit('/kindergarten-2')
-    cy.get('.heading-kindergarten2 h1').should('have.text', 'KINDERGARTEN 2 (5 - 6 YEARS)')
-    cy.get('.heading-kindergarten2').find('img').should('have.length', 1)
-  })
-
   it('Test if the Not Found link works', () => {
     cy.visit('/sfajbs') // random link
     cy.get('.error-page-container h1').should('have.text', 'Lost your Way?')
@@ -113,8 +101,8 @@ describe('Tests if all Links are reachable and render properly', () => {
   it('Test if the Programmes link works', () => {
     cy.visit('/programmes')
     cy.get('.programmes-container h2').should('have.text', 'Our Programmes')
-    cy.get('.programmes-cards-container ul').should('have.length', 2)
-    cy.get('.programmes-cards-container ul li').should('have.length', 5)
+    cy.get('.programmes-cards-container ul').should('have.length', 1)
+    cy.get('.programmes-cards-container ul li').should('have.length', 3)
   })
 
   it('Test if the School Transitions link works', () => {

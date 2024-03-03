@@ -38,20 +38,6 @@ const Programmes = () => {
                                 path="/nursery"
                             />
                         </ul>
-                        <ul className='items'>
-                            <CardItem
-                                src="/images/programmes/4.webp"
-                                text={'Skills that will guide your child towards future academic success: Kindergarten 1 at Toddler World'}
-                                label="Kindergarten 1 (4 - 5 years)"
-                                path="/kindergarten-1"
-                            />
-                            <CardItem
-                                src="/images/programmes/5.webp"
-                                text={'Academic challenges that will result in a smoother transition to school: Kindergarten 2 at Toddler World'}
-                                label="Kindergarten 2 (5 - 6 years)"
-                                path="/kindergarten-2"
-                            />
-                        </ul>
                     </div>
                 </div>
             </div>

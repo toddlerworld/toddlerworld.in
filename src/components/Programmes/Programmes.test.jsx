@@ -2,7 +2,6 @@ import {MemoryRouter, Route, Routes} from 'react-router-dom';
 import { render, screen } from '@testing-library/react';
 import Programmes from './Programmes';
 import CardItem from '../CardItem/CardItem';
-import PlayEquipment from '../PlayEquipment/PlayEquipment';
 import React from 'react';
 
 jest.mock('../CardItem/CardItem', () => jest.fn());
@@ -24,8 +23,8 @@ describe('Programmes Component', () => {
     });
 
     test('renders correct number of CardItems with proper props', () => {
-        // Expect CardItem to be called 3 times
-        expect(CardItem).toHaveBeenCalledTimes(3);
+        // Expect CardItem to be called 2 times
+        expect(CardItem).toHaveBeenCalledTimes(2);
 
         //Loop through each call to CardItem and check the props
         CardItem.mock.calls.forEach((call, index) => {

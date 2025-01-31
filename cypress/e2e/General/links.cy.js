@@ -102,7 +102,7 @@ describe('Tests if all Links are reachable and render properly', () => {
     cy.visit('/programmes')
     cy.get('.programmes-container h2').should('have.text', 'Our Programmes')
     cy.get('.programmes-cards-container ul').should('have.length', 1)
-    cy.get('.programmes-cards-container ul li').should('have.length', 3)
+    cy.get('.programmes-cards-container ul li').should('have.length', 2)
   })
 
   it('Test if the School Transitions link works', () => {

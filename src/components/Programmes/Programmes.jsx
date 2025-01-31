@@ -21,12 +21,6 @@ const Programmes = () => {
                     <div className="wrapper">
                         <ul className="items">
                             <CardItem
-                                src="/images/programmes/1.webp"
-                                text={'A high-energy toddler program that lets them explore the world: Toddlers at Toddler World'}
-                                label="Play Group (18 - 24 months)"
-                                path="/play-group"
-                            />
-                            <CardItem
                                 src="/images/programmes/2.webp"
                                 text={'A strong foundation for success in school and in life: Pre-Nursery at Toddler World'}
                                 label="Pre Nursery (2 - 3 years)"

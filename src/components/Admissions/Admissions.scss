@@ -1,57 +1,133 @@
 .admissions-container {
-    padding: 4rem;
-    max-width: 70%;
-    display: block;
-    margin: auto;
-}
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem max(10%, 2rem);
 
-.admissions-image {
-    max-width: 100%;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    text-align: center;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.left-aligned-admissions {
+  .heading {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
     text-align: left;
-    width: 40%;
-    display: inline-block;
-    padding-right: 25%;
+  }
+
+  .hr-about-us {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1.5rem 0 3rem;
+    width: 100%;
+  }
 }
 
-.right-aligned-admissions {
-    text-align: left;
-    width: 30%;
-    display: inline-block;
+.admissions-image-wrapper {
+  margin-bottom: 2rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+}
+
+.admissions-content {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  .left-aligned-admissions {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+
+    ul {
+      margin: 1.5rem 0;
+      padding-left: 1.5rem;
+      list-style: none;
+
+      li {
+        position: relative;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+
+        &::before {
+          content: "•";
+          position: absolute;
+          left: 0;
+          color: #4a5568;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .right-aligned-admissions {
+    background: #f7fafc;
+    padding: 2rem;
+    border-radius: 1rem;
+
     h1 {
-        text-align: center;
-    }
-}
-.register-interest-admission {
-    padding-top: 10%;
-    text-align: center;
-}
-
-@media screen and (max-width: 786px) {
-    .admissions-container {
-        padding: 1rem;
-        max-width: 100%;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-    .left-aligned-admissions, .right-aligned-admissions {
-        width: 100%;
-        display: block;
-        justify-content: center;
-        padding: 0 0 8%;
+      font-size: 1.5rem;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      text-align: center;
     }
 
-    .left-aligned-admissions ul {
-        padding-left: 5%;
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #4a5568;
+      margin-bottom: 2rem;
     }
+
+    .register-interest-admission {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .admissions-container {
+    padding: 2rem 5%;
+  }
+
+  .admissions-content {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .admissions-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    .right-aligned-admissions {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .admissions-container {
+    padding: 1.5rem 1rem;
+  }
+
+  .admissions-content {
+    .right-aligned-admissions {
+      padding: 1.5rem;
+    }
+  }
 }

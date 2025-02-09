@@ -24,9 +24,10 @@ Provide instructions so we can reproduce. Please also list any relevant details 
 - [ ] Accessibility Tests (preferably in Lighthouse)
 
 **Test Configuration**
-* Firmware version:
-* Hardware:
-* Tools Used:
+
+- Firmware version:
+- Hardware:
+- Tools Used:
 
 ## Checklist
 

@@ -1,60 +1,103 @@
 .parent-partnership-container {
-    padding-left: 10%;
-    padding-bottom: 9%;
-    max-width: 80%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem max(10%, 2rem);
+
+  .heading {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    color: #2d3748;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+  }
+
+  .hr-about-us {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 1.5rem 0 3rem;
+    width: 100%;
+  }
 }
 
 .p-parent-partnership {
-    display: flex;
+  display: flex;
+  gap: 3rem;
+  align-items: flex-start;
+
+  p {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #4a5568;
+    max-width: 800px;
+
+    strong {
+      display: block;
+      font-size: 1.25rem;
+      color: #2d3748;
+      margin-top: 2rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    & > span {
+      display: block;
+      margin-bottom: 1.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .image-wrapper {
+    flex: 1;
+    max-width: 35%;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 1.5rem;
+      object-fit: cover;
+    }
+  }
 }
 
-.parent-partnership-container p{
-    float: left;
-    padding-right: 5%;
+@media (max-width: 1024px) {
+  .parent-partnership-container {
+    padding: 2rem 5%;
+  }
+
+  .p-parent-partnership {
+    gap: 3rem;
+
+    .image-wrapper {
+      max-width: 40%;
+    }
+  }
 }
 
+@media (max-width: 768px) {
+  .parent-partnership-container {
+    padding: 1.5rem 1rem;
 
-.image-parent-partnership {
-    display: flex;
+    .heading {
+      font-size: 1.75rem;
+    }
+  }
+
+  .p-parent-partnership {
     flex-direction: column;
-    align-items: flex-start;
-    color:white;
-    width: 30%;
-    float: right;
-}
+    gap: 2rem;
 
-@media screen and (max-width: 1250px) {
-    .image-parent-partnership {
-        padding-top: 10%;
-        height: 30%;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .parent-partnership-container {
-        padding: 1rem;
-        max-width: 100%;
-    }
-    
-    .our-parent-partnership {
-        align-items: center;
-        justify-content: center;
-    }
-    .p-parent-partnership {
-        display: flex;
-        flex-direction: column;
+    p {
+      order: 2;
     }
 
-    .parent-partnership-container p{
-        padding-bottom: 5%;
+    .image-wrapper {
+      order: 1;
+      max-width: 100%;
     }
-    .image-parent-partnership {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color: white;
-        justify-content: center;
-        width: 100%;
-        float: right;
-    }
+  }
 }

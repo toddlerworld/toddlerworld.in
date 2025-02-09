@@ -1,62 +1,75 @@
-import React from 'react';
-import './Footer.scss';
-import {Link} from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaYoutube,
+  FaTwitter,
+  FaLinkedin,
+} from "react-icons/fa";
+import "./Footer.scss";
 
-function Footer() {
-    return (
-        <div className="footer-container">
-            <section className="logo-socials">
-                <div className="wrapper-socials">
-                    <Link to="/" className="social-logo">
-						Toddler World
-                    </Link>
-                    <small className="website-rights">Toddler World © 2016-2024</small>
-                    <div className="logos-socials">
-                        <Link
-                            className="social-icon-link facebook"
-                            to="https://www.facebook.com/toddlerworldsgr/"
-                            target="_blank"
-                            aria-label="Facebook"
-                        >
-                            <i className="fab fa-facebook-f"/>
-                        </Link>
-                        <Link
-                            className="social-icon-link instagram"
-                            to="https://www.instagram.com/toddlerworldsgr/"
-                            target="_blank"
-                            aria-label="Instagram"
-                        >
-                            <i className="fab fa-instagram"/>
-                        </Link>
-                        <Link
-                            className="social-icon-link youtube"
-                            to="https://www.youtube.com/@ToddlerWorld"
-                            target="_blank"
-                            aria-label="Youtube"
-                        >
-                            <i className="fab fa-youtube"/>
-                        </Link>
-                        <Link
-                            className="social-icon-link twitter"
-                            to="https://www.twitter.com/toddlerworldsgr/"
-                            target="_blank"
-                            aria-label="Twitter"
-                        >
-                            <i className="fab fa-twitter"/>
-                        </Link>
-                        <Link
-                            className="social-icon-link twitter"
-                            to="https://www.linkedin.com/company/toddlerworld/"
-                            target="_blank"
-                            aria-label="LinkedIn"
-                        >
-                            <i className="fab fa-linkedin"/>
-                        </Link>
-                    </div>
-                </div>
-            </section>
+const Footer = () => {
+  const socialLinks = [
+    {
+      name: "Facebook",
+      icon: <FaFacebookF />,
+      url: "https://www.facebook.com/toddlerworldsgr/",
+    },
+    {
+      name: "Instagram",
+      icon: <FaInstagram />,
+      url: "https://www.instagram.com/toddlerworldsgr/",
+    },
+    {
+      name: "Youtube",
+      icon: <FaYoutube />,
+      url: "https://www.youtube.com/@ToddlerWorld",
+    },
+    {
+      name: "Twitter",
+      icon: <FaTwitter />,
+      url: "https://www.twitter.com/toddlerworldsgr/",
+    },
+    {
+      name: "LinkedIn",
+      icon: <FaLinkedin />,
+      url: "https://www.linkedin.com/company/toddlerworld/",
+    },
+  ];
+
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-content">
+          <Link to="/" className="footer-logo">
+            Toddler World
+          </Link>
+
+          <div className="social-links">
+            {socialLinks.map((social) => (
+              <a
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label={social.name}
+              >
+                {social.icon}
+              </a>
+            ))}
+          </div>
+
+          <div className="footer-bottom">
+            <p className="copyright">
+              Toddler World © 2016-{new Date().getFullYear()}
+            </p>
+          </div>
         </div>
-    );
-}
+      </div>
+    </footer>
+  );
+};
 
 export default Footer;

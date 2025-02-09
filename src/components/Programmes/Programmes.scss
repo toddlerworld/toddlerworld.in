@@ -1,47 +1,99 @@
 .programmes-container {
-    padding: 2rem;
-    background: #fff;
-}
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem max(10%, 2rem);
 
-.programmes-top-container, .programmes-bottom-container {
-    padding-bottom: 20px;
+  .programmes-top-container,
+  .programmes-bottom-container {
+    max-width: 600px;
+    margin: 0 auto;
     text-align: center;
-    max-width: 50%;
-    margin: auto;
-    font-size: 20px;
-}
 
-.programmes-cards-container {
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin: 50px 0 24px;
-}
-
-@media screen and (max-width: 1300px) {
-    .programmes-top-container, .programmes-bottom-container {
-        max-width: 60%;
-    }
-}
-
-@media screen and (max-width: 1000px) {
-    .programmes-top-container, .programmes-bottom-container {
-        max-width: 70%;
-    }
-}
-
-@media screen and (max-width: 800px) {
-    .programmes-top-container, .programmes-bottom-container {
-        max-width: 85%;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .programmes-container {
-        padding: 1rem;
+    h2,
+    h3 {
+      font-size: 1.75rem;
+      color: #2d3748;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
-    .programmes-top-container, .programmes-bottom-container {
-        max-width: 100%;
+    p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #4a5568;
     }
+  }
+
+  .programmes-cards-container {
+    margin: 2rem auto;
+    max-width: 900px;
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      justify-content: center;
+
+      .facility-card {
+        background: white;
+        border-radius: 0.5rem;
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        height: 100%;
+
+        &:hover {
+          transform: translateY(-4px);
+        }
+
+        .image-wrapper {
+          position: relative;
+          aspect-ratio: 50/9;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .label {
+            position: absolute;
+            bottom: 0.75rem;
+            left: 0.75rem;
+            background: rgba(255, 255, 255, 0.9);
+            color: #2d3748;
+            padding: 0.4rem 0.75rem;
+            border-radius: 0.25rem;
+            font-size: 0.875rem;
+            font-weight: 500;
+          }
+        }
+
+        .content {
+          padding: 1rem;
+
+          p {
+            font-size: 0.925rem;
+            line-height: 1.5;
+            color: #4a5568;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .programmes-container {
+    padding: 1.5rem 1rem;
+
+    .programmes-cards-container {
+      margin: 1.5rem auto;
+
+      .cards-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
 }

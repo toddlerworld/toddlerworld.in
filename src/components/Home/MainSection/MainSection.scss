@@ -1,62 +1,81 @@
 .hero-container {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 1000px rgb(0 0 0 / 20%);
-    object-fit: contain;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.2)
+    );
+    z-index: 1;
+  }
 }
 
-.hero-container > h1 {
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  max-width: 90rem;
+  width: 100%;
+  padding: 0 1rem;
+
+  h1 {
     color: #fff;
-    font-size: 100px;
-    margin-top: -100px;
+    font-size: clamp(2.5rem, 5vw + 1rem, 6.25rem);
     text-align: center;
-}
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-.hero-container > p {
-    margin-top: 8px;
-    color: #fff;
-    padding: 50px;
-    justify-content: center;
-    text-align: center;
-    font-size: 32px;
-}
-
-.button-login {
-    margin-top: 32px;
-}
-
-.button-login .login-button {
-    margin: 6px;
-}
-
-.fa-play-circle {
-    margin-left: 4px;
-}
-
-@media (786px <= width <= 960px) {
-    .hero-container > h1 {
-        font-size: 70px;
-        margin-top: -150px;
+    @media (prefers-reduced-motion: no-preference) {
+      transition: font-size 0.3s ease;
     }
+  }
 }
 
+.button-container {
+  margin-top: 1rem;
+}
 
-@media (1px <= width <= 786px) {
-    .hero-container > h1 {
-        font-size: 50px;
-        margin-top: -100px;
-    }
+.cta-link {
+  text-decoration: none;
+  display: inline-block;
 
-    .hero-container > p {
-        font-size: 30px;
-    }
+  &:focus-visible {
+    outline: 3px solid #fff;
+    outline-offset: 4px;
+    border-radius: 4px;
+  }
+}
 
-    .responsive {
-        display: block;
-        text-decoration: none;
+.cta-button {
+  @media (hover: hover) {
+    transition: transform 0.2s ease;
+
+    &:hover {
+      transform: translateY(-2px);
     }
+  }
+}
+
+@container (width < 768px) {
+  .hero-content {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 1rem 0.5rem;
+  }
 }

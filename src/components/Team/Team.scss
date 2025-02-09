@@ -1,65 +1,90 @@
 .our-team-container {
-    padding-left: 10%;
-    max-width: 80%;
-    padding-bottom: 5%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 4rem max(10%, 2rem);
+  background-color: #f8fafc;
+
+  .heading {
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #2c3e50;
+    margin-bottom: 1rem;
+  }
+
+  .hr-about-us {
+    border: none;
+    height: 1px;
+    background-color: #e2e8f0;
+    margin: 2rem 0 4rem;
+  }
 }
 
 .p-about-us {
-    display: flex;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 4rem;
+  align-items: start;
+
+  p {
+    font-size: clamp(1rem, 1.5vw, 1.125rem);
+    line-height: 1.8;
+    color: #4a5568;
+
+    span {
+      display: block;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .image-wrapper {
+    position: sticky;
+    top: 2rem;
+
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.02);
+      }
+    }
+  }
 }
 
-.our-team-container p{
-    float: left;
-    padding-right: 5%;
+@media (max-width: 1024px) {
+  .our-team-container {
+    padding: 3rem max(5%, 1.5rem);
+  }
+
+  .p-about-us {
+    gap: 3rem;
+
+    .image-wrapper {
+      position: relative;
+      top: 0;
+    }
+  }
 }
 
-.heading h1 {
-    padding-top: 3%;
-    text-align: left;
-    align-items: flex-start;
-}
+@media (max-width: 768px) {
+  .our-team-container {
+    padding: 2rem 1rem;
+  }
 
-.image-our-team {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color:white;
-    height: 400px;
-    width: 40%;
-    float: right;
-}
+  .p-about-us {
+    grid-template-columns: 1fr;
+    gap: 2rem;
 
-@media screen and (max-width: 1024px) {
-    .our-team-container {
-        align-items: center;
-        justify-content: center;
-        p {
-            padding-bottom: 5%;
-        }
+    p {
+      order: 2;
     }
 
-}
-
-@media screen and (max-width: 768px){
-    .our-team-container {
-        padding: 1rem;
-        max-width: 100%;
+    .image-wrapper {
+      order: 1;
     }
-
-    .image-our-team {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        color:white;
-        height: 100%;
-        width: 100%;
-        float: right;
-    }
-
-    .p-about-us {
-        display: flex;
-        flex-direction: column;
-    }
-
+  }
 }

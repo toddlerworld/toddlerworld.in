@@ -1,209 +1,215 @@
+$primary-color: #222222;
+$secondary-color: #222222;
+
+$background-color: #fff;
+$text-color: #333;
+
 .navbar {
-    background: linear-gradient(90deg, rgb(28 27 27) 0%, rgb(26 23 23) 100%);
-    height: 80px;
-    font-size: 1.2rem;
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  background: linear-gradient(90deg, $primary-color 0%, $secondary-color 100%);
+  height: 70px;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;
-    max-width: 1500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .navbar-logo {
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    scale: 0.27;
-}
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 
-.fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
-}
-
-.nav-menu {
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    list-style: none;
-    text-align: center;
-    width: 60vw;
-    justify-content: end;
-    margin-right: 2rem;
-}
-
-.nav-item {
-    height: 80px;
-}
-
-.nav-links {
-    color: #fff;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0 1rem;
-    height: 100%;
-}
-
-.nav-links:hover {
-    color: #ff0;
-    transition: all 0.2s ease-out;
-}
-
-.fa-bars {
-    font-size: 25px;
-    color: #fff;
-}
-
-.nav-links-mobile {
-    display: none;
+  .logo-image {
+    height: 65px;
+    width: auto;
+  }
 }
 
 .menu-icon {
-    display: none;
+  display: none;
+  font-size: 1.8rem;
+  color: $background-color;
+  cursor: pointer;
 }
 
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left: 30px;
+    position: relative;
+  }
+}
+
+.nav-links {
+  color: $background-color;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+  font-weight: 500;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.2);
+  }
+}
+
+/* Dropdown styles */
 .dropdown {
-    float: left;
-    overflow: hidden;
-}
-
-.dropdown .nav-links {
-    font-size: 1.2rem;
+  .dropdown-toggle {
+    background: none;
     border: none;
-    color: #fff;
-    padding: 0 1rem;
-    height: 100%;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-}
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font: inherit;
+    color: $background-color;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
 
-.dropdown-content {
-    display: none;
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .caret-icon {
+      margin-left: 5px;
+    }
+  }
+
+  .dropdown-content {
     position: absolute;
-    background-color: #000;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgb(0 0 0 / 20%);
-    z-index: 1;
+    top: 100%;
+    left: 0;
+    background: $primary-color;
+    min-width: 180px;
+    border-radius: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition:
+      opacity 0.3s ease,
+      transform 0.3s ease,
+      visibility 0.3s;
+    z-index: 1000;
 
-    a {
-        float: none;
-        color: white;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-        text-align: center;
+    .dropdown-item {
+      display: block;
+      padding: 10px 15px;
+      color: $background-color;
+      text-decoration: none;
+      transition: background 0.3s ease;
 
-        &:hover {
-            color: #ff0;
-        }
+      &:hover {
+        background: rgba(255, 255, 255, 0.2);
+      }
     }
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover .dropdown-content {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+  }
+
+  .dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
-.dropdown:hover .dropdown-content {
+@media screen and (max-width: 875px) {
+  .menu-icon {
     display: block;
-}
+    z-index: 1001;
+  }
 
-@media (1px <= width <= 875px) {
-    .nav-menu {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: flex-start;
-        height: 100vh;
-        position: absolute;
-        top: 80px;
-        left: -100%;
-        opacity: 1;
-        transition: all 0.5s ease;
-    }
+  .nav-menu {
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: linear-gradient(
+      90deg,
+      $primary-color 0%,
+      $secondary-color 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 1000;
+    padding: 0;
+    margin: 0;
+  }
 
-    .nav-menu.active {
-        background: #000;
-        left: 0;
-        opacity: 1;
-        transition: all 0.5s ease;
-        z-index: 1;
-    }
+  .nav-menu.active {
+    transform: translateX(0);
+  }
 
-    .nav-links {
-        text-align: center;
-        width: 100%;
-        display: table;
-        padding: 2rem 0 0;
+  /* Ensure each list item occupies full width and is centered */
+  .nav-menu li {
+    width: 100%;
+    text-align: center;
+    margin: 10px 0;
+  }
 
-        &:hover {
-            color: #ff0;
-            border-radius: 0;
-        }
-    }
+  /* Make each nav link a block element that fills its container */
+  .nav-links {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
 
-    .navbar-logo {
-        position: absolute;
-        top: -90px;
-        left: 0;
-        right: 500px;
-        scale: 0.27;
-    }
+  /* Specific adjustments for the dropdown toggle button */
+  .dropdown .dropdown-toggle {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+    background: none;
+    border: none;
+    color: $background-color;
+    font-size: inherit;
+    cursor: pointer;
+  }
 
-    .menu-icon {
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        transform: translate(-100%, 60%);
-        font-size: 1.8rem;
-        cursor: pointer;
-    }
+  /* Position dropdown content statically for mobile */
+  .dropdown .dropdown-content {
+    position: static;
+    opacity: 0;
+    visibility: hidden;
+    transform: none;
+    box-shadow: none;
+    background: none;
+    margin-top: 10px;
+    width: 100%;
+  }
 
-    .fa-times {
-        color: #fff;
-        font-size: 2rem;
-    }
-
-    .nav-links-mobile {
-        display: block;
-        text-align: center;
-        margin: 2rem auto;
-        border-radius: 4px;
-        width: 80%;
-        text-decoration: none;
-        font-size: 1.5rem;
-        background-color: transparent;
-        color: #fff;
-        padding: 14px 20px;
-        border: 1px solid #fff;
-        transition: all 0.3s ease-out;
-    }
-
-    .nav-links-mobile:hover {
-        background: #fff;
-        color: #242424;
-        transition: 250ms;
-    }
-
-    .dropdown {
-        height: 80px;
-    }
-
-    .dropdown-content {
-        min-width: 100%;
-
-        a {
-            float: none;
-            color: white;
-            min-width: 90%;
-            text-decoration: none;
-            display: block;
-            text-align: center;
-        }
-    }
+  .dropdown .dropdown-content.show {
+    opacity: 1;
+    visibility: visible;
+  }
 }

@@ -1,26 +1,26 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Button } from "../Button/Button";
-import "./Activities.scss";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '../Button/Button';
+import './Activities.scss';
 
 const Activities = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const activities = [
-    "Prayers & Duas",
-    "Singing, Dance, Painting, Sand Pit",
-    "Clay Modeling & Pottery",
-    "Indoor soft play area",
-    "Gardening and Planting Saplings",
-    "Role Play",
-    "Character Building Stories",
-    "Folk Stories and Puppets",
-    "Movies and AV facilities",
-    "Reading Nook",
-    "Story Telling Area",
+    'Prayers & Duas',
+    'Singing, Dance, Painting, Sand Pit',
+    'Clay Modeling & Pottery',
+    'Indoor soft play area',
+    'Gardening and Planting Saplings',
+    'Role Play',
+    'Character Building Stories',
+    'Folk Stories and Puppets',
+    'Movies and AV facilities',
+    'Reading Nook',
+    'Story Telling Area',
   ];
 
   return (
@@ -75,9 +75,9 @@ const Activities = () => {
         <div className="right-aligned-activities">
           <h1>Play Equipment</h1>
           <p>
-            A range of play equipment is available to help children develop an
-            array of skills, and great care is taken to choose materials that
-            will create an inspiring sensory experience.
+            A range of play equipment is available to help children develop an array of skills, and
+            great care is taken to choose materials that will create an inspiring sensory
+            experience.
           </p>
           <div className="register-interest-activities">
             <Link to="/play-equipment">

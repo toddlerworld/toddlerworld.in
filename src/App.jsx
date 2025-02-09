@@ -1,25 +1,25 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./components/Home/Home";
-import Footer from "./components/Footer/Footer";
-import About from "./components/About/About";
-import Team from "./components/Team/Team";
-import Environment from "./components/Environment/Environment";
-import Welcome from "./components/Welcome/Welcome";
-import PlayEquipment from "./components/PlayEquipment/PlayEquipment";
-import ParentPartnership from "./components/ParentPartnership/ParentPartnership";
-import PoliciesProcedures from "./components/PoliciesProcedures/PoliciesProcedures";
-import Admissions from "./components/Admissions/Admissions";
-import Activities from "./components/Activities/Activities";
-import Careers from "./components/Careers/Careers";
-import PreNursery from "./components/PreNursery/PreNursery";
-import Nursery from "./components/Nursery/Nursery";
-import ContactUs from "./components/Contact-us/Contact-us";
-import NotFound from "./components/NotFound/NotFound";
-import Programmes from "./components/Programmes/Programmes";
-import SchoolTransitions from "./components/SchoolTransitions/SchoolTransitions";
+import React from 'react';
+import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
+import Home from './components/Home/Home';
+import Footer from './components/Footer/Footer';
+import About from './components/About/About';
+import Team from './components/Team/Team';
+import Environment from './components/Environment/Environment';
+import Welcome from './components/Welcome/Welcome';
+import PlayEquipment from './components/PlayEquipment/PlayEquipment';
+import ParentPartnership from './components/ParentPartnership/ParentPartnership';
+import PoliciesProcedures from './components/PoliciesProcedures/PoliciesProcedures';
+import Admissions from './components/Admissions/Admissions';
+import Activities from './components/Activities/Activities';
+import Careers from './components/Careers/Careers';
+import PreNursery from './components/PreNursery/PreNursery';
+import Nursery from './components/Nursery/Nursery';
+import ContactUs from './components/Contact-us/Contact-us';
+import NotFound from './components/NotFound/NotFound';
+import Programmes from './components/Programmes/Programmes';
+import SchoolTransitions from './components/SchoolTransitions/SchoolTransitions';
 
 function App() {
   return (

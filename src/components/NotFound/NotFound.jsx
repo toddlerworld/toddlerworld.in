@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Button } from "../Button/Button";
-import "./NotFound.scss";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '../Button/Button';
+import './NotFound.scss';
 
 const NotFound = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
@@ -30,8 +30,7 @@ const NotFound = () => {
         <p>
           Sorry we can't find that page!
           <br />
-          But we're sure you'll find your way back home by clicking the button
-          below.
+          But we're sure you'll find your way back home by clicking the button below.
         </p>
         <Link to="/" className="home-button">
           <Button className="btn">Go Home</Button>

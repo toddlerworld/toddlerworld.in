@@ -2,30 +2,38 @@
   "name": "toddler-world",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@testing-library/jest-dom": "^6.4.2",
-    "@testing-library/react": "^14.2.1",
-    "cypress": "^13.12.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-responsive": "^9.0.2",
-    "react-responsive-carousel": "^3.2.23",
-    "react-router-dom": "^6.22.3",
-    "react-scripts": "5.0.1",
-    "react-slick": "^0.30.2",
-    "sass": "^1.72.0",
-    "slick-carousel": "^1.8.1",
-    "web-vitals": "^3.5.2"
-  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --coverage",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "styling-format": "prettier . --write",
+    "styling-check": "prettier . --check"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "framer-motion": "^12.4.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-icons": "^5.4.0",
+    "react-responsive": "^9.0.2",
+    "react-responsive-carousel": "^3.2.23",
+    "react-router-dom": "^6.22.3",
+    "react-scripts": "5.0.1",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.25.8",
+    "@babel/eslint-parser": "7.24.1",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "7.24.3",
+    "@testing-library/jest-dom": "^6.4.2",
+    "@testing-library/react": "^14.2.1",
+    "prettier": "3.5.0",
+    "sass": "^1.72.0",
+    "web-vitals": "^3.5.2"
   },
   "browserslist": {
     "production": [
@@ -39,14 +47,6 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {
-    "@babel/core": "7.25.8",
-    "@babel/eslint-parser": "7.24.1",
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "@babel/preset-env": "7.24.3",
-    "jest": "^29.7.0",
-    "ts-jest": "^29.2.5"
-  },
   "standard": {
     "globals": [
       "describe",
@@ -55,8 +55,7 @@
       "beforeEach",
       "afterEach",
       "it",
-      "assert",
-      "cy"
+      "assert"
     ]
   }
 }

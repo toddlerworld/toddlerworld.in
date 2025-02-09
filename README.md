@@ -1,9 +1,7 @@
 # The Toddler World codebase
 
-![Build and Test workflow](https://github.com/aheedshah/toddler-world/actions/workflows/build_test_react.yml/badge.svg)
 [![codecov](https://codecov.io/gh/aheedshah/toddler-world/graph/badge.svg?token=57OH7CZD9F)](https://codecov.io/gh/aheedshah/toddler-world)
 [![Linter](https://github.com/aheedshah/toddler-world/actions/workflows/linter.yml/badge.svg)](https://github.com/marketplace/actions/super-linter)
-![Telegram Message](https://github.com/aheedshah/toddler-world/actions/workflows/telegram-notifications.yml/badge.svg)
 
 This is the codebase for the Toddler World web app. Please feel free to contribute to the project by forking the
 repository and submitting a pull request. The PR needs to have a description of the changes and the reason for the same.
@@ -27,13 +25,13 @@ Every kind of help is appreciated!
 Install docker and run it through docker. This will ensure that the application runs in the same environment as it
 would on the server. To run the application through docker, run the following commands:
 
-```docker-compose -f docker-compose.yml up```
+`docker-compose -f docker-compose.yml up`
 
 The above command will create the docker image and run the application on your local machine.
 
 The below command is used to run the application in the background:
 
-```docker run toddler-world-dev```
+`docker run toddler-world-dev`
 
 If you've added packages, created new files, or added new images, keep in mind to update the docker image for it to run
 using the command

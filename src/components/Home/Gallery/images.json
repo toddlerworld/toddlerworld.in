@@ -1,92 +1,92 @@
 [
-    {
-        "id": "1",
-        "source": "/images/home-page-gallery/1.webp",
-        "alt": "A child cutting a loaf of bread with a toy knife in a playful kitchen setting"
-    },
-    {
-        "id": "2",
-        "source": "/images/home-page-gallery/2.webp",
-        "alt": "A child peering with curiosity between the pages of the Rocky Monkey book."
-    },
-    {
-        "id": "3",
-        "source": "/images/home-page-gallery/3.webp",
-        "alt": "Treading Beads at Toddler World"
-    },
-    {
-        "id": "4",
-        "source": "/images/home-page-gallery/4.webp",
-        "alt": "A young child happily stacking colorful building blocks on a sunny day, illustrating the joy of creative play and early learning."
-    },
-    {
-        "id": "5",
-        "source": "/images/home-page-gallery/5.webp",
-        "alt": "Two joyful boys engaged in imaginative play with toy cars."
-    },
-    {
-        "id": "6",
-        "source": "/images/home-page-gallery/6.webp",
-        "alt": "A joyful boy with paint on his hands creating a colourful triangle with his hand and looking through it."
-    },
-    {
-        "id": "7",
-        "source": "/images/home-page-gallery/7.webp",
-        "alt": "A child in costume gazing up at the sky."
-    },
-    {
-        "id": "8",
-        "source": "/images/home-page-gallery/8.webp",
-        "alt": "A child in costume looking at the camera."
-    },
-    {
-        "id": "9",
-        "source": "/images/home-page-gallery/9.webp",
-        "alt": "Child selling potatoes, peppers, and beans while holding money in hand."
-    },
-    {
-        "id": "10",
-        "source": "/images/home-page-gallery/10.webp",
-        "alt": "Two boys using the Rock Climbing facilities"
-    },
-    {
-        "id": "11",
-        "source": "/images/home-page-gallery/11.webp",
-        "alt": "Two children playing inside the play house"
-    },
-    {
-        "id": "12",
-        "source": "/images/home-page-gallery/12.webp",
-        "alt": "A child riding a honey in the play area"
-    },
-    {
-        "id": "13",
-        "source": "/images/home-page-gallery/13.webp",
-        "alt": "An excited child ready to take the blocks out of the bag"
-    },
-    {
-        "id": "14",
-        "source": "/images/home-page-gallery/14.webp",
-        "alt": "Children enjoying playing in the pool area"
-    },
-    {
-        "id": "15",
-        "source": "/images/home-page-gallery/15.webp",
-        "alt": "Children enjoying playing in the ball area"
-    },
-    {
-        "id": "16",
-        "source": "/images/home-page-gallery/16.webp",
-        "alt": "A child reading about shapes from the book"
-    },
-    {
-        "id": "17",
-        "source": "/images/home-page-gallery/17.webp",
-        "alt": "Children sitting on chairs and reading books"
-    },
-    {
-        "id": "18",
-        "source": "/images/home-page-gallery/18.webp",
-        "alt": "Children dressed up as part of an activity"
-    }
+  {
+    "id": "1",
+    "source": "/images/home-page-gallery/1.webp",
+    "alt": "A child cutting a loaf of bread with a toy knife in a playful kitchen setting"
+  },
+  {
+    "id": "2",
+    "source": "/images/home-page-gallery/2.webp",
+    "alt": "A child peering with curiosity between the pages of the Rocky Monkey book."
+  },
+  {
+    "id": "3",
+    "source": "/images/home-page-gallery/3.webp",
+    "alt": "Treading Beads at Toddler World"
+  },
+  {
+    "id": "4",
+    "source": "/images/home-page-gallery/4.webp",
+    "alt": "A young child happily stacking colorful building blocks on a sunny day, illustrating the joy of creative play and early learning."
+  },
+  {
+    "id": "5",
+    "source": "/images/home-page-gallery/5.webp",
+    "alt": "Two joyful boys engaged in imaginative play with toy cars."
+  },
+  {
+    "id": "6",
+    "source": "/images/home-page-gallery/6.webp",
+    "alt": "A joyful boy with paint on his hands creating a colourful triangle with his hand and looking through it."
+  },
+  {
+    "id": "7",
+    "source": "/images/home-page-gallery/7.webp",
+    "alt": "A child in costume gazing up at the sky."
+  },
+  {
+    "id": "8",
+    "source": "/images/home-page-gallery/8.webp",
+    "alt": "A child in costume looking at the camera."
+  },
+  {
+    "id": "9",
+    "source": "/images/home-page-gallery/9.webp",
+    "alt": "Child selling potatoes, peppers, and beans while holding money in hand."
+  },
+  {
+    "id": "10",
+    "source": "/images/home-page-gallery/10.webp",
+    "alt": "Two boys using the Rock Climbing facilities"
+  },
+  {
+    "id": "11",
+    "source": "/images/home-page-gallery/11.webp",
+    "alt": "Two children playing inside the play house"
+  },
+  {
+    "id": "12",
+    "source": "/images/home-page-gallery/12.webp",
+    "alt": "A child riding a honey in the play area"
+  },
+  {
+    "id": "13",
+    "source": "/images/home-page-gallery/13.webp",
+    "alt": "An excited child ready to take the blocks out of the bag"
+  },
+  {
+    "id": "14",
+    "source": "/images/home-page-gallery/14.webp",
+    "alt": "Children enjoying playing in the pool area"
+  },
+  {
+    "id": "15",
+    "source": "/images/home-page-gallery/15.webp",
+    "alt": "Children enjoying playing in the ball area"
+  },
+  {
+    "id": "16",
+    "source": "/images/home-page-gallery/16.webp",
+    "alt": "A child reading about shapes from the book"
+  },
+  {
+    "id": "17",
+    "source": "/images/home-page-gallery/17.webp",
+    "alt": "Children sitting on chairs and reading books"
+  },
+  {
+    "id": "18",
+    "source": "/images/home-page-gallery/18.webp",
+    "alt": "Children dressed up as part of an activity"
+  }
 ]

@@ -1,40 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaTwitter,
-  FaLinkedin,
-} from "react-icons/fa";
-import "./Footer.scss";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FaFacebookF, FaInstagram, FaYoutube, FaTwitter, FaLinkedin } from 'react-icons/fa';
+import './Footer.scss';
 
 const Footer = () => {
   const socialLinks = [
     {
-      name: "Facebook",
+      name: 'Facebook',
       icon: <FaFacebookF />,
-      url: "https://www.facebook.com/toddlerworldsgr/",
+      url: 'https://www.facebook.com/toddlerworldsgr/',
     },
     {
-      name: "Instagram",
+      name: 'Instagram',
       icon: <FaInstagram />,
-      url: "https://www.instagram.com/toddlerworldsgr/",
+      url: 'https://www.instagram.com/toddlerworldsgr/',
     },
     {
-      name: "Youtube",
+      name: 'Youtube',
       icon: <FaYoutube />,
-      url: "https://www.youtube.com/@ToddlerWorld",
+      url: 'https://www.youtube.com/@ToddlerWorld',
     },
     {
-      name: "Twitter",
+      name: 'Twitter',
       icon: <FaTwitter />,
-      url: "https://www.twitter.com/toddlerworldsgr/",
+      url: 'https://www.twitter.com/toddlerworldsgr/',
     },
     {
-      name: "LinkedIn",
+      name: 'LinkedIn',
       icon: <FaLinkedin />,
-      url: "https://www.linkedin.com/company/toddlerworld/",
+      url: 'https://www.linkedin.com/company/toddlerworld/',
     },
   ];
 
@@ -62,9 +56,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-bottom">
-            <p className="copyright">
-              Toddler World © 2016-{new Date().getFullYear()}
-            </p>
+            <p className="copyright">Toddler World © 2016-{new Date().getFullYear()}</p>
           </div>
         </div>
       </div>

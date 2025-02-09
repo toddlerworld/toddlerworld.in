@@ -1,6 +1,6 @@
-import React from "react";
-import "./Cards.scss";
-import CardItem from "../../CardItem/CardItem";
+import React from 'react';
+import './Cards.scss';
+import CardItem from '../../CardItem/CardItem';
 
 const Cards = () => {
   return (
@@ -11,9 +11,7 @@ const Cards = () => {
           <ul className="items">
             <CardItem
               src="/images/home/AMI07620.webp"
-              text={
-                "Our well-designed environment supports child's growth and development"
-              }
+              text={"Our well-designed environment supports child's growth and development"}
               label="Our Environment"
               path="/our-environment"
               alt="Our Environment"

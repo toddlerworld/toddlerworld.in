@@ -1,6 +1,6 @@
-import React from "react";
-import "./Contact.scss";
-import OpeningHours from "./OpeningHours/OpeningHours";
+import React from 'react';
+import './Contact.scss';
+import OpeningHours from './OpeningHours/OpeningHours';
 
 const Contact = () => {
   return (
@@ -12,24 +12,22 @@ const Contact = () => {
         <h2>Better yet, see us in person!</h2>
 
         <p className="contact-paragraph">
-          We would love to see you in person. So feel free to call us to book an
-          appointment.
+          We would love to see you in person. So feel free to call us to book an appointment.
         </p>
 
         <h2> Toddler World</h2>
         <p className="contact-paragraph">
-          Airport Avenue, Near Railway Bridge, Srinagar, Jammu and Kashmir,
-          190021
+          Airport Avenue, Near Railway Bridge, Srinagar, Jammu and Kashmir, 190021
           <br />
         </p>
         <br />
 
         <p className="contact-telephone">
-          Mobile:{" "}
+          Mobile:{' '}
           <a href="tel:+917051427879" className="phone">
             +91 705-1427879
           </a>
-          ,{" "}
+          ,{' '}
           <a href="tel:+917889744619" className="phone">
             +91 788-9744619
           </a>

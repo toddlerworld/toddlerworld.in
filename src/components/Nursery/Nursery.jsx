@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import { Button } from "../Button/Button";
-import "./Nursery.scss";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { Button } from '../Button/Button';
+import './Nursery.scss';
 
 const Nursery = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
@@ -49,13 +49,11 @@ const Nursery = () => {
           </strong>
 
           <p>
-            This programme is for children between 3 years to 4 years old. Once
-            children graduate from Pre-Nursery, we move on to a more advanced
-            curriculum that escalates the possibilities of learning in your
-            child. The programme focuses on better reading skills, a richer
-            vocabulary and stronger skills in basic math. This ensures that your
-            child is ready to venture into a new world of learning that is rich
-            with possibilities.
+            This programme is for children between 3 years to 4 years old. Once children graduate
+            from Pre-Nursery, we move on to a more advanced curriculum that escalates the
+            possibilities of learning in your child. The programme focuses on better reading skills,
+            a richer vocabulary and stronger skills in basic math. This ensures that your child is
+            ready to venture into a new world of learning that is rich with possibilities.
           </p>
         </div>
 
@@ -64,11 +62,7 @@ const Nursery = () => {
           <p>There is a lot more to know. Please feel free to contact us.</p>
           <div className="contact-us-nursery" data-testid="contact-us-comp">
             <Link to="/contact-us" data-testid="contact-us-link-test">
-              <Button
-                buttonStyle="primary-button"
-                buttonSize="large"
-                data-testid="contact-us-test"
-              >
+              <Button buttonStyle="primary-button" buttonSize="large" data-testid="contact-us-test">
                 Contact us
               </Button>
             </Link>

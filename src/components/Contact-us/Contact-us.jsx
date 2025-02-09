@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
-import OpeningHours from "../Home/Contact/OpeningHours/OpeningHours";
-import "./Contact-us.scss";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import OpeningHours from '../Home/Contact/OpeningHours/OpeningHours';
+import './Contact-us.scss';
 
 const ContactUs = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   return (
@@ -37,34 +37,22 @@ const ContactUs = () => {
             >
               <input type="text" name="name" placeholder="Name" required />
               <input type="email" name="email" placeholder="Email" required />
-              <textarea
-                name="message"
-                placeholder="Message"
-                rows="6"
-                required
-              ></textarea>
+              <textarea name="message" placeholder="Message" rows="6" required></textarea>
               <button type="submit" className="contactus-send-button">
                 Send Message
               </button>
             </form>
             <p className="contactus-captcha">
-              This site is protected by reCAPTCHA and the Google{" "}
-              <Link to="https://policies.google.com/privacy">
-                Privacy Policy
-              </Link>{" "}
-              and{" "}
-              <Link to="https://policies.google.com/terms">
-                Terms of Service
-              </Link>{" "}
-              apply.
+              This site is protected by reCAPTCHA and the Google{' '}
+              <Link to="https://policies.google.com/privacy">Privacy Policy</Link> and{' '}
+              <Link to="https://policies.google.com/terms">Terms of Service</Link> apply.
             </p>
           </div>
 
           <div className="right-aligned-contactus">
             <h3>Better yet, see us in person!</h3>
             <p>
-              We would love to see you in person. So feel free to call us to
-              book an appointment.
+              We would love to see you in person. So feel free to call us to book an appointment.
             </p>
 
             <Link to="https://wa.me/917889744619" className="whatsapp-button">
@@ -87,11 +75,11 @@ const ContactUs = () => {
             </p>
 
             <p>
-              Phone:{" "}
+              Phone:{' '}
               <a href="tel:+917051427879" className="phone">
                 +91.7051.427879
               </a>
-              ,{" "}
+              ,{' '}
               <a href="tel:+917889744619" className="phone">
                 +91.7889.744619
               </a>

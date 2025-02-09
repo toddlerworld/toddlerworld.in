@@ -1,19 +1,19 @@
-import React, { useEffect } from "react";
-import { motion } from "framer-motion";
-import "./PoliciesProcedures.scss";
+import React, { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import './PoliciesProcedures.scss';
 
 const PoliciesProcedures = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }, []);
 
   const policies = [
-    "Health and Safety",
-    "Incident",
-    "Accident",
-    "Sick Child",
-    "Behaviour",
-    "Biting",
+    'Health and Safety',
+    'Incident',
+    'Accident',
+    'Sick Child',
+    'Behaviour',
+    'Biting',
   ];
 
   return (
@@ -34,8 +34,8 @@ const PoliciesProcedures = () => {
         transition={{ duration: 0.6, delay: 0.2 }}
       >
         <p>
-          Toddler World maintains Policies and Procedures, which includes but is
-          not limited to the below-listed policies.
+          Toddler World maintains Policies and Procedures, which includes but is not limited to the
+          below-listed policies.
           <motion.ul>
             {policies.map((policy, index) => (
               <motion.li

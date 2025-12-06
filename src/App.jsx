@@ -15,7 +15,6 @@ import Admissions from './components/Admissions/Admissions';
 import Activities from './components/Activities/Activities';
 import Careers from './components/Careers/Careers';
 import PreNursery from './components/PreNursery/PreNursery';
-import Nursery from './components/Nursery/Nursery';
 import ContactUs from './components/Contact-us/Contact-us';
 import NotFound from './components/NotFound/NotFound';
 import Programmes from './components/Programmes/Programmes';
@@ -39,7 +38,6 @@ function App() {
           <Route path="/activities" element={<Activities />} />
           <Route path="/careers" element={<Careers />} />
           <Route path="/pre-nursery" element={<PreNursery />} />
-          <Route path="/nursery" element={<Nursery />} />
           <Route path="/contact-us" element={<ContactUs />} />
           <Route path="/programmes" element={<Programmes />} />
           <Route path="/school-transitions" element={<SchoolTransitions />} />

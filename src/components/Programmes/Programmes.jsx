@@ -18,9 +18,9 @@ const Programmes = () => {
     },
     {
       src: '/images/programmes/3.webp',
-      text: 'Escalates the possibilities of learning in your child: Nursery at Toddler World',
-      label: 'Nursery (3 - 4 years)',
-      path: '/nursery',
+      text: 'Escalates the possibilities of learning in your child: Pre-Nursery at Toddler World',
+      label: 'Pre Nursery (2 - 3 years)',
+      path: '/pre-nursery',
       alt: 'Nursery students engaged in advanced learning activities',
     },
   ];

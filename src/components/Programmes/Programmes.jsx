@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import CardItem from '../CardItem/CardItem';
+import '../Home/Card/Cards.scss';
 import './Programmes.scss';
 
 const Programmes = () => {
@@ -49,11 +50,11 @@ const Programmes = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        <div className="cards-grid">
+        <ul className="cards-grid">
           {programmes.map((programme, _) => (
             <CardItem key={programme.path} {...programme} />
           ))}
-        </div>
+        </ul>
       </motion.div>
 
       <motion.div

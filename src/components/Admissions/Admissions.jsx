@@ -50,7 +50,7 @@ const Admissions = () => {
             <li>
               Once the registration process is done parents along with the child are called for an
               informal interaction with the Nursery Manager. Based on the interaction and the merits
-              the admission to the school is accepted/rejected.
+              the admission to the Nursery is accepted/rejected.
             </li>
             <li>
               Shortlisted parents are required to fill in the admission form, complete all the

@@ -2,22 +2,22 @@
   {
     "label": "Wall Climbing",
     "image": "/images/playequipment/1.webp",
-    "alt": "Children's climbing wall facility",
-    "text": "The only purpose-built climbing wall for toddlers in Srinagar — building strength, balance and brave little hearts.",
+    "alt": "A child climbing through the wooden climbing frame",
+    "text": "The only purpose-built climbing wall for toddlers in Srinagar, building strength, balance and brave little hearts.",
     "accent": "coral"
   },
   {
     "label": "Small World Toys",
     "image": "/images/playequipment/2.webp",
-    "alt": "Educational toys sourced from the UK",
+    "alt": "Children playing with role-play toys at the toy kitchen",
     "text": "A carefully chosen collection of toys from the United Kingdom, designed to grow key early skills through play.",
     "accent": "sky"
   },
   {
     "label": "Soft Play Area",
     "image": "/images/playequipment/3.webp",
-    "alt": "Safe soft play area for children",
-    "text": "Srinagar's only soft play area designed specifically with our youngest explorers in mind — tumble, climb and giggle safely.",
+    "alt": "Two children enjoying the swings in the soft play area",
+    "text": "Srinagar's only soft play area designed specifically with our youngest explorers in mind. Tumble, climb and giggle safely.",
     "accent": "grape"
   },
   {
@@ -30,14 +30,14 @@
   {
     "label": "Outdoor Play Area",
     "image": "/images/playequipment/5.webp",
-    "alt": "Safe outdoor playground with soft flooring",
+    "alt": "A child riding a spring rocker in the outdoor play area",
     "text": "A specially designed outdoor play area with soft, cushioned flooring so little adventurers can roam safely.",
     "accent": "green"
   },
   {
     "label": "And so much more…",
     "image": "/images/playequipment/6.webp",
-    "alt": "Additional play facilities at Toddler World",
+    "alt": "A group of happy children at Toddler World",
     "text": "From sensory corners to seasonal surprises, there's always something new to keep the fun going all year round.",
     "accent": "tangerine"
   }

@@ -1,7 +1,7 @@
 /**
  * Single source of truth for the school's contact details (NAP) and every
  * third-party integration URL. Previously these strings were copy-pasted
- * across many components — keep them here only.
+ * across many components - keep them here only.
  */
 
 export const site = {
@@ -29,7 +29,7 @@ export const site = {
     { label: '+91 788-9744619', href: 'tel:+917889744619' },
   ],
 
-  email: 'info@toddlerworld.in',
+  email: 'toddlerworld.sgr@gmail.com',
 
   hours: [
     { day: 'Monday', open: '10:00', close: '16:00' },
@@ -77,7 +77,7 @@ export const site = {
     youtubeId: 'FxxsA-qaHTM',
     mapEmbed:
       'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3306.730162425703!2d74.7713164!3d34.025136700000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38e191dba7d84fa3%3A0x16d8642869049f5a!2sToddler%20World!5e0!3m2!1sen!2suk!4v1695935838910!5m2!1sen!2suk',
-    mapLink: 'https://maps.app.goo.gl/', // "Get directions" — see below
+    mapLink: 'https://maps.app.goo.gl/', // "Get directions" - see below
     mapDirections: 'https://www.google.com/maps/dir/?api=1&destination=Toddler+World+Srinagar',
   },
 } as const;

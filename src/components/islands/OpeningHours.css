@@ -38,7 +38,7 @@
   background: currentColor;
 }
 .hours__status--open .hours__dot {
-  box-shadow: 0 0 0 4px rgba(47, 179, 128, 0.2);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-secondary) 22%, transparent);
 }
 
 .hours__today {

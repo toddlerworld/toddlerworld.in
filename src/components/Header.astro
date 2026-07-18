@@ -82,7 +82,7 @@ const isGroupActive = (links?: { href: string }[]) => links?.some((l) => isActiv
     background: var(--c-cream);
     border-bottom: 2px solid var(--c-line);
   }
-  /* Blur only on desktop — on mobile it would create a containing block that
+  /* Blur only on desktop - on mobile it would create a containing block that
      traps the fixed nav drawer inside the header instead of the viewport. */
   @media (min-width: 900px) {
     .header {
@@ -372,7 +372,7 @@ const isGroupActive = (links?: { href: string }[]) => links?.some((l) => isActiv
       padding: 0;
     }
 
-    /* Neutralise the desktop hover-dropdown behaviour inside the drawer — Mac
+    /* Neutralise the desktop hover-dropdown behaviour inside the drawer - Mac
        trackpads can hover, and the base rules would otherwise translateX the
        submenu off-screen and pill-highlight the section header. */
     .nav__group:hover .nav__menu,

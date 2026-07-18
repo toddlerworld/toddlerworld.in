@@ -1,0 +1,141 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CalloutCard from '../components/CalloutCard.astro';
+import CtaButton from '../components/CtaButton.astro';
+import { site } from '../data/site';
+
+const steps = [
+  {
+    title: 'Come and visit',
+    text: 'Drop by in person to feel the environment, meet our team and picture your child here. There’s no substitute for seeing it for yourself.',
+  },
+  {
+    title: 'Register your interest',
+    text: 'After your visit, simply register for admission. Places are offered fairly, on a first-come, first-served basis.',
+  },
+  {
+    title: 'A friendly interaction',
+    text: 'You and your child are invited for a relaxed, informal chat with our Nursery Manager, so we can get to know one another.',
+  },
+  {
+    title: 'Complete & confirm',
+    text: 'Fill in the admission form, complete the formalities and pay the fee within the given time — and your place is confirmed. Welcome!',
+  },
+];
+---
+
+<BaseLayout
+  title="Admissions"
+  description="Joining Toddler World is simple: visit us, register your interest, meet our Nursery Manager and confirm your place. Enquire today."
+>
+  <PageHero eyebrow="Joining Toddler World" title="Admissions" accent="green">
+    <p>Four gentle steps between here and your child's first happy day with us.</p>
+  </PageHero>
+
+  <section class="section container">
+    <div class="admissions-layout">
+      <div class="admissions-main">
+        <img
+          class="admissions-photo"
+          src="/images/admissions/1.webp"
+          alt="A child building a tower with blocks"
+          width="900"
+          height="560"
+          loading="lazy"
+          data-reveal
+        />
+        <ol class="steps">
+          {
+            steps.map((s, i) => (
+              <li class="step" data-reveal>
+                <span class="step__num">{i + 1}</span>
+                <div>
+                  <h3 class="step__title">{s.title}</h3>
+                  <p>{s.text}</p>
+                </div>
+              </li>
+            ))
+          }
+        </ol>
+      </div>
+
+      <CalloutCard title="Ready to begin?" accent="sunny" sticky>
+        <p>
+          Our admissions run on a fair, first-come, first-served basis. To start your child's
+          journey, register your interest online — it only takes a moment.
+        </p>
+        <CtaButton variant="sunny" href={site.integrations.enquiry} external
+          >Submit an enquiry</CtaButton
+        >
+        <p class="callout-or">
+          Prefer to talk? <a href="/contact-us">Contact us</a> and we'll help.
+        </p>
+      </CalloutCard>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .admissions-layout {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .admissions-layout {
+      grid-template-columns: 1.6fr 1fr;
+      gap: var(--sp-8);
+    }
+  }
+  .admissions-photo {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--sp-6);
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+  }
+  .steps {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-4);
+  }
+  .step {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    box-shadow: var(--shadow-sm);
+  }
+  .step__num {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-pill);
+    background: var(--c-secondary);
+    color: var(--c-secondary-ink);
+    font-family: var(--font-display);
+    font-weight: var(--fw-display);
+    font-size: 1.2rem;
+  }
+  .step__title {
+    font-size: var(--fs-600);
+    margin-bottom: var(--sp-1);
+  }
+  .step p {
+    color: var(--c-ink-soft);
+  }
+  .callout-or {
+    margin-top: var(--sp-4);
+    font-size: var(--fs-sm);
+    color: var(--c-ink-soft);
+  }
+</style>

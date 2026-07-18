@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CalloutCard from '../components/CalloutCard.astro';
+import CtaButton from '../components/CtaButton.astro';
+
+const readiness = [
+  'Reading books together about starting school',
+  'Role-playing “the teacher” with the children',
+  'Practising eating lunch independently',
+  'Taking part in a fun sports day',
+];
+---
+
+<BaseLayout
+  title="School Transitions"
+  description="Toddler World prepares children for a confident, happy start to primary school. For three years running, 99% of our toddlers have been admitted to top schools in Srinagar."
+>
+  <PageHero eyebrow="Ready for big school" title="School Transitions" accent="sky">
+    <p>Helping your child step into primary school confident, capable and excited.</p>
+  </PageHero>
+
+  <section class="section container">
+    <img
+      class="st-photo"
+      src="/images/SchoolTransitions/1.webp"
+      alt="Children preparing for their school transition journey"
+      width="1200"
+      height="560"
+      loading="lazy"
+      data-reveal
+    />
+
+    <div class="st-layout">
+      <div class="st-main prose" data-reveal>
+        <p class="lead">
+          Starting school is a big milestone — for children and parents alike. When it's time to
+          leave Toddler World for the next chapter, we do everything we can to support and celebrate
+          that step, making sure each child is truly ready for what's ahead.
+        </p>
+        <p>
+          We firmly believe every child should start school ready to learn — able to make friends
+          and play, and confident enough to ask for what they need and say what they think. A
+          child's earliest experiences shape their future success, and their early education and
+          care play a huge part in that.
+        </p>
+        <p>
+          Parents and facilitators working together makes all the difference. By partnering closely
+          and strengthening learning at home too, we help your child make a smoother, happier start
+          at school.
+        </p>
+
+        <h2>How we prepare them</h2>
+        <p>
+          In the lead-up to starting school, our facilitators plan plenty of activities to build
+          school readiness — for example:
+        </p>
+        <ul>
+          {readiness.map((r) => <li>{r}</li>)}
+        </ul>
+        <p>
+          We involve you every step of the way, sharing ideas for what you can do at home to help
+          your child feel ready. Our team communicates as much as possible so that you feel
+          reassured throughout — making the whole transition seamless for children and parents.
+          These chats happen in parent–teacher meetings closer to the moving-on time.
+        </p>
+      </div>
+
+      <CalloutCard title="Did you know?" accent="sky" sticky>
+        <p class="st-stat"><span>99%</span> of our toddlers</p>
+        <p>
+          For three years running, 99% of our children have been admitted to top schools in
+          Srinagar. Want to know more? Drop us a line and we'll be in touch.
+        </p>
+        <CtaButton variant="sky" href="/contact-us">Get in touch</CtaButton>
+      </CalloutCard>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .st-photo {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    margin-bottom: var(--sp-7);
+  }
+  .st-layout {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .st-layout {
+      grid-template-columns: 1.7fr 1fr;
+      gap: var(--sp-8);
+    }
+  }
+  .st-stat {
+    font-family: var(--font-display);
+    font-weight: var(--fw-display);
+    color: var(--c-sky-ink);
+    line-height: 1.1;
+  }
+  .st-stat span {
+    display: block;
+    font-size: 3rem;
+    color: var(--c-sky);
+  }
+</style>

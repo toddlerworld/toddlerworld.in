@@ -1,0 +1,58 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Card from '../components/Card.astro';
+import SectionBand from '../components/SectionBand.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CtaButton from '../components/CtaButton.astro';
+import facilities from '../data/facilities.json';
+---
+
+<BaseLayout
+  title="Facilities"
+  description="From Srinagar's only toddler climbing wall to a splash pool, soft play and outdoor play areas — explore the facilities at Toddler World."
+>
+  <PageHero eyebrow="Room to play & explore" title="Our Facilities" accent="sky">
+    <p>Purpose-built spaces where little ones climb, splash, tumble and discover — safely.</p>
+  </PageHero>
+
+  <SectionBand bg="cream">
+    <div class="container">
+      <SectionHeader
+        eyebrow="Built for little explorers"
+        title="Everything a curious toddler could wish for"
+      >
+        <p>
+          Great care goes into every material and space we choose, to spark an inspiring sensory
+          experience.
+        </p>
+      </SectionHeader>
+      <CardGrid min="280px">
+        {
+          facilities.map((f) => (
+            <div data-reveal>
+              <Card title={f.label} image={f.image} alt={f.alt} accent={f.accent as any}>
+                {f.text}
+              </Card>
+            </div>
+          ))
+        }
+      </CardGrid>
+      <div class="facilities-cta" data-reveal>
+        <CtaButton href="/activities">See our activities</CtaButton>
+        <CtaButton variant="sunny" href="/welcome">Book a visit</CtaButton>
+      </div>
+    </div>
+  </SectionBand>
+</BaseLayout>
+
+<style>
+  .facilities-cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--sp-3);
+    margin-top: var(--sp-7);
+  }
+</style>

@@ -1,0 +1,112 @@
+:root {
+  /* ---------------------------------------------------------------------
+     BRAND
+     Sunny yellow + friendly grass green, evolved from the old brand colors.
+     Yellow is a SURFACE/accent color (dark ink on it) — never yellow text.
+  --------------------------------------------------------------------- */
+  --c-primary: #ffc93c; /* sunny yellow */
+  --c-primary-strong: #f7b500;
+  --c-primary-ink: #3d2e00; /* accessible text ON yellow */
+
+  --c-secondary: #2fb380; /* friendly grass green — main CTA */
+  --c-secondary-strong: #23966a;
+  --c-secondary-ink: #f4fff9;
+
+  /* ---------------------------------------------------------------------
+     PLAYFUL ACCENTS — rotate across cards / sections / blobs
+  --------------------------------------------------------------------- */
+  --c-coral: #ff6b6b;
+  --c-coral-ink: #4a0d0d;
+  --c-sky: #4ea8de;
+  --c-sky-ink: #06263a;
+  --c-grape: #9b5de5;
+  --c-grape-ink: #ffffff;
+  --c-tangerine: #ff924c;
+  --c-tangerine-ink: #4a1f00;
+  --c-bubblegum: #f15bb5;
+  --c-bubblegum-ink: #430022;
+
+  /* ---------------------------------------------------------------------
+     NEUTRALS & BACKGROUNDS — warm, never stark white
+  --------------------------------------------------------------------- */
+  --c-ink: #2a2a33; /* body text */
+  --c-ink-soft: #5a5a66; /* secondary text */
+  --c-ink-faint: #8a8a95;
+  --c-cream: #fff9ef; /* default page background */
+  --c-cream-2: #fff3de; /* alternating band */
+  --c-mint-bg: #eaf8f1; /* green-tinted band */
+  --c-sky-bg: #e9f3fb; /* sky-tinted band */
+  --c-grape-bg: #f3ecfd; /* grape-tinted band */
+  --c-white: #ffffff;
+  --c-line: #ece3d4; /* hairline on cream */
+  --c-line-soft: #f2eadd;
+
+  /* Feedback / utility */
+  --c-whatsapp: #25d366;
+  --c-focus: #4ea8de;
+  --c-error: #d64545;
+
+  /* ---------------------------------------------------------------------
+     TYPOGRAPHY
+  --------------------------------------------------------------------- */
+  --font-display: 'Baloo 2 Variable', 'Trebuchet MS', system-ui, sans-serif;
+  --font-body: 'Nunito Variable', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --fs-900: clamp(2.4rem, 1.4rem + 4vw, 3.6rem); /* hero h1 */
+  --fs-800: clamp(1.9rem, 1.4rem + 2.2vw, 2.6rem); /* section h2 */
+  --fs-700: clamp(1.4rem, 1.2rem + 1vw, 1.7rem); /* h3 */
+  --fs-600: 1.25rem; /* lead / h4 */
+  --fs-500: 1.125rem;
+  --fs-body: 1.0625rem; /* 17px */
+  --fs-sm: 0.9rem;
+  --fs-xs: 0.78rem;
+
+  --lh-body: 1.65;
+  --lh-tight: 1.12;
+  --lh-snug: 1.3;
+
+  --fw-body: 400;
+  --fw-medium: 600;
+  --fw-bold: 700;
+  --fw-display: 800; /* Baloo 2 heading weight */
+
+  /* ---------------------------------------------------------------------
+     SPACING — t-shirt scale
+  --------------------------------------------------------------------- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  --section-y: clamp(3rem, 8vw, 6rem);
+  --content-max: 1120px;
+  --wide-max: 1320px;
+  --prose-max: 68ch;
+
+  /* ---------------------------------------------------------------------
+     SHAPE
+  --------------------------------------------------------------------- */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+  --radius-xl: 40px;
+  --radius-pill: 999px;
+
+  --shadow-sm: 0 2px 8px rgba(43, 43, 51, 0.06);
+  --shadow-md: 0 10px 30px rgba(43, 43, 51, 0.1);
+  --shadow-lg: 0 24px 60px rgba(43, 43, 51, 0.14);
+  --shadow-play: 0 6px 0 rgba(0, 0, 0, 0.14); /* chunky "sticker" offset */
+
+  --ring: 0 0 0 4px rgba(78, 168, 222, 0.45); /* focus ring */
+
+  /* Motion */
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-fast: 140ms;
+  --dur: 240ms;
+}

@@ -1,0 +1,47 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: 'yarn'
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Type / content check
+        run: yarn run check
+
+      - name: Build application
+        run: yarn build
+
+      - name: Smoke test (app serves and responds)
+        run: |
+          yarn preview --host 127.0.0.1 --port 4321 &
+          SERVER_PID=$!
+          for i in $(seq 1 30); do
+            if curl -sSf http://127.0.0.1:4321/ > /dev/null; then
+              echo "✅ App is serving and responded with 200"
+              kill $SERVER_PID
+              exit 0
+            fi
+            sleep 1
+          done
+          echo "❌ App did not respond within 30s"
+          kill $SERVER_PID
+          exit 1

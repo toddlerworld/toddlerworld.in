@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ProseSection from '../components/ProseSection.astro';
+import CtaButton from '../components/CtaButton.astro';
+---
+
+<BaseLayout
+  title="Parent Partnership"
+  description="At Toddler World, parents and educators work hand in hand. Regular updates, open communication and twice-yearly progress meetings keep you close to your child's journey."
+>
+  <PageHero eyebrow="You & us, together" title="Parent Partnership" accent="tangerine">
+    <p>Because the best outcomes happen when home and school pull in the same direction.</p>
+  </PageHero>
+
+  <section class="section container">
+    <ProseSection
+      image="/images/parentpartnership/1.webp"
+      alt="A loving moment between parents and their child"
+      accent="tangerine"
+      reverse
+    >
+      <p class="lead">
+        The bond between our staff and our parents can never be underestimated — because we all want
+        the very same thing: a happy, nurturing atmosphere where your child can flourish.
+      </p>
+      <p>
+        That's why we work hard every single day to give every family excellent care and
+        communication — keeping you in the loop at every opportunity, and at every stage of your
+        child's development.
+      </p>
+      <p>
+        Formal parent–teacher meetings are scheduled twice a year to review your child's progress
+        and achievements, and to set gentle goals for what comes next. And beyond those meetings,
+        you're always welcome to reach out to any member of staff whenever you have a question or
+        something you'd like to talk through.
+      </p>
+      <p>
+        We provide a range of resources and support so you always feel well informed and completely
+        secure in the knowledge that your child is safe, happy and cared for.
+      </p>
+      <p>
+        We'd love you to get involved too — so if you'd like to know more, just ask a member of the
+        Toddler World team next time you're here.
+      </p>
+      <p><strong>Together, we can make a difference.</strong></p>
+      <div class="btn-row">
+        <CtaButton href="/contact-us">Talk to us</CtaButton>
+      </div>
+    </ProseSection>
+  </section>
+</BaseLayout>
+
+<style>
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+</style>

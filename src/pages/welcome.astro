@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ProseSection from '../components/ProseSection.astro';
+import CtaButton from '../components/CtaButton.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Welcome"
+  description="A warm welcome to Toddler World — a loving, Montessori-inspired preschool in Srinagar for children aged 2–3."
+>
+  <PageHero eyebrow="A note from us to you" title="Welcome to Toddler World" accent="sunny">
+    <p>Thank you for your interest in giving your little one a joyful start.</p>
+  </PageHero>
+
+  <section class="section container">
+    <ProseSection
+      image="/images/Welcome/welcome.webp"
+      alt="A nurturing storytelling session at Toddler World"
+      accent="green"
+    >
+      <p class="lead">
+        A child is the most precious gift of our lives. Our priorities, hopes and dreams revolve
+        around them — and as parents ourselves, we understand your wish to give them the very best.
+      </p>
+      <p>
+        At Toddler World we've created the loving, caring environment your child deserves: a place
+        just like home, that you can trust completely. We know in our hearts that there is no
+        greater responsibility than giving a child the best possible start in life.
+      </p>
+      <p>
+        Here, your child will delight in playing alongside other children and our warm, attentive
+        staff — in an atmosphere that is nurturing and where their individuality is genuinely
+        respected. We've built our curriculum with the whole child in mind, and our team works
+        together every day to create rich, joyful classroom experiences that keep learning happy and
+        balanced.
+      </p>
+      <p>
+        With a low child-to-staff ratio, we're able to shape learning in a personal, meaningful way.
+        We offer the best of everything — infrastructure, methodology, curriculum, a trained team
+        and top-of-the-line learning equipment.
+      </p>
+      <p>
+        And when you join Toddler World, we don't only enrol your child — we enrol you too. Our
+        parent counselling workshops help you understand your child even better, so we can grow
+        together.
+      </p>
+      <p>
+        <strong
+          >We welcome you to Toddler World for a joyful journey towards love &amp; light.</strong
+        >
+      </p>
+      <div class="btn-row">
+        <CtaButton variant="sunny" href={site.integrations.enquiry} external
+          >Enquire about a place</CtaButton
+        >
+        <CtaButton variant="ghost" href="/admissions">How admissions work</CtaButton>
+      </div>
+    </ProseSection>
+  </section>
+</BaseLayout>
+
+<style>
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+</style>

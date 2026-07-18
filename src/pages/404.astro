@@ -1,0 +1,65 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaButton from '../components/CtaButton.astro';
+---
+
+<BaseLayout title="Page not found" noindex>
+  <section class="notfound">
+    <div class="container notfound__inner">
+      <img
+        src="/images/not-found/error-image.webp"
+        alt="A curious child looking around"
+        width="420"
+        height="420"
+        class="notfound__img"
+      />
+      <span class="notfound__code">404</span>
+      <h1>Oops — lost your way?</h1>
+      <p>
+        The page you're looking for has wandered off to play. Let's get you back to somewhere
+        familiar.
+      </p>
+      <div class="notfound__cta">
+        <CtaButton variant="sunny" href="/">Back to home</CtaButton>
+        <CtaButton variant="ghost" href="/contact-us">Contact us</CtaButton>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .notfound {
+    padding-block: clamp(3rem, 8vw, 6rem);
+    text-align: center;
+  }
+  .notfound__inner {
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-3);
+  }
+  .notfound__img {
+    width: min(320px, 70%);
+    height: auto;
+    border-radius: var(--radius-xl);
+  }
+  .notfound__code {
+    font-family: var(--font-display);
+    font-weight: var(--fw-display);
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--c-primary);
+    line-height: 1;
+  }
+  .notfound p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-500);
+  }
+  .notfound__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    justify-content: center;
+    margin-top: var(--sp-4);
+  }
+</style>

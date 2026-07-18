@@ -1,0 +1,102 @@
+.hours {
+  background: var(--c-white);
+  border: 2px solid var(--c-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.hours__summary {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 1rem 1.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.hours__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  font-family: var(--font-display);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-sm);
+}
+.hours__status--open {
+  color: var(--c-secondary-strong);
+}
+.hours__status--closed {
+  color: var(--c-ink-faint);
+}
+.hours__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+}
+.hours__status--open .hours__dot {
+  box-shadow: 0 0 0 4px rgba(47, 179, 128, 0.2);
+}
+
+.hours__today {
+  color: var(--c-ink-soft);
+  font-size: var(--fs-sm);
+}
+
+.hours__chevron {
+  margin-left: auto;
+  color: var(--c-ink-soft);
+  transition: transform var(--dur) var(--ease-out);
+}
+.hours.is-open .hours__chevron {
+  transform: rotate(180deg);
+}
+
+.hours__list {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur) var(--ease-out);
+}
+.hours.is-open .hours__list {
+  grid-template-rows: 1fr;
+}
+.hours__list-inner {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.hours__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.55rem 1.25rem;
+  font-size: var(--fs-sm);
+  border-top: 1px solid var(--c-line);
+}
+.hours__row:first-child {
+  padding-top: 0.8rem;
+}
+.hours__row:last-child {
+  padding-bottom: 0.9rem;
+}
+.hours__row.is-today {
+  background: var(--c-mint-bg);
+  font-weight: var(--fw-bold);
+}
+.hours__day {
+  color: var(--c-ink);
+}
+.hours__time {
+  color: var(--c-ink-soft);
+}
+
+/* When the grid collapses the rows, borders would still show; guard it */
+.hours:not(.is-open) .hours__list {
+  border: none;
+}

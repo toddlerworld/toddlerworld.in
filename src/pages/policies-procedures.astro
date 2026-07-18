@@ -1,0 +1,131 @@
+---
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CtaButton from '../components/CtaButton.astro';
+
+const policies = [
+  {
+    label: 'Health & Safety',
+    icon: 'lucide:shield-check',
+    text: 'Rigorous standards that keep every child safe, every day.',
+  },
+  {
+    label: 'Incident',
+    icon: 'lucide:clipboard-list',
+    text: 'Clear steps for recording and responding to any incident.',
+  },
+  {
+    label: 'Accident',
+    icon: 'lucide:bandage',
+    text: 'Trained, calm care and prompt communication with parents.',
+  },
+  {
+    label: 'Sick Child',
+    icon: 'lucide:thermometer',
+    text: 'Sensible guidance to keep unwell children comfortable and others well.',
+  },
+  {
+    label: 'Behaviour',
+    icon: 'lucide:hand-heart',
+    text: 'Gentle, positive approaches that guide little ones with kindness.',
+  },
+  {
+    label: 'Biting',
+    icon: 'lucide:smile',
+    text: 'Understanding, consistent support for a very normal toddler phase.',
+  },
+];
+---
+
+<BaseLayout
+  title="Policies & Procedures"
+  description="Toddler World maintains clear policies and procedures — from health and safety to behaviour — so every family can feel completely reassured."
+>
+  <PageHero eyebrow="Care you can count on" title="Policies & Procedures" accent="grape">
+    <p>Thoughtful, transparent standards that keep every child safe, happy and well.</p>
+  </PageHero>
+
+  <section class="section container">
+    <SectionHeader eyebrow="Our commitments" title="Clear standards, complete peace of mind">
+      <p>
+        Toddler World maintains a full set of policies and procedures. These are a few of the key
+        ones — and we're always happy to walk you through any of them in detail.
+      </p>
+    </SectionHeader>
+
+    <div class="policy-grid">
+      {
+        policies.map((p) => (
+          <div class="policy" data-reveal>
+            <span class="policy__icon">
+              <Icon name={p.icon} />
+            </span>
+            <div>
+              <h3 class="policy__title">{p.label}</h3>
+              <p>{p.text}</p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class="policy-cta" data-reveal>
+      <p>Have a question about how we keep children safe?</p>
+      <CtaButton href="/contact-us">Ask us anything</CtaButton>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+    gap: var(--sp-4);
+  }
+  .policy {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    box-shadow: var(--shadow-sm);
+  }
+  .policy__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: var(--c-grape-bg);
+    color: var(--c-grape);
+  }
+  .policy__icon :global(svg) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .policy__title {
+    font-size: var(--fs-600);
+    margin-bottom: var(--sp-1);
+  }
+  .policy p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-body);
+  }
+  .policy-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--sp-3);
+    margin-top: var(--sp-7);
+    text-align: center;
+  }
+  .policy-cta p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-500);
+  }
+</style>

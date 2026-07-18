@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ProseSection from '../components/ProseSection.astro';
+import CtaButton from '../components/CtaButton.astro';
+---
+
+<BaseLayout
+  title="Our Team"
+  description="Meet the caring, experienced educators at Toddler World — chosen for their empathy, commitment and love of helping little ones grow."
+>
+  <PageHero eyebrow="The people who make it special" title="Our Team" accent="coral">
+    <p>Warm, experienced and endlessly patient — the heart of Toddler World.</p>
+  </PageHero>
+
+  <section class="section container">
+    <ProseSection
+      image="/images/team/1.webp"
+      alt="A dedicated teacher enjoying a reading session with a young child"
+      accent="coral"
+      reverse
+    >
+      <p class="lead">
+        Every member of the Toddler World team is chosen for their empathy with children, their
+        genuine commitment to childcare, and their practical ability to make each day wonderful.
+      </p>
+      <p>
+        Our fun-loving educators are experts at making learning exciting and interactive. We believe
+        that play, laughter and joy are an essential part of childhood — so we encourage children to
+        stretch their imaginations, take gentle risks and discover what they love. Along the way, we
+        nurture each child's potential and celebrate their personal growth.
+      </p>
+      <p>
+        We're just as committed to growing ourselves. At Toddler World we never stop learning: we
+        provide top-quality, ongoing training to every member of staff. That keeps our skills sharp,
+        our team motivated, and — most importantly — ensures the outstanding care your child
+        deserves and you expect.
+      </p>
+      <div class="btn-row">
+        <CtaButton href="/careers">Join our team</CtaButton>
+        <CtaButton variant="ghost" href="/our-environment">See our environment</CtaButton>
+      </div>
+    </ProseSection>
+  </section>
+</BaseLayout>
+
+<style>
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+</style>

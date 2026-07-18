@@ -1,3 +1,7 @@
 # Ignore artifacts:
 build
+dist
 coverage
+.astro
+yarn.lock
+public/images

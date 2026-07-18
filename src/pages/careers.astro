@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import CalloutCard from '../components/CalloutCard.astro';
+import CtaButton from '../components/CtaButton.astro';
+import { site } from '../data/site';
+---
+
+<BaseLayout
+  title="Careers"
+  description="Build a rewarding career in childcare with Toddler World, Srinagar's leading preschool. Competitive package, outstanding training and a team that feels like family."
+>
+  <PageHero eyebrow="Grow with us" title="Careers" accent="tangerine">
+    <p>Love working with little ones? Come and build a career that truly matters.</p>
+  </PageHero>
+
+  <section class="section container">
+    <div class="careers-layout">
+      <div class="careers-main prose" data-reveal>
+        <p class="lead"><strong>A career in childcare with Toddler World.</strong></p>
+        <p>
+          Looking for a fresh challenge — or a career that finally feels fulfilling? Consider
+          joining Srinagar's leading childcare provider. At Toddler World we offer a wide range of
+          opportunities to both challenge and reward your working life.
+        </p>
+        <p>
+          Whether you've spent years in childcare or you're just starting a new chapter, we'd love
+          you to take a look at our openings and get in touch to see if there's a place for you on
+          the team.
+        </p>
+        <p>
+          Toddler World was created by a family who wanted to bring the very best childcare in the
+          world to the children of Kashmir. We believe in equal opportunity for every employee, in
+          investing in our people, and in recognising our staff as our greatest resource.
+        </p>
+        <p>
+          We provide top-quality support and ongoing training for all of our team, sharpening both
+          technical and organisational skills — so we can offer families the security and trust they
+          look for when choosing where to send the most precious thing in their lives: their child.
+        </p>
+        <h2>How can I join Toddler World?</h2>
+        <p>
+          If you're interested in a career with us, send your details using the form below, or email
+          your CV to <a href={`mailto:${site.email}`}>{site.email}</a>. Whenever a role opens up
+          that matches your skills, we'll be in touch.
+        </p>
+      </div>
+
+      <CalloutCard title="Did you know?" accent="tangerine" sticky>
+        <p>
+          We offer a competitive package alongside outstanding training and development. So what are
+          you waiting for? If you're focused, energetic and passionate about childcare, apply today.
+        </p>
+        <CtaButton variant="sunny" href="#send-details">Send your details</CtaButton>
+      </CalloutCard>
+    </div>
+  </section>
+
+  <section class="section container" id="send-details">
+    <div class="careers-form-head" data-reveal>
+      <span class="eyebrow">Apply now</span>
+      <h2>Send your details</h2>
+      <p>Fill in the form below and we'll keep you in mind for the right opportunity.</p>
+    </div>
+    <div class="careers-form" data-reveal>
+      <iframe title="Career application form" src={site.integrations.careersForm} loading="lazy"
+        >Loading…</iframe
+      >
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .careers-layout {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+  @media (min-width: 900px) {
+    .careers-layout {
+      grid-template-columns: 1.7fr 1fr;
+      gap: var(--sp-8);
+    }
+  }
+  .careers-form-head {
+    text-align: center;
+    max-width: 40rem;
+    margin-inline: auto;
+    margin-bottom: var(--sp-6);
+  }
+  .careers-form-head h2 {
+    margin-block: var(--sp-2);
+  }
+  .careers-form-head p {
+    color: var(--c-ink-soft);
+  }
+  .careers-form {
+    max-width: 760px;
+    margin-inline: auto;
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-4);
+    box-shadow: var(--shadow-sm);
+  }
+  .careers-form iframe {
+    width: 100%;
+    min-height: 1100px;
+    border: 0;
+    border-radius: var(--radius-md);
+  }
+</style>

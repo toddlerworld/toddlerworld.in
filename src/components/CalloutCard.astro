@@ -1,0 +1,73 @@
+---
+type Accent = 'green' | 'sky' | 'grape' | 'coral' | 'tangerine' | 'sunny';
+
+interface Props {
+  title?: string;
+  accent?: Accent;
+  icon?: string /* astro-icon name, e.g. "lucide:sparkles" */;
+  sticky?: boolean;
+}
+
+const accentMap: Record<Accent, { bg: string; ink: string }> = {
+  green: { bg: 'var(--c-mint-bg)', ink: 'var(--c-secondary-strong)' },
+  sky: { bg: 'var(--c-sky-bg)', ink: 'var(--c-sky-ink)' },
+  grape: { bg: 'var(--c-grape-bg)', ink: 'var(--c-grape)' },
+  coral: { bg: '#ffecec', ink: 'var(--c-coral-ink)' },
+  tangerine: { bg: '#fff0e4', ink: 'var(--c-tangerine-ink)' },
+  sunny: { bg: 'var(--c-cream-2)', ink: 'var(--c-primary-ink)' },
+};
+
+const { title, accent = 'green', icon, sticky = false } = Astro.props;
+const a = accentMap[accent];
+---
+
+<aside
+  class:list={['callout', { 'is-sticky': sticky }]}
+  style={`--callout-bg:${a.bg}; --callout-ink:${a.ink}`}
+>
+  {
+    icon && (
+      <span class="callout__icon">
+        <slot name="icon" />
+      </span>
+    )
+  }
+  {title && <h3 class="callout__title">{title}</h3>}
+  <div class="callout__body">
+    <slot />
+  </div>
+</aside>
+
+<style>
+  .callout {
+    background: var(--callout-bg);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-6);
+    border: 2px solid rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-sm);
+  }
+  .callout.is-sticky {
+    position: sticky;
+    top: 100px;
+  }
+  .callout__icon :global(svg) {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: var(--callout-ink);
+    margin-bottom: var(--sp-2);
+  }
+  .callout__title {
+    color: var(--callout-ink);
+    font-size: var(--fs-700);
+    margin-bottom: var(--sp-3);
+  }
+  .callout__body :global(p) {
+    color: var(--c-ink-soft);
+  }
+  .callout__body :global(p + p) {
+    margin-top: var(--sp-3);
+  }
+  .callout__body :global(.btn) {
+    margin-top: var(--sp-4);
+  }
+</style>

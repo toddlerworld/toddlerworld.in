@@ -1,0 +1,108 @@
+---
+type Bg = 'cream' | 'cream2' | 'mint' | 'sky' | 'grape' | 'white' | 'green' | 'sunny';
+
+interface Props {
+  bg?: Bg;
+  waveTop?: boolean;
+  waveBottom?: boolean;
+  class?: string;
+  id?: string;
+}
+
+const bgMap: Record<Bg, string> = {
+  cream: 'var(--c-cream)',
+  cream2: 'var(--c-cream-2)',
+  mint: 'var(--c-mint-bg)',
+  sky: 'var(--c-sky-bg)',
+  grape: 'var(--c-grape-bg)',
+  white: 'var(--c-white)',
+  green: 'var(--c-secondary)',
+  sunny: 'var(--c-primary)',
+};
+
+const {
+  bg = 'cream',
+  waveTop = false,
+  waveBottom = false,
+  class: className = '',
+  id,
+} = Astro.props;
+
+const fill = bgMap[bg];
+const dark = bg === 'green';
+---
+
+<section
+  class:list={['band', { 'band--dark': dark }, className]}
+  id={id}
+  style={`--band-bg:${fill}`}
+>
+  {
+    waveTop && (
+      <svg
+        class="wave wave--top"
+        viewBox="0 0 1440 60"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path d="M0,32 C240,64 480,0 720,20 C960,40 1200,68 1440,36 L1440,0 L0,0 Z" />
+      </svg>
+    )
+  }
+  <div class="band__inner">
+    <slot />
+  </div>
+  {
+    waveBottom && (
+      <svg
+        class="wave wave--bottom"
+        viewBox="0 0 1440 60"
+        preserveAspectRatio="none"
+        aria-hidden="true"
+      >
+        <path d="M0,24 C240,0 480,56 720,40 C960,24 1200,-8 1440,28 L1440,60 L0,60 Z" />
+      </svg>
+    )
+  }
+</section>
+
+<style>
+  .band {
+    position: relative;
+    background: var(--band-bg);
+    padding-block: var(--section-y);
+  }
+
+  .band--dark {
+    color: var(--c-secondary-ink);
+  }
+  .band--dark :global(h1),
+  .band--dark :global(h2),
+  .band--dark :global(h3) {
+    color: var(--c-secondary-ink);
+  }
+
+  .band__inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .wave {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    fill: var(--band-bg);
+    z-index: 2;
+  }
+
+  .wave--top {
+    top: -1px;
+    transform: translateY(-98%);
+  }
+
+  .wave--bottom {
+    bottom: -1px;
+    transform: translateY(98%);
+  }
+</style>

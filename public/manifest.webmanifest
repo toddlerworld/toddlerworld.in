@@ -1,0 +1,17 @@
+{
+  "name": "Toddler World — Montessori Preschool, Srinagar",
+  "short_name": "Toddler World",
+  "description": "A warm, Montessori-inspired preschool in Srinagar for children aged 2–3.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fff9ef",
+  "theme_color": "#ffc93c",
+  "icons": [
+    {
+      "src": "/images/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    { "src": "/images/favicon/android-chrome-384x384.png", "sizes": "384x384", "type": "image/png" }
+  ]
+}

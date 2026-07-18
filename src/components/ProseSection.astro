@@ -1,0 +1,96 @@
+---
+type Accent = 'green' | 'sky' | 'grape' | 'coral' | 'tangerine' | 'bubblegum';
+
+interface Props {
+  image?: string;
+  alt?: string;
+  reverse?: boolean;
+  accent?: Accent;
+  sticky?: boolean;
+  width?: number;
+  height?: number;
+}
+
+const accentMap: Record<Accent, string> = {
+  green: 'var(--c-secondary)',
+  sky: 'var(--c-sky)',
+  grape: 'var(--c-grape)',
+  coral: 'var(--c-coral)',
+  tangerine: 'var(--c-tangerine)',
+  bubblegum: 'var(--c-bubblegum)',
+};
+
+const {
+  image,
+  alt = '',
+  reverse = false,
+  accent = 'green',
+  sticky = false,
+  width = 800,
+  height = 640,
+} = Astro.props;
+---
+
+<div
+  class:list={['prose-section', { 'prose-section--reverse': reverse }]}
+  style={`--accent:${accentMap[accent]}`}
+>
+  {
+    image && (
+      <div class:list={['prose-section__media', { 'is-sticky': sticky }]} data-reveal>
+        <img src={image} alt={alt} width={width} height={height} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="prose-section__content prose" data-reveal>
+    <slot />
+  </div>
+</div>
+
+<style>
+  .prose-section {
+    display: grid;
+    gap: clamp(var(--sp-5), 5vw, var(--sp-8));
+    align-items: start;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 860px) {
+    .prose-section {
+      grid-template-columns: 1fr 1fr;
+    }
+    .prose-section--reverse .prose-section__media {
+      order: 2;
+    }
+  }
+
+  .prose-section__media {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--c-white);
+    outline: 3px solid var(--accent);
+    outline-offset: -3px;
+    rotate: -0.6deg;
+  }
+
+  .prose-section--reverse .prose-section__media {
+    rotate: 0.6deg;
+  }
+
+  .prose-section__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 5 / 4;
+  }
+
+  .prose-section__media.is-sticky {
+    position: sticky;
+    top: 100px;
+  }
+
+  .prose-section__content {
+    max-width: none;
+  }
+</style>

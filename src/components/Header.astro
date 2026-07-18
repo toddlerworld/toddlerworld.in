@@ -1,0 +1,426 @@
+---
+import { Icon } from 'astro-icon/components';
+import { nav } from '../data/nav';
+import { site } from '../data/site';
+
+const path = Astro.url.pathname.replace(/\/$/, '') || '/';
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const isGroupActive = (links?: { href: string }[]) => links?.some((l) => isActive(l.href));
+---
+
+<header class="header">
+  <div class="container-wide header__inner">
+    <a class="brand" href="/" aria-label={`${site.name} home`}>
+      <img src="/images/logo-black.png" alt={site.name} width="60" height="60" />
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-input" />
+    <label for="nav-toggle" class="nav-toggle" aria-label="Open menu">
+      <span class="nav-toggle__bars" aria-hidden="true"
+        ><span></span><span></span><span></span></span
+      >
+    </label>
+
+    <nav class="nav" aria-label="Primary">
+      <ul class="nav__list">
+        {
+          nav.map((item) =>
+            item.links ? (
+              <li class:list={['nav__group', { 'is-active': isGroupActive(item.links) }]}>
+                <button class="nav__trigger" aria-haspopup="true">
+                  {item.label}
+                  <Icon name="lucide:chevron-down" class="nav__caret" />
+                </button>
+                <div class="nav__menu">
+                  <ul>
+                    {item.links.map((link) => (
+                      <li>
+                        <a
+                          href={link.href}
+                          class:list={['nav__sub', { 'is-current': isActive(link.href) }]}
+                        >
+                          <span class="nav__sub-label">{link.label}</span>
+                          {link.note && <span class="nav__sub-note">{link.note}</span>}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ) : (
+              <li class="nav__item">
+                <a
+                  href={item.href}
+                  class:list={['nav__link', { 'is-current': isActive(item.href!) }]}
+                >
+                  {item.label}
+                </a>
+              </li>
+            )
+          )
+        }
+      </ul>
+      <a
+        class="nav__enquire"
+        href={site.integrations.enquiry}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Icon name="lucide:sparkles" />
+        Enquire
+      </a>
+    </nav>
+    <label for="nav-toggle" class="nav-scrim" aria-hidden="true"></label>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--c-cream);
+    border-bottom: 2px solid var(--c-line);
+  }
+  /* Blur only on desktop — on mobile it would create a containing block that
+     traps the fixed nav drawer inside the header instead of the viewport. */
+  @media (min-width: 900px) {
+    .header {
+      background: color-mix(in srgb, var(--c-cream) 88%, transparent);
+      backdrop-filter: blur(10px);
+    }
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--sp-4);
+    min-height: 74px;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  .brand img {
+    height: 60px;
+    width: auto;
+  }
+
+  /* --- Nav (desktop) --- */
+  .nav {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-5);
+  }
+
+  .nav__list {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-2);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav__link,
+  .nav__trigger {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25em;
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    font-size: 1rem;
+    color: var(--c-ink);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5em 0.8em;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    transition:
+      background var(--dur-fast) var(--ease-out),
+      color var(--dur-fast) var(--ease-out);
+  }
+
+  .nav__link:hover,
+  .nav__trigger:hover,
+  .nav__group:hover .nav__trigger,
+  .nav__group:focus-within .nav__trigger {
+    background: var(--c-cream-2);
+    color: var(--c-secondary-strong);
+  }
+
+  .nav__link.is-current,
+  .nav__group.is-active .nav__trigger {
+    color: var(--c-secondary-strong);
+  }
+
+  .nav__caret {
+    width: 1em;
+    height: 1em;
+    transition: transform var(--dur) var(--ease-out);
+  }
+  .nav__group:hover .nav__caret,
+  .nav__group:focus-within .nav__caret {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown */
+  .nav__group {
+    position: relative;
+  }
+  .nav__menu {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    min-width: 240px;
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
+    padding: var(--sp-2);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition:
+      opacity var(--dur) var(--ease-out),
+      transform var(--dur) var(--ease-out);
+  }
+  /* Transparent bridge fills the 8px gap between trigger and menu so moving the
+     cursor onto the menu keeps .nav__group:hover alive (the menu is a descendant
+     of the group). Without it the dropdown flickers off mid-move. */
+  .nav__menu::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 0;
+    right: 0;
+    height: 8px;
+  }
+  .nav__group:hover .nav__menu,
+  .nav__group:focus-within .nav__menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(-50%) translateY(0);
+  }
+  .nav__menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .nav__sub {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0.6em 0.8em;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    color: var(--c-ink);
+    transition: background var(--dur-fast) var(--ease-out);
+  }
+  .nav__sub:hover {
+    background: var(--c-mint-bg);
+    color: var(--c-secondary-strong);
+  }
+  .nav__sub.is-current {
+    background: var(--c-mint-bg);
+  }
+  .nav__sub-label {
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+  }
+  .nav__sub-note {
+    font-size: var(--fs-xs);
+    color: var(--c-ink-faint);
+  }
+
+  .nav__enquire {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    color: var(--c-primary-ink);
+    background: var(--c-primary);
+    padding: 0.6em 1.2em;
+    border-radius: var(--radius-pill);
+    text-decoration: none;
+    box-shadow: var(--shadow-play);
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+  .nav__enquire :global(svg) {
+    width: 1.1em;
+    height: 1.1em;
+  }
+  .nav__enquire:hover {
+    transform: translateY(-2px);
+    color: var(--c-primary-ink);
+    background: var(--c-primary-strong);
+  }
+  .nav__enquire:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.14);
+  }
+
+  /* --- Mobile toggle (hidden on desktop) --- */
+  .nav-toggle-input,
+  .nav-toggle,
+  .nav-scrim {
+    display: none;
+  }
+
+  /* ===================================================================
+     MOBILE
+     =================================================================== */
+  @media (max-width: 899px) {
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-md);
+      background: var(--c-cream-2);
+      cursor: pointer;
+      z-index: 120;
+    }
+    .nav-toggle__bars {
+      position: relative;
+      width: 24px;
+      height: 18px;
+    }
+    .nav-toggle__bars span {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      border-radius: 3px;
+      background: var(--c-ink);
+      transition:
+        transform var(--dur) var(--ease-out),
+        opacity var(--dur) var(--ease-out);
+    }
+    .nav-toggle__bars span:nth-child(1) {
+      top: 0;
+    }
+    .nav-toggle__bars span:nth-child(2) {
+      top: 7.5px;
+    }
+    .nav-toggle__bars span:nth-child(3) {
+      top: 15px;
+    }
+
+    .nav {
+      position: fixed;
+      inset: 0 0 0 auto;
+      width: min(88vw, 380px);
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+      gap: var(--sp-4);
+      background: var(--c-cream);
+      box-shadow: var(--shadow-lg);
+      padding: 96px var(--sp-5) var(--sp-6);
+      overflow-y: auto;
+      transform: translateX(105%);
+      transition: transform var(--dur) var(--ease-out);
+      z-index: 110;
+    }
+
+    .nav__list {
+      flex-direction: column;
+      align-items: stretch;
+      gap: var(--sp-1);
+      width: 100%;
+    }
+
+    .nav__group {
+      border-bottom: 2px solid var(--c-line);
+      padding-bottom: var(--sp-3);
+    }
+
+    .nav__trigger {
+      width: 100%;
+      justify-content: space-between;
+      font-size: 1.1rem;
+      pointer-events: none; /* submenu is always expanded on mobile */
+      color: var(--c-ink-faint);
+      text-transform: uppercase;
+      font-size: var(--fs-sm);
+      letter-spacing: 0.04em;
+    }
+    .nav__caret {
+      display: none;
+    }
+
+    /* Submenus are always visible in the drawer (zero-JS) */
+    .nav__menu {
+      position: static;
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+      transform: none;
+      min-width: 0;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+    }
+
+    /* Neutralise the desktop hover-dropdown behaviour inside the drawer — Mac
+       trackpads can hover, and the base rules would otherwise translateX the
+       submenu off-screen and pill-highlight the section header. */
+    .nav__group:hover .nav__menu,
+    .nav__group:focus-within .nav__menu {
+      transform: none;
+    }
+    .nav__group:hover .nav__trigger,
+    .nav__group:focus-within .nav__trigger {
+      background: none;
+      color: var(--c-ink-faint);
+    }
+
+    .nav__link {
+      font-size: 1.15rem;
+      padding: 0.6em 0.8em;
+    }
+
+    .nav__enquire {
+      justify-content: center;
+      margin-top: var(--sp-2);
+      font-size: 1.05rem;
+      padding: 0.85em 1.2em;
+    }
+
+    /* Toggle behaviour */
+    .nav-toggle-input:checked ~ .nav {
+      transform: translateX(0);
+    }
+    .nav-toggle-input:checked ~ .nav-scrim {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 15, 5, 0.4);
+      z-index: 105;
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .nav-toggle__bars span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .nav-toggle__bars span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav-toggle-input:checked ~ .nav-toggle .nav-toggle__bars span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+
+    /* Lock body scroll when open */
+    .nav-toggle-input:checked ~ .nav {
+      overscroll-behavior: contain;
+    }
+  }
+</style>

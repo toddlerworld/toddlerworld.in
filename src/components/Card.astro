@@ -1,0 +1,169 @@
+---
+type Accent = 'green' | 'sky' | 'grape' | 'coral' | 'tangerine' | 'bubblegum' | 'sunny';
+
+interface Props {
+  title: string;
+  href?: string;
+  image?: string;
+  alt?: string;
+  accent?: Accent;
+  eyebrow?: string;
+  external?: boolean;
+  cta?: string;
+  width?: number;
+  height?: number;
+}
+
+const accentMap: Record<Accent, string> = {
+  green: 'var(--c-secondary)',
+  sky: 'var(--c-sky)',
+  grape: 'var(--c-grape)',
+  coral: 'var(--c-coral)',
+  tangerine: 'var(--c-tangerine)',
+  bubblegum: 'var(--c-bubblegum)',
+  sunny: 'var(--c-primary)',
+};
+
+const {
+  title,
+  href,
+  image,
+  alt = '',
+  accent = 'green',
+  eyebrow,
+  external = false,
+  cta = 'Learn more',
+  width = 640,
+  height = 460,
+} = Astro.props;
+
+const Tag = href ? 'a' : 'div';
+const rel = external ? 'noopener noreferrer' : undefined;
+const target = external ? '_blank' : undefined;
+const accentColor = accentMap[accent];
+---
+
+<Tag
+  class:list={['card', { 'card--link': href }]}
+  href={href}
+  target={target}
+  rel={rel}
+  style={`--accent:${accentColor}`}
+>
+  {
+    image && (
+      <div class="card__media">
+        <img src={image} alt={alt} width={width} height={height} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="card__body">
+    {eyebrow && <span class="card__eyebrow">{eyebrow}</span>}
+    <h3 class="card__title">{title}</h3>
+    <p class="card__text"><slot /></p>
+    {
+      href && (
+        <span class="card__cta">
+          {cta} <span aria-hidden="true">→</span>
+        </span>
+      )
+    }
+  </div>
+</Tag>
+
+<style>
+  .card {
+    display: flex;
+    flex-direction: column;
+    background: var(--c-white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: var(--shadow-sm);
+    border: 2px solid var(--c-line);
+    border-top: 6px solid var(--accent);
+    height: 100%;
+    transition:
+      transform var(--dur) var(--ease-bounce),
+      box-shadow var(--dur) var(--ease-out),
+      border-color var(--dur) var(--ease-out);
+  }
+
+  .card--link {
+    cursor: pointer;
+  }
+
+  .card--link:hover {
+    transform: translateY(-6px) rotate(-0.4deg);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--accent);
+    color: inherit;
+  }
+
+  .card__media {
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: var(--c-cream-2);
+  }
+
+  .card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms var(--ease-out);
+  }
+
+  .card--link:hover .card__media img {
+    transform: scale(1.06);
+  }
+
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-2);
+    padding: var(--sp-5);
+    flex: 1;
+  }
+
+  .card__eyebrow {
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+    filter: brightness(0.72);
+  }
+
+  .card__title {
+    font-size: var(--fs-700);
+  }
+
+  .card__text {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-body);
+    flex: 1;
+  }
+
+  .card__text:empty {
+    display: none;
+  }
+
+  .card__cta {
+    margin-top: var(--sp-2);
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    color: var(--accent);
+    filter: brightness(0.78);
+  }
+
+  .card__cta span {
+    display: inline-block;
+    transition: transform var(--dur) var(--ease-out);
+  }
+
+  .card--link:hover .card__cta span {
+    transform: translateX(4px);
+  }
+</style>

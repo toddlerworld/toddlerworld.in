@@ -1,0 +1,19 @@
+---
+interface Props {
+  min?: string /* min card width before wrapping */;
+  class?: string;
+}
+const { min = '260px', class: className = '' } = Astro.props;
+---
+
+<div class:list={['card-grid', className]} style={`--min:${min}`}>
+  <slot />
+</div>
+
+<style>
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(var(--min), 100%), 1fr));
+    gap: var(--sp-5);
+  }
+</style>

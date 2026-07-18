@@ -1,0 +1,95 @@
+---
+type Accent = 'green' | 'sky' | 'grape' | 'coral' | 'tangerine' | 'bubblegum' | 'sunny';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  accent?: Accent;
+}
+
+const accentMap: Record<Accent, { a: string; b: string; ink: string }> = {
+  green: { a: '#2fb380', b: '#4ea8de', ink: '#fff' },
+  sky: { a: '#4ea8de', b: '#9b5de5', ink: '#fff' },
+  grape: { a: '#9b5de5', b: '#f15bb5', ink: '#fff' },
+  coral: { a: '#ff6b6b', b: '#ff924c', ink: '#fff' },
+  tangerine: { a: '#ff924c', b: '#ffc93c', ink: '#4a1f00' },
+  bubblegum: { a: '#f15bb5', b: '#9b5de5', ink: '#fff' },
+  sunny: { a: '#ffc93c', b: '#ff924c', ink: '#3d2e00' },
+};
+
+const { eyebrow, title, accent = 'green' } = Astro.props;
+const c = accentMap[accent];
+---
+
+<section class="page-hero" style={`--h-a:${c.a}; --h-b:${c.b}; --h-ink:${c.ink}`}>
+  <div class="page-hero__blobs" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="container page-hero__inner">
+    {eyebrow && <span class="page-hero__eyebrow">{eyebrow}</span>}
+    <h1 class="page-hero__title">{title}</h1>
+    <slot />
+  </div>
+</section>
+
+<style>
+  .page-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    background: linear-gradient(120deg, var(--h-a), var(--h-b));
+    color: var(--h-ink);
+    padding-block: clamp(3rem, 8vw, 5rem);
+    text-align: center;
+  }
+  .page-hero__inner {
+    position: relative;
+    z-index: 2;
+    max-width: 46rem;
+  }
+  .page-hero__eyebrow {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sm);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    opacity: 0.9;
+    margin-bottom: var(--sp-2);
+  }
+  .page-hero__title {
+    color: var(--h-ink);
+    font-size: var(--fs-900);
+  }
+  .page-hero :global(p) {
+    margin-top: var(--sp-3);
+    font-size: var(--fs-600);
+    color: var(--h-ink);
+    opacity: 0.94;
+  }
+  .page-hero__blobs span {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.16);
+    filter: blur(2px);
+  }
+  .page-hero__blobs span:nth-child(1) {
+    width: 220px;
+    height: 220px;
+    top: -80px;
+    right: -40px;
+  }
+  .page-hero__blobs span:nth-child(2) {
+    width: 140px;
+    height: 140px;
+    bottom: -60px;
+    left: 8%;
+  }
+  .page-hero__blobs span:nth-child(3) {
+    width: 90px;
+    height: 90px;
+    top: 30%;
+    left: -30px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+</style>

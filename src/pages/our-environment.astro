@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import ProseSection from '../components/ProseSection.astro';
+import CtaButton from '../components/CtaButton.astro';
+---
+
+<BaseLayout
+  title="Our Environment"
+  description="A safe, calm and joyful learning environment in Srinagar — thoughtfully designed to feel like a home away from home for children aged 2–3."
+>
+  <PageHero eyebrow="A home away from home" title="Our Environment" accent="green">
+    <p>Step inside and you may never want to leave — and neither will your little one.</p>
+  </PageHero>
+
+  <section class="section container">
+    <ProseSection
+      image="/images/environment/environment.webp"
+      alt="A child exploring our carefully designed play area"
+      accent="green"
+    >
+      <p class="lead">
+        Toddler World is a place that draws children in — once they walk through the door, they
+        simply don't want to leave. Our thoughtfully designed environment supports every child's
+        growth, while giving families the reassurance of genuine, high-quality care.
+      </p>
+
+      <h2>Peace of mind</h2>
+      <p>
+        We know the safety and well-being of your child is your top priority — it's ours too. We go
+        above and beyond to make sure every child feels safe, comfortable and cared for, across
+        every part of our programme.
+      </p>
+
+      <h2>Home away from home</h2>
+      <p>
+        We give your child a true home away from home. That warm, personal feeling carries through
+        everything — from our people to our buildings and grounds, which are designed to be fun,
+        interactive and full of life. Here, your child takes their very first steps toward a
+        lifelong love of learning.
+      </p>
+
+      <h2>A caring growth environment</h2>
+      <p>Our dedicated, trained staff shape a space that gently caters to:</p>
+      <ul>
+        <li>The different stages of a child's development</li>
+        <li>The individual differences between children</li>
+        <li>The varied skills and potential of each little one</li>
+        <li>And, just as importantly, every kind of intelligence</li>
+      </ul>
+      <p>Every corner is designed to give your child the best possible experience.</p>
+
+      <div class="btn-row">
+        <CtaButton href="/play-equipment">Explore our facilities</CtaButton>
+        <CtaButton variant="ghost" href="/welcome">Come and visit</CtaButton>
+      </div>
+    </ProseSection>
+  </section>
+</BaseLayout>
+
+<style>
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+</style>

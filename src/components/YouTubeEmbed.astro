@@ -1,0 +1,114 @@
+---
+interface Props {
+  id: string;
+  title?: string;
+}
+const { id, title = 'Watch our video' } = Astro.props;
+const poster = `https://i.ytimg.com/vi/${id}/maxresdefault.jpg`;
+const posterFallback = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
+---
+
+<div class="yt" data-yt-id={id}>
+  <button class="yt__btn" type="button" aria-label={`Play video: ${title}`}>
+    <img
+      class="yt__poster"
+      src={poster}
+      data-fallback={posterFallback}
+      alt=""
+      width="1280"
+      height="720"
+      loading="lazy"
+      onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.removeAttribute('data-fallback');}"
+    />
+    <span class="yt__play" aria-hidden="true">
+      <svg viewBox="0 0 68 48" width="68" height="48">
+        <path
+          class="yt__play-bg"
+          d="M66.52 7.74c-.78-2.93-2.49-5.41-5.42-6.19C55.79.13 34 0 34 0S12.21.13 6.9 1.55c-2.93.78-4.63 3.26-5.42 6.19C.06 13.05 0 24 0 24s.06 10.95 1.48 16.26c.78 2.93 2.49 5.41 5.42 6.19C12.21 47.87 34 48 34 48s21.79-.13 27.1-1.55c2.93-.78 4.64-3.26 5.42-6.19C67.94 34.95 68 24 68 24s-.06-10.95-1.48-16.26z"
+        ></path>
+        <path class="yt__play-tri" d="M45 24 27 14v20"></path>
+      </svg>
+    </span>
+  </button>
+</div>
+
+<style>
+  .yt {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    background: #000;
+  }
+  .yt__btn {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+    background: none;
+  }
+  .yt__poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 500ms var(--ease-out);
+  }
+  .yt__btn:hover .yt__poster {
+    transform: scale(1.03);
+  }
+  .yt__play {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  }
+  .yt__play svg {
+    width: 88px;
+    height: auto;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.4));
+    transition: transform var(--dur) var(--ease-bounce);
+  }
+  .yt__btn:hover .yt__play svg {
+    transform: scale(1.1);
+  }
+  .yt__play-bg {
+    fill: #ff0000;
+    opacity: 0.92;
+  }
+  .yt__btn:hover .yt__play-bg {
+    opacity: 1;
+  }
+  .yt__play-tri {
+    fill: #fff;
+  }
+  .yt :global(iframe) {
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>
+
+<script>
+  function initYouTubeFacades() {
+    document.querySelectorAll<HTMLElement>('.yt').forEach((el) => {
+      if (el.dataset.ytBound === 'true') return;
+      el.dataset.ytBound = 'true';
+      const btn = el.querySelector('.yt__btn');
+      btn?.addEventListener('click', () => {
+        const id = el.dataset.ytId;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?autoplay=1&rel=0`;
+        iframe.title = 'Toddler World video';
+        iframe.allow =
+          'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture';
+        iframe.allowFullscreen = true;
+        el.replaceChildren(iframe);
+      });
+    });
+  }
+  initYouTubeFacades();
+  document.addEventListener('astro:page-load', initYouTubeFacades);
+</script>

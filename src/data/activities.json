@@ -1,0 +1,14 @@
+[
+  { "label": "Prayers & Duas", "icon": "lucide:sun" },
+  { "label": "Singing, Dance & Music", "icon": "lucide:music" },
+  { "label": "Painting & Sand Pit", "icon": "lucide:palette" },
+  { "label": "Clay Modelling & Pottery", "icon": "lucide:shapes" },
+  { "label": "Indoor Soft Play", "icon": "lucide:baby" },
+  { "label": "Gardening & Planting Saplings", "icon": "lucide:sprout" },
+  { "label": "Role Play", "icon": "lucide:drama" },
+  { "label": "Character-Building Stories", "icon": "lucide:book-heart" },
+  { "label": "Folk Stories & Puppets", "icon": "lucide:venetian-mask" },
+  { "label": "Movies & AV Sessions", "icon": "lucide:clapperboard" },
+  { "label": "Reading Nook", "icon": "lucide:book-open" },
+  { "label": "Story-Telling Area", "icon": "lucide:messages-square" }
+]

@@ -1,0 +1,35 @@
+---
+import { site } from '../data/site';
+interface Props {
+  title?: string;
+  class?: string;
+}
+const { title = 'Toddler World location on Google Maps', class: className = '' } = Astro.props;
+---
+
+<div class:list={['map', className]}>
+  <iframe
+    src={site.integrations.mapEmbed}
+    title={title}
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+    allowfullscreen></iframe>
+</div>
+
+<style>
+  .map {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    border: 3px solid var(--c-white);
+    outline: 3px solid var(--c-secondary);
+    outline-offset: -3px;
+    line-height: 0;
+  }
+  .map iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 320px;
+    border: 0;
+  }
+</style>

@@ -1,0 +1,145 @@
+---
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import SectionBand from '../components/SectionBand.astro';
+import CtaButton from '../components/CtaButton.astro';
+import activities from '../data/activities.json';
+---
+
+<BaseLayout
+  title="Activities"
+  description="From clay modelling and role play to gardening, storytelling and song — discover the joyful Montessori activities that fill every day at Toddler World."
+>
+  <PageHero eyebrow="Every day is an adventure" title="Our Activities" accent="grape">
+    <p>Hands-on, heart-full Montessori activities that turn play into learning.</p>
+  </PageHero>
+
+  <section class="section container">
+    <div class="activities-intro" data-reveal>
+      <img
+        src="/images/activities/1.webp"
+        alt="A child exploring a colourful bead-maze toy"
+        width="900"
+        height="600"
+        loading="lazy"
+      />
+      <div>
+        <span class="eyebrow">Montessori activities</span>
+        <h2>A world of things to make, do and discover</h2>
+        <p class="lead">
+          Our days are full of variety — carefully chosen activities that grow little bodies,
+          curious minds and kind hearts, all through the joy of play.
+        </p>
+      </div>
+    </div>
+
+    <ul class="activity-grid">
+      {
+        activities.map((a) => (
+          <li class="activity" data-reveal>
+            <span class="activity__icon">
+              <Icon name={a.icon} />
+            </span>
+            <span>{a.label}</span>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <SectionBand bg="sky" waveTop>
+    <div class="container play-callout">
+      <div data-reveal>
+        <span class="eyebrow">More to explore</span>
+        <h2>Play equipment that inspires</h2>
+        <p>
+          Alongside our activities, a wonderful range of play equipment helps children build all
+          kinds of skills — chosen with great care to spark an inspiring sensory experience.
+        </p>
+      </div>
+      <CtaButton variant="primary" href="/play-equipment">See our facilities</CtaButton>
+    </div>
+  </SectionBand>
+</BaseLayout>
+
+<style>
+  .activities-intro {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: center;
+    margin-bottom: var(--sp-8);
+  }
+  @media (min-width: 820px) {
+    .activities-intro {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .activities-intro img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+  }
+  .activities-intro h2 {
+    margin-block: var(--sp-2) var(--sp-3);
+  }
+
+  .activity-grid {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(240px, 100%), 1fr));
+    gap: var(--sp-3);
+  }
+  .activity {
+    display: flex;
+    align-items: center;
+    gap: var(--sp-3);
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-pill);
+    padding: var(--sp-3) var(--sp-4);
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    box-shadow: var(--shadow-sm);
+    transition:
+      transform var(--dur) var(--ease-bounce),
+      border-color var(--dur) var(--ease-out);
+  }
+  .activity:hover {
+    transform: translateY(-3px);
+    border-color: var(--c-grape);
+  }
+  .activity__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-pill);
+    background: var(--c-grape-bg);
+    color: var(--c-grape);
+  }
+  .activity__icon :global(svg) {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+
+  .play-callout {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-4);
+    max-width: 46rem;
+  }
+  .play-callout h2 {
+    margin-block: var(--sp-2) var(--sp-3);
+  }
+  .play-callout p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-500);
+  }
+</style>

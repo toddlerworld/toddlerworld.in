@@ -1,0 +1,215 @@
+---
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import SectionBand from '../components/SectionBand.astro';
+import CtaButton from '../components/CtaButton.astro';
+
+const pillars = [
+  {
+    title: 'Citizen',
+    icon: 'lucide:users-round',
+    accent: 'coral',
+    text: 'Sharing and communicating matter just as much as ABCs and 123s. We nurture a love of family and community — the foundation of your child’s well-being.',
+  },
+  {
+    title: 'Scholar',
+    icon: 'lucide:book-open-text',
+    accent: 'sky',
+    text: 'Through a world-class curriculum, your child gains the early literacy and language skills that shape future success — plus pre-writing skills like grip and letter shapes.',
+  },
+  {
+    title: 'Mind',
+    icon: 'lucide:lightbulb',
+    accent: 'grape',
+    text: 'Hands-on activities and the latest technology open your child’s eyes to the wonders of science and maths, building confident early thinkers.',
+  },
+  {
+    title: 'Body',
+    icon: 'lucide:activity',
+    accent: 'green',
+    text: 'Your little one will dance, sing, play and hit developmental milestones — learning healthy habits through joyful daily physical activity.',
+  },
+  {
+    title: 'Milestones',
+    icon: 'lucide:flag',
+    accent: 'tangerine',
+    text: 'Before moving on, every child works toward specific, age-appropriate milestones that set them up beautifully for what comes next.',
+  },
+  {
+    title: 'Assessment',
+    icon: 'lucide:clipboard-check',
+    accent: 'bubblegum',
+    text: 'Gentle, regular assessment makes sure your child is meeting those milestones and progressing happily in their learning.',
+  },
+];
+---
+
+<BaseLayout
+  title="Pre-Nursery (2–3 years)"
+  description="Toddler World's Pre-Nursery programme for ages 2–3 builds a strong foundation for school and life across six pillars: Citizen, Scholar, Mind, Body, Milestones and Assessment."
+>
+  <PageHero eyebrow="Ages 2–3 years" title="Pre-Nursery" accent="coral">
+    <p>A strong, joyful foundation for success in school — and in life.</p>
+  </PageHero>
+
+  <section class="section container">
+    <div class="pn-intro" data-reveal>
+      <img
+        src="/images/prenursery/1.webp"
+        alt="A young child developing fine motor skills through practical activities"
+        width="900"
+        height="640"
+        loading="lazy"
+      />
+      <div>
+        <span class="eyebrow">The most important years</span>
+        <h2>Where lifelong learning begins</h2>
+        <p class="lead">
+          The pre-nursery years are the most pivotal for your child's lifelong ability to learn. At
+          this prime age, your talkative little one is ready to develop pre-reading skills and form
+          their very first friendships.
+        </p>
+        <p>
+          Our programme is designed to build a strong foundation for school success — so your child
+          enters their next classroom ready and eager to learn. Along the way we nurture the
+          cognitive and social-emotional skills of a lifelong learner: problem-solving,
+          self-regulation, independence, interactive learning and collaborative play.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <SectionBand bg="cream2" waveTop waveBottom>
+    <div class="container">
+      <SectionHeader eyebrow="How we help them grow" title="Six pillars of a happy head start">
+        <p>Our pre-nursery approach nurtures the whole child — mind, body and heart.</p>
+      </SectionHeader>
+      <div class="pillars">
+        {
+          pillars.map((p) => (
+            <article class={`pillar pillar--${p.accent}`} data-reveal>
+              <span class="pillar__icon">
+                <Icon name={p.icon} />
+              </span>
+              <h3>{p.title}</h3>
+              <p>{p.text}</p>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </SectionBand>
+
+  <section class="section container">
+    <div class="pn-cta" data-reveal>
+      <h2>There's a lot more to discover</h2>
+      <p>We'd love to tell you everything about our pre-nursery programme in person.</p>
+      <div class="btn-row">
+        <CtaButton href="/contact-us">Contact us</CtaButton>
+        <CtaButton variant="ghost" href="/programmes">Explore programmes</CtaButton>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .pn-intro {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: center;
+  }
+  @media (min-width: 860px) {
+    .pn-intro {
+      grid-template-columns: 1fr 1.1fr;
+    }
+  }
+  .pn-intro img {
+    width: 100%;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+  .pn-intro h2 {
+    margin-block: var(--sp-2) var(--sp-3);
+  }
+  .pn-intro p + p {
+    margin-top: var(--sp-3);
+    color: var(--c-ink-soft);
+  }
+
+  .pillars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+    gap: var(--sp-5);
+  }
+  .pillar {
+    --pill: var(--c-secondary);
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-top: 6px solid var(--pill);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    box-shadow: var(--shadow-sm);
+  }
+  .pillar--coral {
+    --pill: var(--c-coral);
+  }
+  .pillar--sky {
+    --pill: var(--c-sky);
+  }
+  .pillar--grape {
+    --pill: var(--c-grape);
+  }
+  .pillar--green {
+    --pill: var(--c-secondary);
+  }
+  .pillar--tangerine {
+    --pill: var(--c-tangerine);
+  }
+  .pillar--bubblegum {
+    --pill: var(--c-bubblegum);
+  }
+  .pillar__icon {
+    display: grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: var(--radius-md);
+    background: color-mix(in srgb, var(--pill) 16%, white);
+    color: var(--pill);
+    margin-bottom: var(--sp-3);
+  }
+  .pillar__icon :global(svg) {
+    width: 1.7rem;
+    height: 1.7rem;
+  }
+  .pillar h3 {
+    font-size: var(--fs-700);
+    margin-bottom: var(--sp-2);
+  }
+  .pillar p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-body);
+  }
+
+  .pn-cta {
+    text-align: center;
+    max-width: 40rem;
+    margin-inline: auto;
+  }
+  .pn-cta p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-500);
+    margin-top: var(--sp-2);
+  }
+  .btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    justify-content: center;
+    margin-top: var(--sp-5);
+  }
+</style>

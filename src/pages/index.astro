@@ -1,0 +1,551 @@
+---
+import { Icon } from 'astro-icon/components';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SectionBand from '../components/SectionBand.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CardGrid from '../components/CardGrid.astro';
+import Card from '../components/Card.astro';
+import CtaButton from '../components/CtaButton.astro';
+import YouTubeEmbed from '../components/YouTubeEmbed.astro';
+import MapEmbed from '../components/MapEmbed.astro';
+import ReviewsCarousel from '../components/islands/ReviewsCarousel.tsx';
+import PhotoGallery from '../components/islands/PhotoGallery.tsx';
+import OpeningHours from '../components/islands/OpeningHours.tsx';
+import { site } from '../data/site';
+import reviews from '../data/reviews.json';
+import gallery from '../data/gallery.json';
+
+const stats = [
+  { value: '10+', label: 'Years nurturing little ones in Srinagar' },
+  { value: '2–3', label: 'The age we specialise in, and love' },
+  { value: '99%', label: 'Move on to top schools in the valley' },
+];
+
+const features = [
+  {
+    icon: 'lucide:heart-handshake',
+    title: 'Warm & caring',
+    text: 'Gentle, patient teachers who treat every child like their own.',
+  },
+  {
+    icon: 'lucide:sprout',
+    title: 'Montessori-inspired',
+    text: 'Hands-on learning that follows your child’s natural curiosity.',
+  },
+  {
+    icon: 'lucide:shield-check',
+    title: 'Safe & secure',
+    text: 'A calm, protected space built for all of Kashmir’s seasons.',
+  },
+];
+---
+
+<BaseLayout>
+  <!-- ============================ HERO ============================ -->
+  <section class="hero">
+    <div class="hero__bg">
+      <picture>
+        <source media="(max-width: 720px)" srcset="/images/mobile.webp" />
+        <img
+          src="/images/main-section/landing-image.webp"
+          alt="Children playing and learning at Toddler World"
+          width="1600"
+          height="900"
+          fetchpriority="high"
+        />
+      </picture>
+    </div>
+    <div class="hero__blobs" aria-hidden="true"></div>
+    <div class="container hero__inner">
+      <h1 class="hero__title">Small world,<br /><span>big imaginations</span></h1>
+      <p class="hero__lead">
+        A warm, nurturing first school for curious little ones aged 2–3 — where every day is full of
+        play, discovery and gentle growth.
+      </p>
+      <div class="hero__cta">
+        <CtaButton variant="sunny" size="lg" href={site.integrations.enquiry} external>
+          Enquire about a place
+        </CtaButton>
+        <CtaButton variant="ghost" size="lg" href="/welcome">Take a look around</CtaButton>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ STATS ============================ -->
+  <section class="container stats-strip" aria-label="Toddler World at a glance">
+    {
+      stats.map((s) => (
+        <div class="stat" data-reveal>
+          <span class="stat__value">{s.value}</span>
+          <span class="stat__label">{s.label}</span>
+        </div>
+      ))
+    }
+  </section>
+
+  <!-- ========================= WELCOME INTRO ========================= -->
+  <section class="section container">
+    <div class="intro">
+      <div class="intro__media" data-reveal>
+        <img
+          src="/images/Welcome/welcome.webp"
+          alt="A happy child at Toddler World"
+          width="720"
+          height="720"
+          loading="lazy"
+        />
+        <span class="intro__badge">Est. {site.foundedYear}</span>
+      </div>
+      <div class="intro__content" data-reveal>
+        <span class="eyebrow">Welcome to Toddler World</span>
+        <h2>A joyful first step into the big wide world</h2>
+        <p class="lead">
+          For many little ones, Toddler World is the very first time away from home. We make that
+          first step gentle, happy and full of wonder — a place where your child feels safe to
+          explore, make friends and fall in love with learning.
+        </p>
+        <div class="feature-list">
+          {
+            features.map((f) => (
+              <div class="feature">
+                <span class="feature__icon">
+                  <Icon name={f.icon} />
+                </span>
+                <div>
+                  <h3 class="feature__title">{f.title}</h3>
+                  <p>{f.text}</p>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+        <CtaButton href="/about-us">More about us</CtaButton>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= A BIT ABOUT US ========================= -->
+  <SectionBand bg="mint" waveTop waveBottom>
+    <div class="container">
+      <SectionHeader eyebrow="Come and explore" title="A little world with so much to discover">
+        <p>Three of the things families love most about life at Toddler World.</p>
+      </SectionHeader>
+      <CardGrid>
+        <div data-reveal>
+          <Card
+            title="Our Environment"
+            accent="green"
+            href="/our-environment"
+            image="/images/home/AMI07620.webp"
+            alt="A warm, welcoming learning space at Toddler World"
+            eyebrow="Home away from home"
+          >
+            Bright, calm rooms designed around little hands and big curiosity.
+          </Card>
+        </div>
+        <div data-reveal>
+          <Card
+            title="Our Facilities"
+            accent="sky"
+            href="/play-equipment"
+            image="/images/home/AMI05179.webp"
+            alt="Play facilities at Toddler World"
+            eyebrow="Room to play"
+          >
+            A splash pool, soft play, wall climbing and a whole world to explore.
+          </Card>
+        </div>
+        <div data-reveal>
+          <Card
+            title="Our Programmes"
+            accent="grape"
+            href="/programmes"
+            image="/images/home/AMI07643.webp"
+            alt="Montessori learning at Toddler World"
+            eyebrow="Learning through play"
+          >
+            A Montessori-inspired programme tailored to your child’s stage.
+          </Card>
+        </div>
+      </CardGrid>
+    </div>
+  </SectionBand>
+
+  <!-- ===================== SCHOOL TRANSITIONS BAND ===================== -->
+  <section class="section container">
+    <div class="transition-band" data-reveal>
+      <div class="transition-band__text">
+        <span class="eyebrow eyebrow--light">Ready for what’s next</span>
+        <h2>Setting up a happy, confident start to big school</h2>
+        <p>
+          Everything we do prepares your child for a smooth, joyful transition to primary school —
+          building the confidence, independence and love of learning that lasts a lifetime.
+        </p>
+        <CtaButton variant="sunny" href="/school-transitions">How we prepare them</CtaButton>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ REVIEWS ============================ -->
+  <SectionBand bg="cream2">
+    <div class="container">
+      <SectionHeader eyebrow="Loved by families" title="The trust we’ve earned">
+        <p>Kind words from the parents who know us best.</p>
+      </SectionHeader>
+      <ReviewsCarousel client:visible reviews={reviews} />
+    </div>
+  </SectionBand>
+
+  <!-- ============================ VIDEO ============================ -->
+  <section class="section container">
+    <SectionHeader eyebrow="Take a peek" title="See why we’re a little different">
+      <p>A short look at a day in the life at Toddler World.</p>
+    </SectionHeader>
+    <div class="video-wrap" data-reveal>
+      <YouTubeEmbed id={site.integrations.youtubeId} title="A day at Toddler World" />
+    </div>
+  </section>
+
+  <!-- ============================ GALLERY ============================ -->
+  <SectionBand bg="sky" waveTop id="gallery">
+    <div class="container">
+      <SectionHeader eyebrow="Happy moments" title="Life at Toddler World">
+        <p>Real days, real smiles — straight from our classrooms and play areas.</p>
+      </SectionHeader>
+      <PhotoGallery client:visible photos={gallery} />
+    </div>
+  </SectionBand>
+
+  <!-- ============================ CONTACT ============================ -->
+  <section class="section container" id="visit">
+    <SectionHeader eyebrow="Come and visit" title="We’d love to meet you">
+      <p>Drop by, call, or send an enquiry — we’re always happy to show families around.</p>
+    </SectionHeader>
+    <div class="contact-grid">
+      <div class="contact-info" data-reveal>
+        <div class="contact-info__block">
+          <span class="contact-info__icon"><Icon name="lucide:map-pin" /></span>
+          <div>
+            <h3>Find us</h3>
+            <p>{site.address.full}</p>
+            <a
+              class="contact-info__link"
+              href={site.integrations.mapDirections}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Get directions →
+            </a>
+          </div>
+        </div>
+        <div class="contact-info__block">
+          <span class="contact-info__icon"><Icon name="lucide:phone" /></span>
+          <div>
+            <h3>Call us</h3>
+            {
+              site.phones.map((p) => (
+                <p>
+                  <a href={p.href}>{p.label}</a>
+                </p>
+              ))
+            }
+          </div>
+        </div>
+        <div class="contact-info__block">
+          <span class="contact-info__icon"><Icon name="lucide:clock" /></span>
+          <div>
+            <h3>Opening hours</h3>
+            <OpeningHours client:idle hours={site.hours} />
+          </div>
+        </div>
+        <div class="contact-info__actions">
+          <CtaButton href="/contact-us">Contact us</CtaButton>
+          <CtaButton variant="whatsapp" href={site.integrations.whatsapp} external>
+            <Icon name="fa6-brands:whatsapp" /> WhatsApp
+          </CtaButton>
+        </div>
+      </div>
+      <MapEmbed class="contact-map" />
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    align-items: center;
+    min-height: min(76vh, 680px);
+    padding-block: clamp(3rem, 8vw, 6rem);
+    overflow: hidden;
+  }
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+  }
+  .hero__bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+      100deg,
+      rgba(255, 249, 239, 0.97) 0%,
+      rgba(255, 249, 239, 0.9) 38%,
+      rgba(255, 249, 239, 0.55) 62%,
+      rgba(255, 249, 239, 0.15) 100%
+    );
+  }
+  @media (max-width: 720px) {
+    .hero::after {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 249, 239, 0.86) 0%,
+        rgba(255, 249, 239, 0.92) 55%,
+        rgba(255, 249, 239, 0.98) 100%
+      );
+    }
+  }
+  .hero__inner {
+    max-width: 620px;
+  }
+  .hero__title {
+    font-size: var(--fs-900);
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+  }
+  .hero__title span {
+    color: var(--c-secondary);
+  }
+  .hero__lead {
+    margin-top: var(--sp-4);
+    font-size: var(--fs-600);
+    color: var(--c-ink-soft);
+    max-width: 34rem;
+  }
+  .hero__cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+    margin-top: var(--sp-6);
+  }
+
+  /* ---------- STATS ---------- */
+  .stats-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--sp-4);
+    margin-top: calc(var(--sp-7) * -1);
+    position: relative;
+    z-index: 3;
+  }
+  .stat {
+    background: var(--c-white);
+    border: 2px solid var(--c-line);
+    border-radius: var(--radius-lg);
+    padding: var(--sp-5);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+  }
+  .stat__value {
+    display: block;
+    font-family: var(--font-display);
+    font-weight: var(--fw-display);
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    color: var(--c-secondary);
+    line-height: 1;
+  }
+  .stat__label {
+    display: block;
+    margin-top: var(--sp-2);
+    font-size: var(--fs-sm);
+    color: var(--c-ink-soft);
+  }
+  @media (max-width: 620px) {
+    .stats-strip {
+      grid-template-columns: 1fr;
+      margin-top: var(--sp-6);
+    }
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: var(--sp-4);
+      text-align: left;
+    }
+    .stat__value {
+      font-size: 2rem;
+    }
+  }
+
+  /* ---------- INTRO ---------- */
+  .intro {
+    display: grid;
+    gap: clamp(var(--sp-5), 5vw, var(--sp-8));
+    align-items: center;
+  }
+  @media (min-width: 860px) {
+    .intro {
+      grid-template-columns: 0.9fr 1.1fr;
+    }
+  }
+  .intro__media {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    rotate: -1.2deg;
+    border: 4px solid var(--c-white);
+  }
+  .intro__media img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+  }
+  .intro__badge {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    background: var(--c-primary);
+    color: var(--c-primary-ink);
+    font-family: var(--font-display);
+    font-weight: var(--fw-bold);
+    padding: 0.5em 1em;
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-md);
+  }
+  .intro__content > * + * {
+    margin-top: var(--sp-4);
+  }
+  .feature-list {
+    display: grid;
+    gap: var(--sp-4);
+    margin-block: var(--sp-5);
+  }
+  .feature {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+  }
+  .feature__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: var(--radius-md);
+    background: var(--c-mint-bg);
+    color: var(--c-secondary-strong);
+  }
+  .feature__icon :global(svg) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  .feature__title {
+    font-size: var(--fs-600);
+  }
+  .feature p {
+    color: var(--c-ink-soft);
+    font-size: var(--fs-body);
+  }
+
+  /* ---------- TRANSITION BAND ---------- */
+  .transition-band {
+    position: relative;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    background:
+      linear-gradient(120deg, rgba(155, 93, 229, 0.92), rgba(78, 168, 222, 0.88)),
+      url('/images/SchoolTransitions/1.webp') center / cover;
+    color: #fff;
+    padding: clamp(2.5rem, 6vw, 4.5rem);
+  }
+  .transition-band__text {
+    max-width: 40rem;
+  }
+  .transition-band h2 {
+    color: #fff;
+    margin-block: var(--sp-3);
+  }
+  .transition-band p {
+    color: rgba(255, 255, 255, 0.92);
+    font-size: var(--fs-500);
+    margin-bottom: var(--sp-5);
+  }
+  .eyebrow--light {
+    color: #fff;
+  }
+
+  /* ---------- VIDEO ---------- */
+  .video-wrap {
+    max-width: 900px;
+    margin-inline: auto;
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-grid {
+    display: grid;
+    gap: var(--sp-6);
+    align-items: start;
+  }
+  @media (min-width: 860px) {
+    .contact-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--sp-5);
+  }
+  .contact-info__block {
+    display: flex;
+    gap: var(--sp-4);
+    align-items: flex-start;
+  }
+  .contact-info__icon {
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-md);
+    background: var(--c-cream-2);
+    color: var(--c-primary-ink);
+  }
+  .contact-info__icon :global(svg) {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+  .contact-info__block h3 {
+    font-size: var(--fs-600);
+    margin-bottom: var(--sp-1);
+  }
+  .contact-info__block p {
+    color: var(--c-ink-soft);
+  }
+  .contact-info__link {
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sm);
+  }
+  .contact-info__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--sp-3);
+  }
+  .contact-info__actions :global(svg) {
+    width: 1.2em;
+    height: 1.2em;
+  }
+  .contact-map {
+    min-height: 420px;
+    height: 100%;
+  }
+</style>

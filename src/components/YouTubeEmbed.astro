@@ -18,7 +18,6 @@ const posterFallback = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
       width="1280"
       height="720"
       loading="lazy"
-      onerror="if(this.dataset.fallback){this.src=this.dataset.fallback;this.removeAttribute('data-fallback');}"
     />
     <span class="yt__play" aria-hidden="true">
       <svg viewBox="0 0 68 48" width="68" height="48">
@@ -96,6 +95,21 @@ const posterFallback = `https://i.ytimg.com/vi/${id}/hqdefault.jpg`;
     document.querySelectorAll<HTMLElement>('.yt').forEach((el) => {
       if (el.dataset.ytBound === 'true') return;
       el.dataset.ytBound = 'true';
+
+      const poster = el.querySelector<HTMLImageElement>('.yt__poster');
+      if (poster) {
+        const useFallback = () => {
+          const fallback = poster.dataset.fallback;
+          if (fallback) {
+            poster.src = fallback;
+            delete poster.dataset.fallback;
+          }
+        };
+        // Handle both future errors and images that already failed to load.
+        poster.addEventListener('error', useFallback);
+        if (poster.complete && poster.naturalWidth === 0) useFallback();
+      }
+
       const btn = el.querySelector('.yt__btn');
       btn?.addEventListener('click', () => {
         const id = el.dataset.ytId;

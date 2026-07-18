@@ -22,7 +22,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Type / content check
-        run: yarn check
+        run: yarn run check
 
       - name: Build application
         run: yarn build

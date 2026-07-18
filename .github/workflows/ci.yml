@@ -27,6 +27,9 @@ jobs:
       - name: Type / content check
         run: yarn run check
 
+      - name: Prettier check
+        run: yarn styling-check
+
       - name: Build application
         run: yarn build
 

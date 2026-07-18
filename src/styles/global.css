@@ -104,7 +104,7 @@ strong {
 }
 
 /* =====================================================================
-   FOCUS — visible, playful ring
+   FOCUS - visible, playful ring
    ===================================================================== */
 :focus-visible {
   outline: none;
@@ -224,7 +224,7 @@ strong {
 }
 
 /* =====================================================================
-   SCROLL-REVEAL — CSS-only, replaces framer-motion.
+   SCROLL-REVEAL - CSS-only, replaces framer-motion.
    Elements with [data-reveal] fade+rise into view.
    ===================================================================== */
 @media (prefers-reduced-motion: no-preference) {

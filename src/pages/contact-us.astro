@@ -12,7 +12,7 @@ import { site } from '../data/site';
   description="Get in touch with Toddler World, Srinagar. Call us, message on WhatsApp, drop us a line, or visit us at Airport Avenue, Near Railway Bridge."
 >
   <PageHero eyebrow="We'd love to hear from you" title="Contact Us" accent="green">
-    <p>Questions, visits, enrolments — we're always happy to help.</p>
+    <p>Questions, visits, enrolments: we're always happy to help.</p>
   </PageHero>
 
   <section class="section container">
@@ -53,7 +53,7 @@ import { site } from '../data/site';
       <!-- Details -->
       <div class="contact-details" data-reveal>
         <h2>Better yet, see us in person</h2>
-        <p>Feel free to call to book an appointment — we'd love to show you around.</p>
+        <p>Feel free to call to book an appointment. We'd love to show you around.</p>
 
         <a
           class="whatsapp-btn"
@@ -305,14 +305,14 @@ import { site } from '../data/site';
         if (res.ok) {
           form.reset();
           status.className = 'contact-status is-success';
-          status.textContent = 'Thank you! Your message is on its way — we’ll be in touch soon.';
+          status.textContent = 'Thank you! Your message is on its way. We’ll be in touch soon.';
         } else {
           throw new Error('Bad response');
         }
       } catch {
         status.className = 'contact-status is-error';
         status.textContent =
-          'Sorry, something went wrong. Please email info@toddlerworld.in or call us instead.';
+          'Sorry, something went wrong. Please email toddlerworld.sgr@gmail.com or call us instead.';
       } finally {
         button.disabled = false;
       }

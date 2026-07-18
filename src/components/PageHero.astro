@@ -7,14 +7,15 @@ interface Props {
   accent?: Accent;
 }
 
+// Gradients reference the brand tokens so they track the logo palette in tokens.css.
 const accentMap: Record<Accent, { a: string; b: string; ink: string }> = {
-  green: { a: '#2fb380', b: '#4ea8de', ink: '#fff' },
-  sky: { a: '#4ea8de', b: '#9b5de5', ink: '#fff' },
-  grape: { a: '#9b5de5', b: '#f15bb5', ink: '#fff' },
-  coral: { a: '#ff6b6b', b: '#ff924c', ink: '#fff' },
-  tangerine: { a: '#ff924c', b: '#ffc93c', ink: '#4a1f00' },
-  bubblegum: { a: '#f15bb5', b: '#9b5de5', ink: '#fff' },
-  sunny: { a: '#ffc93c', b: '#ff924c', ink: '#3d2e00' },
+  green: { a: 'var(--c-secondary)', b: 'var(--c-sky)', ink: '#fff' },
+  sky: { a: 'var(--c-sky)', b: 'var(--c-grape)', ink: '#fff' },
+  grape: { a: 'var(--c-grape)', b: 'var(--c-bubblegum)', ink: '#fff' },
+  coral: { a: 'var(--c-coral)', b: 'var(--c-tangerine)', ink: '#fff' },
+  tangerine: { a: 'var(--c-tangerine)', b: 'var(--c-primary)', ink: 'var(--c-tangerine-ink)' },
+  bubblegum: { a: 'var(--c-bubblegum)', b: 'var(--c-grape)', ink: '#fff' },
+  sunny: { a: 'var(--c-primary)', b: 'var(--c-tangerine)', ink: 'var(--c-primary-ink)' },
 };
 
 const { eyebrow, title, accent = 'green' } = Astro.props;

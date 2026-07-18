@@ -17,7 +17,7 @@ const {
 
 const fullTitle = title
   ? `${title} · ${site.name}`
-  : `${site.name} — Montessori Preschool in Srinagar`;
+  : `${site.name} · Montessori Preschool in Srinagar`;
 const canonical = new URL(Astro.url.pathname, site.url).href.replace(/\/$/, '') || site.url;
 const ogImage = new URL(image, site.url).href;
 ---
